@@ -1,0 +1,53 @@
+/**
+ * This file should contain frontend styles that 
+ * will be applied to all module instances.
+ */
+
+.bb_ulti_boot_card_container {
+    border: 0;
+    position: relative;
+    display: block;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+} 
+
+.bb_ulti_boot_card_container img.bb_ulti_boot_card_image {
+    max-width: 100%;
+    width: 100%;
+}
+
+.bb_ulti_boot_card_container .bb_ulti_boot_card_block {
+    padding: 1.25rem;
+}
+
+.bb_ulti_boot_card_container, 
+.bb_ulti_boot_card_container .bb_ulti_boot_card_title {
+    margin-bottom: .75rem;
+}
+
+.bb_ulti_boot_card_block .bb_ulti_boot_card_text {
+    margin-bottom: 1rem;
+}
+
+.bb_ulti_boot_card_link {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.bb_ulti_boot_card_block.bb-content-align-left {
+    text-align: left;
+}
+
+.bb_ulti_boot_card_block.bb-content-align-center {
+    text-align: center;
+}
+
+.bb_ulti_boot_card_block.bb-content-align-right{
+    text-align: right;
+}
