@@ -2,13 +2,6 @@
  * This file should contain frontend styles that 
  * will be applied to individual module instances.
  *
- * You have access to three variables in this file: 
- * 
- * $module An instance of your module class.
- * $id The module's ID.
- * $settings The module's settings.
- *
- * Example: 
  */
 
 .fl-node-<?php echo $id; ?> {
@@ -20,19 +13,17 @@
 	$settings->color = UABB_Helper::uabb_colorpicker( $settings, 'color' );
 	$settings->link_color = UABB_Helper::uabb_colorpicker( $settings, 'link_color' );
 	$settings->desc_color = UABB_Helper::uabb_colorpicker( $settings, 'desc_color' );
-	$settings->desc_margin_top = ( trim($settings->desc_margin_top) !== '' ) ? $settings->desc_margin_top : '15';
-    $settings->desc_margin_bottom = ( trim($settings->desc_margin_bottom) !== '' ) ? $settings->desc_margin_bottom : '0';
 ?>
 
 /* Background Property */
-.fl-node-<?php echo $id; ?> .bb_ulti_boot_card_container { 
+.fl-node-<?php echo $id; ?> .bb_boot_card_container { 
 		background: <?php echo $settings->bg_color; ?>;
 }
 
 
 /* BCard Heading Typography */
-.fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_ulti_boot_card_title,
-.fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_ulti_boot_card_title * {
+.fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_boot_card_title,
+.fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_boot_card_title * {
 	
 	<?php if(!empty($settings->color)) : ?>
 		color: <?php echo $settings->color; ?>;
@@ -55,8 +46,8 @@
 
 
 /* BCard's Description Typography */
-.fl-node-<?php echo $id; ?> .bb_ulti_boot_card_text,
-.fl-node-<?php echo $id; ?> .bb_ulti_boot_card_text * {
+.fl-node-<?php echo $id; ?> .bb_boot_card_text,
+.fl-node-<?php echo $id; ?> .bb_boot_card_text * {
 	
 	<?php if(!empty($settings->desc_color)) : ?>
 		color: <?php echo $settings->desc_color; ?>;
@@ -75,7 +66,7 @@
 }
 
 /* BCard's Link color */
-.fl-node-<?php echo $id; ?> .bb_ulti_boot_card_link {
+.fl-node-<?php echo $id; ?> .bb_boot_card_link {
 	<?php if(!empty($settings->link_color)) : ?>
 		color: #<?php echo $settings->link_color; ?>;
 	<?php endif; ?>
