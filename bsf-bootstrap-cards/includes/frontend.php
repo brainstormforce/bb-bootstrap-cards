@@ -9,7 +9,6 @@
  *
  * Example: 
  */
-//var_dump( $settings );
 ?>
 
 <div class="bb_ulti_boot_card_container">

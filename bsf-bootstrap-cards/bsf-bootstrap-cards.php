@@ -17,23 +17,12 @@ class BSFModuleCards extends FLBuilderModule {
             'name'          => __('Bootstrap Card', 'fl-builder'),
             'description'   => __('To create Bootstrap Card builder modules.', 'fl-builder'),
             'category'		=> __('Advanced Modules', 'fl-builder'),
-            'dir'           => BSF_MODULE_CARDS_DIR . 'ultimate-bootstrapcard/',
-            'url'           => BSF_MODULE_CARDS_URL . 'ultimate-bootstrapcard/',
+            'dir'           => BSF_MODULE_CARDS_DIR . 'bsf-bootstrap-cards/',
+            'url'           => BSF_MODULE_CARDS_URL . 'bsf-bootstrap-cards/',
             'editor_export' => true, // Defaults to true and can be omitted.
             'enabled'       => true, // Defaults to true and can be omitted.
         ));
         
-        /** 
-         * Use these methods to enqueue css and js already
-         * registered or to register and enqueue your own.
-         */
-        // Already registered
-        $this->add_css('font-awesome');
-        $this->add_js('jquery-bxslider');
-        
-        // Register and enqueue your own
-        $this->add_css('example-lib', $this->url . 'css/example-lib.css');
-        $this->add_js('example-lib', $this->url . 'js/example-lib.js', array(), '', true);
     }
 
     /** 
@@ -50,29 +39,6 @@ class BSFModuleCards extends FLBuilderModule {
         return $settings;
     }
 
-    /** 
-     * This method will be called by the builder
-     * right before the module is deleted. 
-     *
-     * @method delete
-     */      
-    public function delete()
-    {
-    
-    }
-
-    /** 
-     * Add additional methods to this class for use in the 
-     * other module files such as preview.php, frontend.php
-     * and frontend.css.php.
-     * 
-     *
-     * @method example_method
-     */   
-    public function example_method()
-    {
-    
-    }
 }
 
 /**

@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Beaver Builder Bootstrap Card Modules
+ * Plugin Name: Bootstrap Cards Module
  * Plugin URI: http://www.ultimatebeaver.com/
  * Description: This is a plugin for creating Bootstrap Card builder modules.
  * Version: 1.0
@@ -15,7 +15,7 @@ define( 'BSF_MODULE_CARDS_URL', plugins_url( '/', __FILE__ ) );
  */
 function BSF_load_ultimate_bootstrapcard() {
 	if ( class_exists( 'FLBuilder' ) ) {
-	    require_once 'ultimate-bootstrapcard/ultimate-bootstrapcard.php';
+	    require_once 'bsf-bootstrap-cards/bsf-bootstrap-cards.php';
 	}
 }
 add_action( 'init', 'BSF_load_ultimate_bootstrapcard', 9999 );
