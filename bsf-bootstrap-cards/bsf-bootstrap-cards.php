@@ -28,82 +28,6 @@ class BSFModuleCards extends FLBuilderModule {
 
 
     /**
-     * @method render_text
-     */
-    public function render_text()
-    {
-        global $wp_embed;
-
-        echo '<div class="uabb-infobox-text uabb-text-editor">' . wpautop( $wp_embed->autoembed( $this->settings->text ) ) . '</div>';
-    }
-
-    /**
-     * @method render_link
-     */
-    public function render_link()
-    {
-        if($this->settings->cta_type == 'link') {
-            echo '<a href="' . $this->settings->link . '" target="' . $this->settings->link_target . '" class="uabb-infobox-cta-link">' . $this->settings->cta_text . '</a>';
-        }
-    }
-
-    /**
-     * @method render_button
-     */
-    public function render_button()
-    {
-
-        if($this->settings->cta_type == 'button') {
-            $btn_settings = array(
-
-                /* General Section */
-                'text'              => $this->settings->btn_text,
-
-                /* Link Section */
-                'link'              => $this->settings->btn_link,
-                'link_target'       => $this->settings->btn_link_target,
-
-                /* Style Section */
-                'style'             => $this->settings->btn_style,
-                'border_size'       => $this->settings->btn_border_size,
-                'transparent_button_options' => $this->settings->btn_transparent_button_options,
-                'threed_button_options'      => $this->settings->btn_threed_button_options,
-                'flat_button_options'        => $this->settings->btn_flat_button_options,
-
-                /* Colors */
-                'bg_color'          => $this->settings->btn_bg_color,
-                'bg_hover_color'    => $this->settings->btn_bg_hover_color,
-                'text_color'        => $this->settings->btn_text_color,
-                'text_hover_color'  => $this->settings->btn_text_hover_color,
-                'hover_attribute'   => $this->settings->hover_attribute,
-
-                /* Icon */
-                'icon'              => $this->settings->btn_icon,
-                'icon_position'     => $this->settings->btn_icon_position,
-
-                /* Structure */
-                'width'              => $this->settings->btn_width,
-                'custom_width'       => $this->settings->btn_custom_width,
-                'custom_height'      => $this->settings->btn_custom_height,
-                'padding_top_bottom' => $this->settings->btn_padding_top_bottom,
-                'padding_left_right' => $this->settings->btn_padding_left_right,
-                'border_radius'      => $this->settings->btn_border_radius,
-                'align'              => '',
-                'mob_align'          => '',
-
-                /* Typography */
-                'font_size'         => $this->settings->btn_font_size,
-                'line_height'       => $this->settings->btn_line_height,
-                'font_family'       => $this->settings->btn_font_family,
-            );
-
-            echo '<div class="uabb-infobox-button">';
-            FLBuilder::render_module_html('uabb-button', $btn_settings);
-            echo '</div>';
-        }
-    }
-
-        /**
      * @method enqueue_scripts
      */
     public function enqueue_scripts()
@@ -668,33 +592,33 @@ FLBuilder::register_module('BSFModuleCards',
                 ),
 
                 'btn-general'    => array( // Section
-                    'title'         => __( 'General', 'uabb' ),
+                    'title'         => __( 'General', 'bsf-cards' ),
                     'fields'        => array(
                         'btn_text'          => array(
                             'type'          => 'text',
-                            'label'         => __('Text', 'uabb'),
-                            'default'       => __('Click Here', 'uabb'),
+                            'label'         => __('Text', 'bsf-cards'),
+                            'default'       => __('Click Here', 'bsf-cards'),
                         ),
                     )
                 ),
                 'btn-link'       => array( // Section
-                    'title'         => __('Link', 'uabb'),
+                    'title'         => __('Link', 'bsf-cards'),
                     'fields'        => array(
                         'btn_link'          => array(
                             'type'          => 'link',
-                            'label'         => __('Link', 'uabb'),
-                            'placeholder'   => __( 'http://www.example.com', 'uabb' ),
+                            'label'         => __('Link', 'bsf-cards'),
+                            'placeholder'   => __( 'http://www.example.com', 'bsf-cards' ),
                             'preview'       => array(
                                 'type'          => 'none'
                             )
                         ),
                         'btn_link_target'   => array(
                             'type'          => 'select',
-                            'label'         => __('Link Target', 'uabb'),
+                            'label'         => __('Link Target', 'bsf-cards'),
                             'default'       => '_self',
                             'options'       => array(
-                                '_self'         => __('Same Window', 'uabb'),
-                                '_blank'        => __('New Window', 'uabb')
+                                '_self'         => __('Same Window', 'bsf-cards'),
+                                '_blank'        => __('New Window', 'bsf-cards')
                             ),
                             'preview'       => array(
                                 'type'          => 'none'
@@ -703,23 +627,23 @@ FLBuilder::register_module('BSFModuleCards',
                     )
                 ),
                 'btn-style'      => array(
-                    'title'         => __('Style', 'uabb'),
+                    'title'         => __('Style', 'bsf-cards'),
                     'fields'        => array(
                         'btn_style'         => array(
                             'type'          => 'select',
-                            'label'         => __('Style', 'uabb'),
+                            'label'         => __('Style', 'bsf-cards'),
                             'default'       => 'flat',
                             'class'         => 'creative_button_styles',
                             'options'       => array(
-                                'flat'          => __('Flat', 'uabb'),
-                                'gradient'      => __('Gradient', 'uabb'),
-                                'transparent'   => __('Transparent', 'uabb'),
-                                'threed'          => __('3D', 'uabb'),
+                                'flat'          => __('Flat', 'bsf-cards'),
+                                'gradient'      => __('Gradient', 'bsf-cards'),
+                                'transparent'   => __('Transparent', 'bsf-cards'),
+                                'threed'          => __('3D', 'bsf-cards'),
                             ),
                         ),
                         'btn_border_size'   => array(
                             'type'          => 'text',
-                            'label'         => __('Border Size', 'uabb'),
+                            'label'         => __('Border Size', 'bsf-cards'),
                             'description'   => 'px',
                             'maxlength'     => '3',
                             'size'          => '5',
@@ -727,80 +651,80 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'btn_transparent_button_options'         => array(
                             'type'          => 'select',
-                            'label'         => __('Hover Styles', 'uabb'),
+                            'label'         => __('Hover Styles', 'bsf-cards'),
                             'default'       => 'transparent-fade',
                             'options'       => array(
-                                'none'          => __('None', 'uabb'),
-                                'transparent-fade'          => __('Fade Background', 'uabb'),
-                                'transparent-fill-top'      => __('Fill Background From Top', 'uabb'),
-                                'transparent-fill-bottom'      => __('Fill Background From Bottom', 'uabb'),
-                                'transparent-fill-left'     => __('Fill Background From Left', 'uabb'),
-                                'transparent-fill-right'     => __('Fill Background From Right', 'uabb'),
-                                'transparent-fill-center'       => __('Fill Background Vertical', 'uabb'),
-                                'transparent-fill-diagonal'     => __('Fill Background Diagonal', 'uabb'),
-                                'transparent-fill-horizontal'  => __('Fill Background Horizontal', 'uabb'),
+                                'none'          => __('None', 'bsf-cards'),
+                                'transparent-fade'          => __('Fade Background', 'bsf-cards'),
+                                'transparent-fill-top'      => __('Fill Background From Top', 'bsf-cards'),
+                                'transparent-fill-bottom'      => __('Fill Background From Bottom', 'bsf-cards'),
+                                'transparent-fill-left'     => __('Fill Background From Left', 'bsf-cards'),
+                                'transparent-fill-right'     => __('Fill Background From Right', 'bsf-cards'),
+                                'transparent-fill-center'       => __('Fill Background Vertical', 'bsf-cards'),
+                                'transparent-fill-diagonal'     => __('Fill Background Diagonal', 'bsf-cards'),
+                                'transparent-fill-horizontal'  => __('Fill Background Horizontal', 'bsf-cards'),
                             ),
                         ),
                         'btn_threed_button_options'         => array(
                             'type'          => 'select',
-                            'label'         => __('Hover Styles', 'uabb'),
+                            'label'         => __('Hover Styles', 'bsf-cards'),
                             'default'       => 'threed_down',
                             'options'       => array(
-                                'threed_down'          => __('Move Down', 'uabb'),
-                                'threed_up'      => __('Move Up', 'uabb'),
-                                'threed_left'      => __('Move Left', 'uabb'),
-                                'threed_right'     => __('Move Right', 'uabb'),
-                                'animate_top'     => __('Animate Top', 'uabb'),
-                                'animate_bottom'     => __('Animate Bottom', 'uabb'),
-                                /*'animate_left'     => __('Animate Left', 'uabb'),
-                                'animate_right'     => __('Animate Right', 'uabb'),*/
+                                'threed_down'          => __('Move Down', 'bsf-cards'),
+                                'threed_up'      => __('Move Up', 'bsf-cards'),
+                                'threed_left'      => __('Move Left', 'bsf-cards'),
+                                'threed_right'     => __('Move Right', 'bsf-cards'),
+                                'animate_top'     => __('Animate Top', 'bsf-cards'),
+                                'animate_bottom'     => __('Animate Bottom', 'bsf-cards'),
+                                /*'animate_left'     => __('Animate Left', 'bsf-cards'),
+                                'animate_right'     => __('Animate Right', 'bsf-cards'),*/
                             ),
                         ),
                         'btn_flat_button_options'         => array(
                             'type'          => 'select',
-                            'label'         => __('Hover Styles', 'uabb'),
+                            'label'         => __('Hover Styles', 'bsf-cards'),
                             'default'       => 'none',
                             'options'       => array(
-                                'none'          => __('None', 'uabb'),
-                                'animate_to_left'      => __('Appear Icon From Right', 'uabb'),
-                                'animate_to_right'          => __('Appear Icon From Left', 'uabb'),
-                                'animate_from_top'      => __('Appear Icon From Top', 'uabb'),
-                                'animate_from_bottom'     => __('Appear Icon From Bottom', 'uabb'),
+                                'none'          => __('None', 'bsf-cards'),
+                                'animate_to_left'      => __('Appear Icon From Right', 'bsf-cards'),
+                                'animate_to_right'          => __('Appear Icon From Left', 'bsf-cards'),
+                                'animate_from_top'      => __('Appear Icon From Top', 'bsf-cards'),
+                                'animate_from_bottom'     => __('Appear Icon From Bottom', 'bsf-cards'),
                             ),
                         ),
                     )
                 ),
                 'btn-icon'       => array( // Section
-                    'title'         => __('Icons', 'uabb'),
+                    'title'         => __('Icons', 'bsf-cards'),
                     'fields'        => array(
                         'btn_icon'          => array(
                             'type'          => 'icon',
-                            'label'         => __('Icon', 'uabb'),
+                            'label'         => __('Icon', 'bsf-cards'),
                             'show_remove'   => true
                         ),
                         'btn_icon_position' => array(
                             'type'          => 'select',
-                            'label'         => __('Icon Position', 'uabb'),
+                            'label'         => __('Icon Position', 'bsf-cards'),
                             'default'       => 'before',
                             'options'       => array(
-                                'before'        => __('Before Text', 'uabb'),
-                                'after'         => __('After Text', 'uabb')
+                                'before'        => __('Before Text', 'bsf-cards'),
+                                'after'         => __('After Text', 'bsf-cards')
                             )
                         )
                     )
                 ),
                 'btn-colors'     => array( // Section
-                    'title'         => __('Colors', 'uabb'),
+                    'title'         => __('Colors', 'bsf-cards'),
                     'fields'        => array(
                         'btn_text_color'        => array( 
                             'type'       => 'color',
-                            'label'      => __('Text Color', 'uabb'),
+                            'label'      => __('Text Color', 'bsf-cards'),
                             'default'    => '',
                             'show_reset' => true,
                         ),
                         'btn_text_hover_color'        => array( 
                             'type'       => 'color',
-                            'label'      => __('Text Hover Color', 'uabb'),
+                            'label'      => __('Text Hover Color', 'bsf-cards'),
                             'default'    => '',
                             'show_reset' => true,
                             'preview'       => array(
@@ -809,13 +733,13 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'btn_bg_color'        => array( 
                             'type'       => 'color',
-                            'label'      => __('Background Color', 'uabb'),
+                            'label'      => __('Background Color', 'bsf-cards'),
                             'default'    => '',
                             'show_reset' => true,
                         ),
                         'btn_bg_color_opc'    => array( 
                             'type'        => 'text',
-                            'label'       => __('Opacity', 'uabb'),
+                            'label'       => __('Opacity', 'bsf-cards'),
                             'default'     => '',
                             'description' => '%',
                             'maxlength'   => '3',
@@ -824,7 +748,7 @@ FLBuilder::register_module('BSFModuleCards',
 
                         'btn_bg_hover_color'        => array( 
                             'type'       => 'color',
-                            'label'         => __('Background Hover Color', 'uabb'),
+                            'label'         => __('Background Hover Color', 'bsf-cards'),
                             'default'    => '',
                             'show_reset' => true,
                             'preview'       => array(
@@ -833,19 +757,19 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'btn_bg_hover_color_opc'    => array( 
                             'type'        => 'text',
-                            'label'       => __('Opacity', 'uabb'),
+                            'label'       => __('Opacity', 'bsf-cards'),
                             'default'     => '',
                             'description' => '%',
                             'maxlength'   => '3',
                             'size'        => '5',
                         ),
                         'hover_attribute' => array(
-                            'type'          => 'uabb-toggle-switch',
-                            'label'         => __( 'Apply Hover Color To', 'uabb' ),
+                            'type'          => 'bsf-cards-toggle-switch',
+                            'label'         => __( 'Apply Hover Color To', 'bsf-cards' ),
                             'default'       => 'bg',
                             'options'       => array(
-                                'border'    => __( 'Border', 'uabb' ),
-                                'bg'        => __( 'Background', 'uabb' ),
+                                'border'    => __( 'Border', 'bsf-cards' ),
+                                'bg'        => __( 'Background', 'bsf-cards' ),
                             ),
                             'width' => '75px'
                         ),

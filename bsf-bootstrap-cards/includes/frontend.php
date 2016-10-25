@@ -25,14 +25,16 @@
 			<div class="bb_boot_card_text">
 				<?php echo $settings->card_textarea; ?>
 			</div>
-	    <!--Link-->   
-	   <?php if( $settings->card_btn_type == 'link' ){ ?>  
-	    <a class="bb_boot_card_link" href="<?php echo $settings->link_field; ?>">
-	    	<?php echo $settings->card_btn_text; ?>
-	    </a>
-	
-	    <?php } else if($settings->card_btn_type == 'button'  ) { ?>
-			
+	    <!--Link--> 
+
+	   	<?php if( $settings->card_btn_type == 'link' ){ ?>  
+		    <a class="bb_boot_card_link" href="<?php echo $settings->link_field; ?>" target="<?php echo $settings->link_target?>">
+		    	<?php echo $settings->card_btn_text; ?>
+		    </a>
+	    <?php } else if($settings->card_btn_type == 'button'){ ?>
+	     	<a class="bb_boot_card_link" href="<?php echo $settings->link_field; ?>">
+				<span class="bb_boot_button"><?php echo $settings->card_btn_text; ?></span>
+			</a>	
 		<?php } ?>
 
 	</div>
