@@ -629,18 +629,7 @@ FLBuilder::register_module('BSFModuleCards',
                 'btn-style'      => array(
                     'title'         => __('Style', 'bsf-cards'),
                     'fields'        => array(
-                        'btn_style'         => array(
-                            'type'          => 'select',
-                            'label'         => __('Style', 'bsf-cards'),
-                            'default'       => 'flat',
-                            'class'         => 'creative_button_styles',
-                            'options'       => array(
-                                'flat'          => __('Flat', 'bsf-cards'),
-                                'gradient'      => __('Gradient', 'bsf-cards'),
-                                'transparent'   => __('Transparent', 'bsf-cards'),
-                                'threed'          => __('3D', 'bsf-cards'),
-                            ),
-                        ),
+
                         'btn_border_size'   => array(
                             'type'          => 'text',
                             'label'         => __('Border Size', 'bsf-cards'),
@@ -649,70 +638,9 @@ FLBuilder::register_module('BSFModuleCards',
                             'size'          => '5',
                             'placeholder'   => '2'
                         ),
-                        'btn_transparent_button_options'         => array(
-                            'type'          => 'select',
-                            'label'         => __('Hover Styles', 'bsf-cards'),
-                            'default'       => 'transparent-fade',
-                            'options'       => array(
-                                'none'          => __('None', 'bsf-cards'),
-                                'transparent-fade'          => __('Fade Background', 'bsf-cards'),
-                                'transparent-fill-top'      => __('Fill Background From Top', 'bsf-cards'),
-                                'transparent-fill-bottom'      => __('Fill Background From Bottom', 'bsf-cards'),
-                                'transparent-fill-left'     => __('Fill Background From Left', 'bsf-cards'),
-                                'transparent-fill-right'     => __('Fill Background From Right', 'bsf-cards'),
-                                'transparent-fill-center'       => __('Fill Background Vertical', 'bsf-cards'),
-                                'transparent-fill-diagonal'     => __('Fill Background Diagonal', 'bsf-cards'),
-                                'transparent-fill-horizontal'  => __('Fill Background Horizontal', 'bsf-cards'),
-                            ),
-                        ),
-                        'btn_threed_button_options'         => array(
-                            'type'          => 'select',
-                            'label'         => __('Hover Styles', 'bsf-cards'),
-                            'default'       => 'threed_down',
-                            'options'       => array(
-                                'threed_down'          => __('Move Down', 'bsf-cards'),
-                                'threed_up'      => __('Move Up', 'bsf-cards'),
-                                'threed_left'      => __('Move Left', 'bsf-cards'),
-                                'threed_right'     => __('Move Right', 'bsf-cards'),
-                                'animate_top'     => __('Animate Top', 'bsf-cards'),
-                                'animate_bottom'     => __('Animate Bottom', 'bsf-cards'),
-                                /*'animate_left'     => __('Animate Left', 'bsf-cards'),
-                                'animate_right'     => __('Animate Right', 'bsf-cards'),*/
-                            ),
-                        ),
-                        'btn_flat_button_options'         => array(
-                            'type'          => 'select',
-                            'label'         => __('Hover Styles', 'bsf-cards'),
-                            'default'       => 'none',
-                            'options'       => array(
-                                'none'          => __('None', 'bsf-cards'),
-                                'animate_to_left'      => __('Appear Icon From Right', 'bsf-cards'),
-                                'animate_to_right'          => __('Appear Icon From Left', 'bsf-cards'),
-                                'animate_from_top'      => __('Appear Icon From Top', 'bsf-cards'),
-                                'animate_from_bottom'     => __('Appear Icon From Bottom', 'bsf-cards'),
-                            ),
-                        ),
                     )
                 ),
-                'btn-icon'       => array( // Section
-                    'title'         => __('Icons', 'bsf-cards'),
-                    'fields'        => array(
-                        'btn_icon'          => array(
-                            'type'          => 'icon',
-                            'label'         => __('Icon', 'bsf-cards'),
-                            'show_remove'   => true
-                        ),
-                        'btn_icon_position' => array(
-                            'type'          => 'select',
-                            'label'         => __('Icon Position', 'bsf-cards'),
-                            'default'       => 'before',
-                            'options'       => array(
-                                'before'        => __('Before Text', 'bsf-cards'),
-                                'after'         => __('After Text', 'bsf-cards')
-                            )
-                        )
-                    )
-                ),
+
                 'btn-colors'     => array( // Section
                     'title'         => __('Colors', 'bsf-cards'),
                     'fields'        => array(

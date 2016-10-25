@@ -32,8 +32,8 @@
 		    	<?php echo $settings->card_btn_text; ?>
 		    </a>
 	    <?php } else if($settings->card_btn_type == 'button'){ ?>
-	     	<a class="bb_boot_card_link" href="<?php echo $settings->link_field; ?>">
-				<span class="bb_boot_button"><?php echo $settings->card_btn_text; ?></span>
+	     	<a class="bb_boot_card_link" href="<?php echo $settings->btn_link; ?>" target="<?php echo $settings->btn_link_target?>">
+				<span class="bb_boot_button"><?php echo $settings->btn_text; ?></span>
 			</a>	
 		<?php } ?>
 
