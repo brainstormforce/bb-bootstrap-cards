@@ -61,6 +61,11 @@
 		font-size: <?php echo $settings->link_custom_size; ?>px;
 	<?php endif; ?>
 }
+.fl-node-<?php echo $id; ?> .bb_boot_card_link:hover {
+	<?php if(!empty($settings->link_hover_color)) : ?>
+		color: #<?php echo $settings->link_hover_color; ?>;
+	<?php endif; ?>
+}
 
 <?php if( $settings->card_btn_type == 'link' ) { ?>
 /* Link Text Margin */
