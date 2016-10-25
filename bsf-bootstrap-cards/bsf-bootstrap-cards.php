@@ -630,23 +630,15 @@ FLBuilder::register_module('BSFModuleCards',
                                     'selector'        => '.bb_boot_card_block .bb_boot_card_title'
                                 )
                             ),
-                            'new_font_size'     => array(
-                                'type'          => 'uabb-simplify',
-                                'label'         => __( 'Font Size', 'bsf-cards' ),
-                                'default'       => array(
-                                    'desktop'       => '',
-                                    'medium'        => '',
-                                    'small'         => '',
-                                )
-                            ),
-
-                            'line_height'    => array(
-                                'type'          => 'uabb-simplify',
-                                'label'         => __( 'Line Height', 'bsf-cards' ),
-                                'default'       => array(
-                                    'desktop'       => '',
-                                    'medium'        => '',
-                                    'small'         => '',
+                            'title_font_size' => array(
+                                'type'          => 'text',
+                                'label'         => __('Font Size', 'bsf-cards'),
+                                'description'   => 'px',
+                                'preview'       => array(
+                                    'type'          => 'css',
+                                    'selector'      => '.bb_boot_card_block .bb_boot_card_title',
+                                    'property'      => 'font-size',
+                                    'unit'          => 'px'
                                 )
                             ),
 
@@ -667,6 +659,7 @@ FLBuilder::register_module('BSFModuleCards',
                     'card_description'    =>  array(
                         'title'     => __('Description', 'bsf-cards'),
                         'fields'    => array(
+
                             'desc_font_family'       => array(
                                 'type'          => 'font',
                                 'label'         => __('Font Family', 'bsf-cards'),
@@ -679,24 +672,19 @@ FLBuilder::register_module('BSFModuleCards',
                                     'selector'        => '.bb_boot_card_text, .bb_boot_card_text *'
                                 )
                             ),
-                            'desc_font_size'     => array(
-                                'type'          => 'uabb-simplify',
-                                'label'         => __( 'Font Size', 'bsf-cards' ),
-                                'default'       => array(
-                                    'desktop'       => '',
-                                    'medium'        => '',
-                                    'small'         => '',
+
+                            'desc_font_size' => array(
+                                'type'          => 'text',
+                                'label'         => __('Font Size', 'bsf-cards'),
+                                'description'   => 'px',
+                                'preview'       => array(
+                                    'type'          => 'css',
+                                    'selector'      => '.bb_boot_card_text, .bb_boot_card_text',
+                                    'property'      => 'font-size',
+                                    'unit'          => 'px'
                                 )
                             ),
-                            'desc_line_height'    => array(
-                                'type'          => 'uabb-simplify',
-                                'label'         => __( 'Line Height', 'bsf-cards' ),
-                                'default'       => array(
-                                    'desktop'       => '',
-                                    'medium'        => '',
-                                    'small'         => '',
-                                )
-                            ),
+
                             'desc_color'        => array( 
                                 'type'       => 'color',
                                 'label'      => __('Color', 'bsf-cards'),
