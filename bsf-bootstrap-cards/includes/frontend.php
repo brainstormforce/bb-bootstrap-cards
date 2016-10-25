@@ -26,9 +26,15 @@
 				<?php echo $settings->card_textarea; ?>
 			</div>
 	    <!--Link-->   
+	   <?php if( $settings->card_btn_type == 'link' ){ ?>  
 	    <a class="bb_boot_card_link" href="<?php echo $settings->link_field; ?>">
-	    	<?php echo $settings->card_link_text; ?>
+	    	<?php echo $settings->card_btn_text; ?>
 	    </a>
+	
+	    <?php } else if($settings->card_btn_type == 'button'  ) { ?>
+			
+		<?php } ?>
+
 	</div>
 	<!--/.Card content-->
 

@@ -38,12 +38,41 @@
 	<?php endif; ?>
 }
 
+.fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_boot_card_title {
+	margin-top: <?php echo ( trim($settings->title_margin_top) != '' ) ? $settings->title_margin_top : '0'; ?>px;
+	margin-bottom: <?php echo ( trim($settings->title_margin_bottom) != '' ) ? $settings->title_margin_bottom : '0'; ?>px;
+
+	<?php if ( $settings->title_margin_top != '' || $settings->title_margin_bottom != '' ) { ?>
+	display:block;
+	<?php } ?>
+}
+
 /* BCard's Link color */
 .fl-node-<?php echo $id; ?> .bb_boot_card_link {
 	<?php if(!empty($settings->link_color)) : ?>
 		color: #<?php echo $settings->link_color; ?>;
 	<?php endif; ?>
+
+	<?php if( !empty($settings->link_font_family) && $settings->link_font_family['family'] != 'Default' ) : ?>
+		<?php ( $settings->link_font_family ); ?>
+	<?php endif; ?>
+
+	<?php if($settings->link_font_size == 'custom') : ?>
+		font-size: <?php echo $settings->link_custom_size; ?>px;
+	<?php endif; ?>
 }
+
+<?php if( $settings->card_btn_type == 'link' ) { ?>
+/* Link Text Margin */
+.fl-node-<?php echo $id; ?> .bb_boot_card_link {
+	margin-top: <?php echo ( trim($settings->link_margin_top) != '' ) ? $settings->link_margin_top : '0'; ?>px;
+	margin-bottom: <?php echo ( trim($settings->link_margin_bottom) != '' ) ? $settings->link_margin_bottom : '0'; ?>px;
+	<?php if ( $settings->link_margin_top != '' || $settings->link_margin_bottom != '' ) { ?>
+	display:block;
+	<?php } ?>
+}
+<?php } ?>
+
 
 /* BCard's Description Typography */
 .fl-node-<?php echo $id; ?> .bb_boot_card_text,
@@ -60,6 +89,16 @@
 	<?php if($settings->desc_font_size == 'custom') : ?>
 		font-size: <?php echo $settings->desc_custom_size; ?>px;
 	<?php endif; ?>
-
 }
+
+
+.fl-node-<?php echo $id; ?> .bb_boot_card_text {
+	margin-top: <?php echo ( trim($settings->desc_margin_top) != '' ) ? $settings->desc_margin_top : '0'; ?>px;
+	margin-bottom: <?php echo ( trim($settings->desc_margin_bottom) != '' ) ? $settings->desc_margin_bottom : '0'; ?>px;
+
+	<?php if ( $settings->desc_margin_top != '' || $settings->desc_margin_bottom != '' ) { ?>
+	display:block;
+	<?php } ?>
+}
+
 
