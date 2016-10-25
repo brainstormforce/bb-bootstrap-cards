@@ -626,20 +626,6 @@ FLBuilder::register_module('BSFModuleCards',
                         )
                     )
                 ),
-                'btn-style'      => array(
-                    'title'         => __('Style', 'bsf-cards'),
-                    'fields'        => array(
-
-                        'btn_border_size'   => array(
-                            'type'          => 'text',
-                            'label'         => __('Border Size', 'bsf-cards'),
-                            'description'   => 'px',
-                            'maxlength'     => '3',
-                            'size'          => '5',
-                            'placeholder'   => '2'
-                        ),
-                    )
-                ),
 
                 'btn-colors'     => array( // Section
                     'title'         => __('Colors', 'bsf-cards'),
@@ -765,6 +751,14 @@ FLBuilder::register_module('BSFModuleCards',
                             'maxlength'     => '3',
                             'size'          => '4',
                             'description'   => 'px'
+                        ),
+                        'btn_border_size'   => array(
+                            'type'          => 'text',
+                            'label'         => __('Border Size', 'bsf-cards'),
+                            'description'   => 'px',
+                            'maxlength'     => '3',
+                            'size'          => '5',
+                            'placeholder'   => '2'
                         ),
                     )
                 ),
