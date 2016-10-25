@@ -17,6 +17,6 @@ function bsf_load_bootstrap_card() {
 	if ( class_exists( 'FLBuilder' ) ) {
 	    require_once 'bsf-bootstrap-cards/bsf-bootstrap-cards.php';
 	}
-}
+} 
 add_action( 'init', 'bsf_load_bootstrap_card', 9999 );
 
