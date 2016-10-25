@@ -633,13 +633,13 @@ FLBuilder::register_module('BSFModuleCards',
                         'btn_text_color'        => array( 
                             'type'       => 'color',
                             'label'      => __('Text Color', 'bsf-cards'),
-                            'default'    => '',
+                            'default'    => '#414242',
                             'show_reset' => true,
                         ),
                         'btn_text_hover_color'        => array( 
                             'type'       => 'color',
                             'label'      => __('Text Hover Color', 'bsf-cards'),
-                            'default'    => '',
+                            'default'    => '#ffffff',
                             'show_reset' => true,
                             'preview'       => array(
                                 'type'          => 'none'
@@ -648,13 +648,13 @@ FLBuilder::register_module('BSFModuleCards',
                         'btn_bg_color'        => array( 
                             'type'       => 'color',
                             'label'      => __('Background Color', 'bsf-cards'),
-                            'default'    => '',
+                            'default'    => '#ffdd00',
                             'show_reset' => true,
                         ),
                         'btn_bg_color_opc'    => array( 
                             'type'        => 'text',
                             'label'       => __('Opacity', 'bsf-cards'),
-                            'default'     => '',
+                            'default'     => '100',
                             'description' => '%',
                             'maxlength'   => '3',
                             'size'        => '5',
@@ -672,79 +672,70 @@ FLBuilder::register_module('BSFModuleCards',
                         'btn_bg_hover_color_opc'    => array( 
                             'type'        => 'text',
                             'label'       => __('Opacity', 'bsf-cards'),
-                            'default'     => '',
+                            'default'     => '100',
                             'description' => '%',
                             'maxlength'   => '3',
                             'size'        => '5',
                         ),
-                        'hover_attribute' => array(
-                            'type'          => 'bsf-cards-toggle-switch',
-                            'label'         => __( 'Apply Hover Color To', 'bsf-cards' ),
-                            'default'       => 'bg',
-                            'options'       => array(
-                                'border'    => __( 'Border', 'bsf-cards' ),
-                                'bg'        => __( 'Background', 'bsf-cards' ),
-                            ),
-                            'width' => '75px'
-                        ),
+                        
                     )
                 ),
                 'btn-structure'  => array(
                     'title'         => __('Structure', 'bsf-cards'),
                     'fields'        => array(
-                        'btn_width'         => array(
-                            'type'          => 'select',
-                            'label'         => __('Width', 'bsf-cards'),
-                            'default'       => 'auto',
-                            'options'       => array(
-                                'auto'          => _x( 'Auto', 'Width.', 'bsf-cards' ),
-                                'full'          => __('Full Width', 'bsf-cards'),
-                                'custom'        => __('Custom', 'bsf-cards')
-                            ),
-                            'toggle'        => array(
-                                'auto'          => array(
-                                    'fields'        => array('btn_align', 'btn_mob_align')
-                                ),
-                                'full'          => array(
-                                    'fields'        => array( )
-                                ),
-                                'custom'        => array(
-                                    'fields'        => array('btn_align', 'btn_mob_align', 'btn_custom_width', 'btn_custom_height', 'btn_padding_top_bottom', 'btn_padding_left_right' )
-                                )
-                            )
-                        ),
-                        'btn_custom_width'  => array(
-                            'type'          => 'text',
-                            'label'         => __('Custom Width', 'bsf-cards'),
-                            'default'       => '200',
-                            'maxlength'     => '3',
-                            'size'          => '4',
-                            'description'   => 'px'
-                        ),
-                        'btn_custom_height'  => array(
-                            'type'          => 'text',
-                            'label'         => __('Custom Height', 'bsf-cards'),
-                            'default'       => '45',
-                            'maxlength'     => '3',
-                            'size'          => '4',
-                            'description'   => 'px'
-                        ),
-                        'btn_padding_top_bottom'       => array(
-                            'type'          => 'text',
-                            'label'         => __('Padding Top/Bottom', 'bsf-cards'),
-                            'placeholder'   => '0',
-                            'maxlength'     => '3',
-                            'size'          => '4',
-                            'description'   => 'px'
-                        ),
-                        'btn_padding_left_right'       => array(
-                            'type'          => 'text',
-                            'label'         => __('Padding Left/Right', 'bsf-cards'),
-                            'placeholder'   => '0',
-                            'maxlength'     => '3',
-                            'size'          => '4',
-                            'description'   => 'px'
-                        ),
+                        // 'btn_width'         => array(
+                        //     'type'          => 'select',
+                        //     'label'         => __('Width', 'bsf-cards'),
+                        //     'default'       => 'auto',
+                        //     'options'       => array(
+                        //         'auto'          => _x( 'Auto', 'Width.', 'bsf-cards' ),
+                        //         'full'          => __('Full Width', 'bsf-cards'),
+                        //         'custom'        => __('Custom', 'bsf-cards')
+                        //     ),
+                        //     'toggle'        => array(
+                        //         'auto'          => array(
+                        //             'fields'        => array('btn_align', 'btn_mob_align')
+                        //         ),
+                        //         'full'          => array(
+                        //             'fields'        => array( )
+                        //         ),
+                        //         'custom'        => array(
+                        //             'fields'        => array('btn_align', 'btn_mob_align', 'btn_custom_width', 'btn_custom_height', 'btn_padding_top_bottom', 'btn_padding_left_right' )
+                        //         )
+                        //     )
+                        // ),
+                        // 'btn_custom_width'  => array(
+                        //     'type'          => 'text',
+                        //     'label'         => __('Custom Width', 'bsf-cards'),
+                        //     'default'       => '200',
+                        //     'maxlength'     => '3',
+                        //     'size'          => '4',
+                        //     'description'   => 'px'
+                        // ),
+                        // 'btn_custom_height'  => array(
+                        //     'type'          => 'text',
+                        //     'label'         => __('Custom Height', 'bsf-cards'),
+                        //     'default'       => '45',
+                        //     'maxlength'     => '3',
+                        //     'size'          => '4',
+                        //     'description'   => 'px'
+                        // ),
+                        // 'btn_padding_top_bottom'       => array(
+                        //     'type'          => 'text',
+                        //     'label'         => __('Padding Top/Bottom', 'bsf-cards'),
+                        //     'placeholder'   => '0',
+                        //     'maxlength'     => '3',
+                        //     'size'          => '4',
+                        //     'description'   => 'px'
+                        // ),
+                        // 'btn_padding_left_right'       => array(
+                        //     'type'          => 'text',
+                        //     'label'         => __('Padding Left/Right', 'bsf-cards'),
+                        //     'placeholder'   => '0',
+                        //     'maxlength'     => '3',
+                        //     'size'          => '4',
+                        //     'description'   => 'px'
+                        // ),
                         'btn_border_radius' => array(
                             'type'          => 'text',
                             'label'         => __('Round Corners', 'bsf-cards'),
@@ -752,14 +743,14 @@ FLBuilder::register_module('BSFModuleCards',
                             'size'          => '4',
                             'description'   => 'px'
                         ),
-                        'btn_border_size'   => array(
-                            'type'          => 'text',
-                            'label'         => __('Border Size', 'bsf-cards'),
-                            'description'   => 'px',
-                            'maxlength'     => '3',
-                            'size'          => '5',
-                            'placeholder'   => '2'
-                        ),
+                        // 'btn_border_size'   => array(
+                        //     'type'          => 'text',
+                        //     'label'         => __('Border Size', 'bsf-cards'),
+                        //     'description'   => 'px',
+                        //     'maxlength'     => '3',
+                        //     'size'          => '5',
+                        //     'placeholder'   => '2'
+                        // ),
                     )
                 ),
 

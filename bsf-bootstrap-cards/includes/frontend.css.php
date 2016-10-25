@@ -107,3 +107,60 @@
 }
 
 
+/* BCard's Button Link */
+.fl-node-<?php echo $id; ?> .bb_boot_card_link_button .bb_boot_button {
+	<?php if(!empty($settings->btn_text_color)) : ?>
+		color: #<?php echo $settings->btn_text_color; ?>;
+	<?php endif; ?>
+}
+
+.fl-node-<?php echo $id; ?> .bb_boot_card_link_button:hover .bb_boot_button {
+	<?php if(!empty($settings->btn_text_hover_color)) : ?>
+		color: #<?php echo $settings->btn_text_hover_color; ?>;
+	<?php endif; ?>
+}
+
+.fl-node-<?php echo $id; ?> .bb_boot_card_link_button {
+	<?php if(!empty($settings->btn_bg_color)) : ?>
+		background-color: #<?php echo $settings->btn_bg_color; ?>;
+		background-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($settings->btn_bg_color)) ?>, <?php echo $settings->btn_bg_color_opc/100; ?>);
+	<?php endif; ?>	
+		padding: 8px 16px;
+	<?php if(!empty($settings->btn_border_radius)) : ?>	
+    	border-radius: <?php echo $settings->btn_border_radius; ?>px;
+    	-moz-border-radius: <?php echo $settings->btn_border_radius; ?>px;
+    	-webkit-border-radius: <?php echo $settings->btn_border_radius; ?>px;
+    <?php endif; ?>	
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    text-shadow: none;
+    box-shadow: none;
+    position: relative;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+
+.fl-node-<?php echo $id; ?> .bb_boot_card_link_button:hover {
+	<?php if(!empty($settings->btn_bg_hover_color)) : ?>
+		background-color: #<?php echo $settings->btn_bg_hover_color; ?>;
+		background-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($settings->btn_bg_hover_color)) ?>, <?php echo $settings->btn_bg_hover_color_opc/100; ?>);
+	<?php endif; ?>
+}
+
+.bb_boot_card_link_button {
+    background-color: #ffdd00;
+}
+.bb_boot_card_link_button .bb_boot_button{
+	color: #414242;
+	font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: uppercase;
+}
