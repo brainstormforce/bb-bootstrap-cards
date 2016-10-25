@@ -481,11 +481,11 @@ FLBuilder::register_module('BSFModuleCards',
                         'bg_color_opc' => array( 
                             'type'        => 'text',
                             'label'       => __('Opacity', 'bsf-cards'),
-                            'default'     => '',
+                            'default'     => '100',
                             'description' => '%',
                             'maxlength'   => '3',
                             'size'        => '5',
-                        ),
+                        )
                     )
                 )
             )
@@ -504,46 +504,13 @@ FLBuilder::register_module('BSFModuleCards',
                         //     'show_remove'   => true
                         // ),
 
-                        'photo_source'  => array(
-                            'type'          => 'select',
-                            'label'         => __('Photo Source', 'bsf-cards'),
-                            'default'       => 'library',
-                            'options'       => array(
-                                'library'       => __('Media Library', 'bsf-cards'),
-                                'url'           => __('URL', 'fl-builder')
-                            ),
-                            'toggle'        => array(
-                                'library'       => array(
-                                    'fields'        => array('photo')
-                                ),
-                                'url'           => array(
-                                    'fields'        => array('photo_url', 'caption')
-                                )
-                            )
-                        ),
+
                         'photo'         => array(
                             'type'          => 'photo',
                             'label'         => __('Photo', 'bsf-cards'),
                             'show_remove'   => true
                         ),
-                        'photo_url'     => array(
-                            'type'          => 'text',
-                            'label'         => __('Photo URL', 'bsf-cards'),
-                            'placeholder'   => __( 'http://www.example.com/my-photo.jpg', 'bsf-cards' )
-                        ),
-                        'crop'          => array(
-                            'type'          => 'select',
-                            'label'         => __('Crop', 'fl-builder'),
-                            'default'       => 'None',
-                            'options'       => array(
-                                ''              => _x( 'None', 'Photo Crop.', 'bsf-cards' ),
-                                'landscape'     => __('Landscape', 'bsf-cards'),
-                                'panorama'      => __('Panorama', 'bsf-cards'),
-                                'portrait'      => __('Portrait', 'bsf-cards'),
-                                'square'        => __('Square', 'bsf-cards'),
-                                'circle'        => __('Circle', 'bsf-cards')
-                            )
-                        ),
+                        
                         'align'         => array(
                             'type'          => 'select',
                             'label'         => __('Alignment', 'bsf-cards'),
@@ -590,7 +557,7 @@ FLBuilder::register_module('BSFModuleCards',
                                 'preview'       => array(
                                     'type' => 'css',
                                     'property' => 'color',
-                                    'selector' => '.bb_boot_card_block'
+                                    'selector' => '.bb_boot_card_link'
                                 )
                             ),
 
@@ -630,16 +597,28 @@ FLBuilder::register_module('BSFModuleCards',
                                     'selector'        => '.bb_boot_card_block .bb_boot_card_title'
                                 )
                             ),
-                            'title_font_size' => array(
-                                'type'          => 'text',
-                                'label'         => __('Font Size', 'bsf-cards'),
-                                'description'   => 'px',
-                                'preview'       => array(
-                                    'type'          => 'css',
-                                    'selector'      => '.bb_boot_card_block .bb_boot_card_title',
-                                    'property'      => 'font-size',
-                                    'unit'          => 'px'
+
+                            'title_size'    => array(
+                                'type'          => 'select',
+                                'label'         => __('Heading Size', 'fl-builder'),
+                                'default'       => 'default',
+                                'options'       => array(
+                                    'default'       =>  __('Default', 'fl-builder'),
+                                    'custom'        =>  __('Custom', 'fl-builder')
+                                ),
+                                'toggle'        => array(
+                                    'custom'        => array(
+                                        'fields'        => array('title_custom_size')
+                                    )
                                 )
+                            ),
+                            'title_custom_size' => array(
+                                'type'              => 'text',
+                                'label'             => __('Heading Custom Size', 'fl-builder'),
+                                'default'           => '24',
+                                'maxlength'         => '3',
+                                'size'              => '4',
+                                'description'       => 'px'
                             ),
 
                             'color'    => array( 
@@ -669,20 +648,31 @@ FLBuilder::register_module('BSFModuleCards',
                                 ),
                                 'preview'         => array(
                                     'type'            => 'font',
-                                    'selector'        => '.bb_boot_card_text, .bb_boot_card_text *'
+                                    'selector'        => '.bb_boot_card_text, .bb_boot_card_text'
                                 )
                             ),
 
-                            'desc_font_size' => array(
-                                'type'          => 'text',
+                            'desc_font_size'    => array(
+                                'type'          => 'select',
                                 'label'         => __('Font Size', 'bsf-cards'),
-                                'description'   => 'px',
-                                'preview'       => array(
-                                    'type'          => 'css',
-                                    'selector'      => '.bb_boot_card_text, .bb_boot_card_text',
-                                    'property'      => 'font-size',
-                                    'unit'          => 'px'
+                                'default'       => 'default',
+                                'options'       => array(
+                                    'default'       =>  __('Default', 'bsf-cards'),
+                                    'custom'        =>  __('Custom', 'bsf-cards')
+                                ),
+                                'toggle'        => array(
+                                    'custom'        => array(
+                                        'fields'        => array('desc_custom_size')
+                                    )
                                 )
+                            ),
+                            'desc_custom_size' => array(
+                                'type'              => 'text',
+                                'label'             => __('Font Size', 'fl-builder'),
+                                'default'           => '14',
+                                'maxlength'         => '3',
+                                'size'              => '4',
+                                'description'       => 'px'
                             ),
 
                             'desc_color'        => array( 

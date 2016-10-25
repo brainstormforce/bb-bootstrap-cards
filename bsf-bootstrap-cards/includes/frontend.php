@@ -6,31 +6,14 @@
  */
 ?>
 
-<?php
-$photo    = $module->get_data();
-$classes  = $module->get_classes();
-$src      = $module->get_src();
-$link     = $module->get_link();
-$alt      = $module->get_alt();
-$attrs    = $module->get_attributes();
-$filetype = pathinfo($src, PATHINFO_EXTENSION);
-?>
-
 <div class="bb_boot_card_container">
 
 	<!--Card image-->
 	<div class="bb_boot_card_image fl-photo<?php if ( ! empty( $settings->crop ) ) echo ' fl-photo-crop-' . $settings->crop ; ?> fl-photo-align-<?php echo $settings->align; ?>">
 	    <!-- <img src="<?php //echo $settings->photo_field_src; ?>" /> -->
-	    <?php
-			if( $settings->photo != '' && isset( $settings->photo_src) ){
-		?>
-		   
-		   <img class="<?php echo $classes; ?>" src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" itemprop="image" <?php echo $attrs; ?> />
-
-		   <?php
-		}
-	    ?>
-	    
+	    <?php if( $settings->photo != '' && isset( $settings->photo_src) ){ ?> 
+		   <img src="<?php echo $settings->photo_src; ?>" />
+		<?php } ?>
 	</div>
 	<!--/.Card image-->
 

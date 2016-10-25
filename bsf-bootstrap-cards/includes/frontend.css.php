@@ -4,16 +4,22 @@
  *
  */
 
-.fl-node-<?php echo $id; ?> {
-    font-size: <?php echo $settings->text_field; ?>px;
-}
+<!-- .fl-node-<?php //echo $id; ?> {
+    font-size: <?php //echo $settings->text_field; ?>px;
+} -->
 
 
 /* Background Property */
-.fl-node-<?php echo $id; ?> .bb_boot_card_container { 
-		background: #<?php echo $settings->bg_color; ?>;
-}
+<!-- .fl-node-<?php //echo $id; ?> .bb_boot_card_container { 
+		background: #<?php //echo $settings->bg_color; ?>;
+} -->
 
+<?php if(!empty($settings->bg_color)) : ?>
+.fl-node-<?php echo $id; ?> .bb_boot_card_container { 
+	background-color: #<?php echo $settings->bg_color; ?>;
+	background-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($settings->bg_color)) ?>, <?php echo $settings->bg_color_opc/100; ?>);
+}
+<?php endif; ?>
 
 /* BCard Heading Typography */
 .fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_boot_card_title,
@@ -27,10 +33,8 @@
 		<?php ( $settings->font ); ?>
 	<?php endif; ?>
 
-	<?php if( $settings->title_font_size['desktop'] != '' ) : ?>
-		font-size: <?php echo $settings->title_font_size['desktop']; ?>px;
-	<?php elseif( isset( $settings->font_size ) && isset( $settings->custom_font_size ) && $settings->font_size == 'custom' && $settings->custom_font_size != '' ) : ?>
-		font-size: <?php echo $settings->custom_font_size; ?>px;
+	<?php if($settings->title_size == 'custom') : ?>
+		font-size: <?php echo $settings->title_custom_size; ?>px;
 	<?php endif; ?>
 }
 
@@ -53,8 +57,8 @@
 		<?php ( $settings->desc_font_family ); ?>
 	<?php endif; ?>
 
-	<?php if( $settings->desc_font_size['desktop'] != '' ) : ?>
-		font-size: <?php echo $settings->desc_font_size['desktop']; ?>px;
+	<?php if($settings->desc_font_size == 'custom') : ?>
+		font-size: <?php echo $settings->desc_custom_size; ?>px;
 	<?php endif; ?>
 
 }
