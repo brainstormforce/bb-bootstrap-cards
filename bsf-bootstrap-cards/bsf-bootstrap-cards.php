@@ -273,11 +273,11 @@ FLBuilder::register_module('BSFModuleCards',
                             'label'      => __('Link Hover Color', 'bsf-cards'),
                             'default'    => '',
                             'show_reset' => true,
-                            'preview'       => array(
-                                'type' => 'css',
-                                'property' => 'color',
-                                'selector' => '.bb_boot_card_link',
-                            )
+                            // 'preview'       => array(
+                            //     'type' => 'css',
+                            //     'property' => 'color',
+                            //     'selector' => '.bb_boot_card_link',
+                            // )
                         ),
 
                         'link_margin_top' => array(
