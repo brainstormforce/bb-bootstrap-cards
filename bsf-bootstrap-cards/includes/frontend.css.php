@@ -27,7 +27,7 @@ display:block;
 }
 
 /* BCard's Link color */
-.fl-node-<?php echo $id; ?> .bb_boot_card_link {
+.fl-node-<?php echo $id; ?> .bb_boot_card_link, .fl-node-<?php echo $id; ?> .bb_boot_card_link:visited {
 <?php if(!empty($settings->link_color)) : ?>
 	color: #<?php echo $settings->link_color; ?>;
 <?php endif; ?>
