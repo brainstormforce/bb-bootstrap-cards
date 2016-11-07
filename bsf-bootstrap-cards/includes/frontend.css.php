@@ -17,7 +17,6 @@
 <?php if(!empty($settings->bg_color)) : ?>
 .fl-node-<?php echo $id; ?> .bb_boot_card_container { 
 	background-color: #<?php echo $settings->bg_color; ?>;
-	background-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($settings->bg_color)) ?>, <?php echo $settings->bg_color_opc/100; ?>);
 }
 <?php endif; ?>
 
@@ -123,7 +122,6 @@
 .fl-node-<?php echo $id; ?> .bb_boot_card_link_button {
 	<?php if(!empty($settings->btn_bg_color)) : ?>
 		background-color: #<?php echo $settings->btn_bg_color; ?>;
-		background-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($settings->btn_bg_color)) ?>, <?php echo $settings->btn_bg_color_opc/100; ?>);
 	<?php endif; ?>	
 		padding: 8px 16px;
 	<?php if(!empty($settings->btn_border_radius)) : ?>	
@@ -149,7 +147,6 @@
 .fl-node-<?php echo $id; ?> .bb_boot_card_link_button:hover {
 	<?php if(!empty($settings->btn_bg_hover_color)) : ?>
 		background-color: #<?php echo $settings->btn_bg_hover_color; ?>;
-		background-color: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($settings->btn_bg_hover_color)) ?>, <?php echo $settings->btn_bg_hover_color_opc/100; ?>);
 	<?php endif; ?>
 }
 

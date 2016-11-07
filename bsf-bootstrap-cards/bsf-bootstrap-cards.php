@@ -479,14 +479,14 @@ FLBuilder::register_module('BSFModuleCards',
                             'default'    => '',
                             'show_reset' => true,
                         ),
-                        'bg_color_opc' => array( 
-                            'type'        => 'text',
-                            'label'       => __('Opacity', 'bsf-cards'),
-                            'default'     => '100',
-                            'description' => '%',
-                            'maxlength'   => '3',
-                            'size'        => '5',
-                        )
+                        // 'bg_color_opc' => array( 
+                        //     'type'        => 'text',
+                        //     'label'       => __('Opacity', 'bsf-cards'),
+                        //     'default'     => '100',
+                        //     'description' => '%',
+                        //     'maxlength'   => '3',
+                        //     'size'        => '5',
+                        // )
                     )
                 )
             )
@@ -755,14 +755,14 @@ FLBuilder::register_module('BSFModuleCards',
                             'default'    => '#ffdd00',
                             'show_reset' => true,
                         ),
-                        'btn_bg_color_opc'    => array( 
-                            'type'        => 'text',
-                            'label'       => __('Opacity', 'bsf-cards'),
-                            'default'     => '100',
-                            'description' => '%',
-                            'maxlength'   => '3',
-                            'size'        => '5',
-                        ),
+                        // 'btn_bg_color_opc'    => array( 
+                        //     'type'        => 'text',
+                        //     'label'       => __('Opacity', 'bsf-cards'),
+                        //     'default'     => '100',
+                        //     'description' => '%',
+                        //     'maxlength'   => '3',
+                        //     'size'        => '5',
+                        // ),
 
                         'btn_bg_hover_color'        => array( 
                             'type'       => 'color',
@@ -773,14 +773,14 @@ FLBuilder::register_module('BSFModuleCards',
                                 'type'          => 'none'
                             )
                         ),
-                        'btn_bg_hover_color_opc'    => array( 
-                            'type'        => 'text',
-                            'label'       => __('Opacity', 'bsf-cards'),
-                            'default'     => '100',
-                            'description' => '%',
-                            'maxlength'   => '3',
-                            'size'        => '5',
-                        ),
+                        // 'btn_bg_hover_color_opc'    => array( 
+                        //     'type'        => 'text',
+                        //     'label'       => __('Opacity', 'bsf-cards'),
+                        //     'default'     => '100',
+                        //     'description' => '%',
+                        //     'maxlength'   => '3',
+                        //     'size'        => '5',
+                        // ),
 
                         'btn_border_radius' => array(
                             'type'          => 'text',
