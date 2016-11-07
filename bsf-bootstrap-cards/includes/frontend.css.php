@@ -113,18 +113,6 @@ display:block;
 	-moz-border-radius: <?php echo $settings->btn_border_radius; ?>px;
 	-webkit-border-radius: <?php echo $settings->btn_border_radius; ?>px;
 <?php endif; ?>	
-	display: inline-block;
-	vertical-align: middle;
-	text-align: center;
-	overflow: hidden;
-	text-shadow: none;
-	box-shadow: none;
-	position: relative;
-	-webkit-transition: all 200ms linear;
-	-moz-transition: all 200ms linear;
-	-ms-transition: all 200ms linear;
-	-o-transition: all 200ms linear;
-	transition: all 200ms linear;
 }
 
 
@@ -134,15 +122,3 @@ display:block;
 <?php endif; ?>
 }
 
-.bb_boot_card_link_button {
-    background-color: #ffdd00;
-}
-
-.bb_boot_card_link_button .bb_boot_button{
-	color: #414242;
-	font-size: 14px;
-    line-height: 16px;
-    text-decoration: none;
-    text-shadow: none;
-    text-transform: uppercase;
-}
