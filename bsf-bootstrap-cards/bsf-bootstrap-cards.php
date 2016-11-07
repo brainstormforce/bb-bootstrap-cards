@@ -530,10 +530,10 @@ FLBuilder::register_module('BSFModuleCards',
         ),
 
         'link'      => array( // Tab
-            'title'         => __('Link', 'bsf-cards'), // Tab title
+            'title'         => __('Link / Button ', 'bsf-cards'), // Tab title
             'sections'      => array( // Tab Sections
                 'card_link'       => array( // Section
-                    'title'         => __('Read More Link', 'bsf-cards'), // Section Title
+                    'title'         => __('Select Read More', 'bsf-cards'), // Section Title
                     'fields'        => array( // Section Fields
                         'card_btn_type'      => array(
                         'type'          => 'select',
@@ -556,11 +556,7 @@ FLBuilder::register_module('BSFModuleCards',
 
                             )
                         ),
-                        'card_btn_text'      => array(
-                            'type'          => 'text',
-                            'label'         => __('Text', 'bsf-cards'),
-                            'default'       => __('Read More', 'bsf-cards'),
-                        ),
+                        
 
                     )
                 ),
@@ -568,6 +564,13 @@ FLBuilder::register_module('BSFModuleCards',
                 'link'          => array(
                     'title'         => __('Link', 'bsf-cards'),
                     'fields'        => array(
+                        
+                        'card_btn_text'      => array(
+                            'type'          => 'text',
+                            'label'         => __('Text', 'bsf-cards'),
+                            'default'       => __('Read More', 'bsf-cards'),
+                        ),
+
                         'link_field'          => array(
                             'type'          => 'link',
                             'label'         => __('Link', 'bsf-cards'),
@@ -591,22 +594,123 @@ FLBuilder::register_module('BSFModuleCards',
                     )
                 ),
 
-                'btn-general'    => array( // Section
-                    'title'         => __( 'General', 'bsf-cards' ),
-                    'fields'        => array(
-                        'btn_text'          => array(
-                            'type'          => 'text',
-                            'label'         => __('Text', 'bsf-cards'),
-                            'default'       => __('Click Here', 'bsf-cards'),
+                'link_typography'    =>  array(
+                    'title' => __( 'Link Typography', 'bsf-cards' ),
+                    'fields'    => array(
+                        'link_font_family'       => array(
+                            'type'          => 'font',
+                            'label'         => __('Font Family', 'bsf-cards'),
+                            'default'       => array(
+                                'family'        => 'Default',
+                                'weight'        => 'Default'
+                            ),
+                            'preview'   => array(
+                                'type'      => 'font',
+                                'selector'  => '.bb_boot_card_link'
+                            ),
+                        ),
+
+                        'link_font_size'    => array(
+                            'type'          => 'select',
+                            'label'         => __('Link Font Size', 'fl-builder'),
+                            'default'       => 'default',
+                            'options'       => array(
+                                'default'       =>  __('Default', 'fl-builder'),
+                                'custom'        =>  __('Custom', 'fl-builder')
+                            ),
+                            'toggle'        => array(
+                                'custom'        => array(
+                                    'fields'        => array('link_custom_size')
+                                )
+                            )
+                        ),
+                        'link_custom_size' => array(
+                            'type'              => 'text',
+                            'label'             => __('Link Font Size', 'fl-builder'),
+                            'default'           => '20',
+                            'maxlength'         => '3',
+                            'size'              => '4',
+                            'description'       => 'px'
+                        ),
+
+                        'link_color'        => array( 
+                            'type'       => 'color',
+                            'label'         => __('Link Color', 'bsf-cards'),
+                            'default'    => '',
+                            'show_reset' => true,
+                        ),
+
+                        'link_color'        => array( 
+                            'type'       => 'color',
+                            'label'      => __('Link Color', 'bsf-cards'),
+                            'default'    => '',
+                            'show_reset' => true,
+                            'preview'       => array(
+                                'type' => 'css',
+                                'property' => 'color',
+                                'selector' => '.bb_boot_card_link',
+                            )
+                        ),
+
+                        'link_hover_color'        => array( 
+                            'type'       => 'color',
+                            'label'      => __('Link Hover Color', 'bsf-cards'),
+                            'default'    => '',
+                            'show_reset' => true,
+                            'preview'       => array(
+                                'type' => 'css',
+                                'property' => 'color',
+                                'selector' => '.bb_boot_card_link',
+                            )
+                        ),
+
+                        'link_margin_top' => array(
+                            'type'              => 'text',
+                            'label'             => __('Margin Top', 'bsf-cards'),
+                            'placeholder'       => '0',
+                            'maxlength'         => '3',
+                            'size'              => '4',
+                            'description'       => 'px',
+                            'default'    => '',
+                            'preview'       => array(
+                                'type' => 'css',
+                                'property' => 'margin-top',
+                                'selector' => '.bb_boot_card_link',
+                                'unit'       => 'px'
+                            )
+
+                        ),
+                        'link_margin_bottom' => array(
+                            'type'              => 'text',
+                            'label'             => __('Margin Bottom', 'bsf-cards'),
+                            'placeholder'       => '0',
+                            'maxlength'         => '3',
+                            'size'              => '4',
+                            'description'       => 'px',
+                            'default'    => '',
+                            'preview'       => array(
+                                'type' => 'css',
+                                'property' => 'margin-bottom',
+                                'selector' => '.bb_boot_card_link',
+                                'unit'       => 'px'
+                            )
                         ),
                     )
                 ),
+
                 'btn-link'       => array( // Section
-                    'title'         => __('Link', 'bsf-cards'),
+                    'title'         => __('Button', 'bsf-cards'),
                     'fields'        => array(
+
+                        'btn_text'          => array(
+                            'type'          => 'text',
+                            'label'         => __('Button Text', 'bsf-cards'),
+                            'default'       => __('Click Here', 'bsf-cards'),
+                        ),
+
                         'btn_link'          => array(
                             'type'          => 'link',
-                            'label'         => __('Link', 'bsf-cards'),
+                            'label'         => __('Button Link', 'bsf-cards'),
                             'placeholder'   => __( 'http://www.example.com', 'bsf-cards' ),
                             'preview'       => array(
                                 'type'          => 'none'
@@ -614,7 +718,7 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'btn_link_target'   => array(
                             'type'          => 'select',
-                            'label'         => __('Link Target', 'bsf-cards'),
+                            'label'         => __('Button Target', 'bsf-cards'),
                             'default'       => '_self',
                             'options'       => array(
                                 '_self'         => __('Same Window', 'bsf-cards'),
@@ -876,110 +980,6 @@ FLBuilder::register_module('BSFModuleCards',
                                 )
                             ),
 
-                        )
-                    ),
-
-                    'link_typography'    =>  array(
-                        'title' => __( 'Link Typography', 'bsf-cards' ),
-                        'fields'    => array(
-                            'link_font_family'       => array(
-                                'type'          => 'font',
-                                'label'         => __('Font Family', 'bsf-cards'),
-                                'default'       => array(
-                                    'family'        => 'Default',
-                                    'weight'        => 'Default'
-                                ),
-                                'preview'   => array(
-                                    'type'      => 'font',
-                                    'selector'  => '.bb_boot_card_link'
-                                ),
-                            ),
-
-                            'link_font_size'    => array(
-                                'type'          => 'select',
-                                'label'         => __('Link Font Size', 'fl-builder'),
-                                'default'       => 'default',
-                                'options'       => array(
-                                    'default'       =>  __('Default', 'fl-builder'),
-                                    'custom'        =>  __('Custom', 'fl-builder')
-                                ),
-                                'toggle'        => array(
-                                    'custom'        => array(
-                                        'fields'        => array('link_custom_size')
-                                    )
-                                )
-                            ),
-                            'link_custom_size' => array(
-                                'type'              => 'text',
-                                'label'             => __('Link Font Size', 'fl-builder'),
-                                'default'           => '20',
-                                'maxlength'         => '3',
-                                'size'              => '4',
-                                'description'       => 'px'
-                            ),
-
-                            'link_color'        => array( 
-                                'type'       => 'color',
-                                'label'         => __('Link Color', 'bsf-cards'),
-                                'default'    => '',
-                                'show_reset' => true,
-                            ),
-
-                            'link_color'        => array( 
-                                'type'       => 'color',
-                                'label'      => __('Link Color', 'bsf-cards'),
-                                'default'    => '',
-                                'show_reset' => true,
-                                'preview'       => array(
-                                    'type' => 'css',
-                                    'property' => 'color',
-                                    'selector' => '.bb_boot_card_link',
-                                )
-                            ),
-
-                            'link_hover_color'        => array( 
-                                'type'       => 'color',
-                                'label'      => __('Link Hover Color', 'bsf-cards'),
-                                'default'    => '',
-                                'show_reset' => true,
-                                'preview'       => array(
-                                    'type' => 'css',
-                                    'property' => 'color',
-                                    'selector' => '.bb_boot_card_link',
-                                )
-                            ),
-
-                            'link_margin_top' => array(
-                                'type'              => 'text',
-                                'label'             => __('Margin Top', 'bsf-cards'),
-                                'placeholder'       => '0',
-                                'maxlength'         => '3',
-                                'size'              => '4',
-                                'description'       => 'px',
-                                'default'    => '',
-                                'preview'       => array(
-                                    'type' => 'css',
-                                    'property' => 'margin-top',
-                                    'selector' => '.bb_boot_card_link',
-                                    'unit'       => 'px'
-                                )
-
-                            ),
-                            'link_margin_bottom' => array(
-                                'type'              => 'text',
-                                'label'             => __('Margin Bottom', 'bsf-cards'),
-                                'placeholder'       => '0',
-                                'maxlength'         => '3',
-                                'size'              => '4',
-                                'description'       => 'px',
-                                'default'    => '',
-                                'preview'       => array(
-                                    'type' => 'css',
-                                    'property' => 'margin-bottom',
-                                    'selector' => '.bb_boot_card_link',
-                                    'unit'       => 'px'
-                                )
-                            ),
                         )
                     ),
 
