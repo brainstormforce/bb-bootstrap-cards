@@ -13,10 +13,26 @@ define( 'BSF_MODULE_CARDS_URL', plugins_url( '/', __FILE__ ) );
 /**
  * Custom modules
  */
-function bsf_load_bootstrap_card() {
-	if ( class_exists( 'FLBuilder' ) ) {
-	    require_once 'bsf-bootstrap-cards/bsf-bootstrap-cards.php';
-	}
-} 
-add_action( 'init', 'bsf_load_bootstrap_card', 9999 );
 
+if ( !class_exists( 'BSFBBBootstarpCards' ) ) {
+
+    /**
+    * 
+    */
+    class BSFBBBootstarpCards
+    {
+        
+        function __construct() {
+
+            add_action( 'init', array( $this, 'load_bootstrap_card' ) );
+        }
+
+        function load_bootstrap_card() {
+            if ( class_exists( 'FLBuilder' ) ) {
+                require_once 'bsf-bootstrap-cards/bsf-bootstrap-cards.php';
+            }
+        } 
+    }
+
+    new BSFBBBootstarpCards();
+}
