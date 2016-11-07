@@ -34,37 +34,15 @@ class BSFModuleCards extends FLBuilderModule {
         if(!isset($settings->photo_src)) {
             $settings->photo_src = '';
         }
-
         // Cache the attachment data.
         $data = FLBuilderPhoto::get_attachment_data($settings->photo);
 
         if($data) {
             $settings->data = $data;
         }
-
         return $settings;
     }
-
-    /**
-     * @method get_alt
-     */
-    public function get_alt()
-    {
-        $photo = $this->get_data();
-
-        if(!empty($photo->alt)) {
-            return htmlspecialchars($photo->alt);
-        }
-        else if(!empty($photo->description)) {
-            return htmlspecialchars($photo->description);
-        }
-        else if(!empty($photo->caption)) {
-            return htmlspecialchars($photo->caption);
-        }
-        else if(!empty($photo->title)) {
-            return htmlspecialchars($photo->title);
-        }
-    }
+  
 
 }
 

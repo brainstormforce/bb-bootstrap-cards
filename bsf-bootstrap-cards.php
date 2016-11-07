@@ -16,14 +16,10 @@ define( 'BSF_MODULE_CARDS_URL', plugins_url( '/', __FILE__ ) );
 
 if ( !class_exists( 'BSFBBBootstarpCards' ) ) {
 
-    /**
-    * 
-    */
     class BSFBBBootstarpCards
     {
         
         function __construct() {
-
             add_action( 'init', array( $this, 'load_bootstrap_card' ) );
         }
 
