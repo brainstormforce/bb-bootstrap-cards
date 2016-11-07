@@ -314,7 +314,7 @@ FLBuilder::register_module('BSFModuleCards',
                     )
                 ),
 
-                'btn_typography'       => array( // Section
+                'btn-link'       => array( // Section
                     'title'         => __('Button', 'bsf-cards'),
                     'fields'        => array(
 
@@ -347,7 +347,7 @@ FLBuilder::register_module('BSFModuleCards',
                     )
                 ),
 
-                'btn-colors'     => array( // Section
+                'btn_typography'     => array( // Section
                     'title'         => __('Button Typography', 'bsf-cards'),
                     'fields'        => array(
                         'btn_font_family'       => array(

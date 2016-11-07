@@ -5,14 +5,19 @@
 <?php endif; ?>
 
 /* BCard Heading Typography */
+<?php if( !empty($settings->font) && $settings->font['family'] != 'Default' ) : ?>
+.fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_boot_card_title,
+.fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_boot_card_title *{
+	<?php FLBuilderFonts::font_css( $settings->font ); ?>
+}
+<?php endif; ?>
+
 .fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_boot_card_title,
 .fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_boot_card_title * {
 <?php if(!empty($settings->color)) : ?>
 	color: #<?php echo $settings->color; ?>;
 <?php endif; ?>
-<?php if( !empty($settings->font) && $settings->font['family'] != 'Default' ) : ?>
-	<?php ( $settings->font ); ?>
-<?php endif; ?>
+
 <?php if($settings->title_size == 'custom') : ?>
 	font-size: <?php echo $settings->title_custom_size; ?>px;
 <?php endif; ?>
@@ -27,13 +32,18 @@ display:block;
 }
 
 /* BCard's Link color */
+
+<?php if( !empty($settings->link_font_family) && $settings->font['family'] != 'Default' ) : ?>
+.fl-node-<?php echo $id; ?> .bb_boot_card_link, .fl-node-<?php echo $id; ?> .bb_boot_card_link:visited{
+	<?php FLBuilderFonts::font_css( $settings->link_font_family ); ?>
+}
+<?php endif; ?>
+
 .fl-node-<?php echo $id; ?> .bb_boot_card_link, .fl-node-<?php echo $id; ?> .bb_boot_card_link:visited {
 <?php if(!empty($settings->link_color)) : ?>
 	color: #<?php echo $settings->link_color; ?>;
 <?php endif; ?>
-<?php if( !empty($settings->link_font_family) && $settings->link_font_family['family'] != 'Default' ) : ?>
-	<?php ( $settings->link_font_family ); ?>
-<?php endif; ?>
+
 <?php if($settings->link_font_size == 'custom') : ?>
 	font-size: <?php echo $settings->link_custom_size; ?>px;
 <?php endif; ?>
@@ -58,19 +68,23 @@ display:block;
 
 
 /* BCard's Description Typography */
+
+<?php if( !empty($settings->desc_font_family) && $settings->font['family'] != 'Default' ) : ?>
+.fl-node-<?php echo $id; ?> .bb_boot_card_text{
+	<?php FLBuilderFonts::font_css( $settings->desc_font_family ); ?>
+}
+<?php endif; ?>
+
 .fl-node-<?php echo $id; ?> .bb_boot_card_text,
 .fl-node-<?php echo $id; ?> .bb_boot_card_text * {
 <?php if(!empty($settings->desc_color)) : ?>
 	color: <?php echo $settings->desc_color; ?>;
 <?php endif; ?>
-<?php if( !empty($settings->desc_font_family) && $settings->desc_font_family['family'] != 'Default' ) : ?>
-	<?php ( $settings->desc_font_family ); ?>
-<?php endif; ?>
+
 <?php if($settings->desc_font_size == 'custom') : ?>
 	font-size: <?php echo $settings->desc_custom_size; ?>px;
 <?php endif; ?>
 }
-
 
 .fl-node-<?php echo $id; ?> .bb_boot_card_text {
 margin-top: <?php echo ( trim($settings->desc_margin_top) != '' ) ? $settings->desc_margin_top : '0'; ?>px;
@@ -82,12 +96,14 @@ display:block;
 
 
 /* BCard's Button Link */
+<?php if( !empty($settings->btn_font_family) && $settings->font['family'] != 'Default' ) : ?>
+.fl-node-<?php echo $id; ?> .bb_boot_card_link_button .bb_boot_button{
+	<?php FLBuilderFonts::font_css( $settings->btn_font_family ); ?>
+}
+<?php endif; ?>
 .fl-node-<?php echo $id; ?> .bb_boot_card_link_button .bb_boot_button {
 <?php if(!empty($settings->btn_text_color)) : ?>
 	color: #<?php echo $settings->btn_text_color; ?>;
-<?php endif; ?>
-<?php if( !empty($settings->btn_font_family) && $settings->btn_font_family['family'] != 'Default' ) : ?>
-	<?php ( $settings->btn_font_family ); ?>
 <?php endif; ?>
 <?php if($settings->btn_font_size == 'custom') : ?>
 	font-size: <?php echo $settings->btn_custom_size; ?>px;

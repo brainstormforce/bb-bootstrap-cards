@@ -54,6 +54,7 @@
 
 .bb_boot_card_link_button {
     background-color: #ffdd00;
+        display: inline-block;
 }
 
 .bb_boot_card_link_button .bb_boot_button{
