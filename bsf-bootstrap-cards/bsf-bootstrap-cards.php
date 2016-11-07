@@ -19,31 +19,9 @@ class BSFModuleCards extends FLBuilderModule {
             'category'		=> __('Advanced Modules', 'bsf-cards'),
             'dir'           => BSF_MODULE_CARDS_DIR . 'bsf-bootstrap-cards/',
             'url'           => BSF_MODULE_CARDS_URL . 'bsf-bootstrap-cards/',
-            'editor_export' => true, // Defaults to true and can be omitted.
-            'enabled'       => true, // Defaults to true and can be omitted.
             'partial_refresh'   => true
         ));
         
-    }
-
-
-    /**
-     * @method enqueue_scripts
-     */
-    public function enqueue_scripts()
-    {
-        $override_lightbox = apply_filters( 'fl_builder_override_lightbox', false );
-        
-        if($this->settings && $this->settings->link_type == 'lightbox') {
-            if ( ! $override_lightbox ) {
-                $this->add_js('jquery-magnificpopup');
-                $this->add_css('jquery-magnificpopup');
-            }
-            else {
-                wp_dequeue_script('jquery-magnificpopup');
-                wp_dequeue_style('jquery-magnificpopup');
-            }
-        }
     }
 
     /**
@@ -64,219 +42,7 @@ class BSFModuleCards extends FLBuilderModule {
             $settings->data = $data;
         }
 
-        // Save a crop if necessary.
-        $this->crop();
-
         return $settings;
-    }
-
-    /**
-     * @method delete
-     */
-    public function delete()
-    {
-        $cropped_path = $this->_get_cropped_path();
-
-        if(file_exists($cropped_path['path'])) {
-            unlink($cropped_path['path']);
-        }
-    }
-
-    /**
-     * @method crop
-     */
-    public function crop()
-    {
-        // Delete an existing crop if it exists.
-        $this->delete();
-
-        // Do a crop.
-        if(!empty($this->settings->crop)) {
-
-            $editor = $this->_get_editor();
-
-            if(!$editor || is_wp_error($editor)) {
-                return false;
-            }
-
-            $cropped_path = $this->_get_cropped_path();
-            $size         = $editor->get_size();
-            $new_width    = $size['width'];
-            $new_height   = $size['height'];
-
-            // Get the crop ratios.
-            if($this->settings->crop == 'landscape') {
-                $ratio_1 = 1.43;
-                $ratio_2 = .7;
-            }
-            elseif($this->settings->crop == 'panorama') {
-                $ratio_1 = 2;
-                $ratio_2 = .5;
-            }
-            elseif($this->settings->crop == 'portrait') {
-                $ratio_1 = .7;
-                $ratio_2 = 1.43;
-            }
-            elseif($this->settings->crop == 'square') {
-                $ratio_1 = 1;
-                $ratio_2 = 1;
-            }
-            elseif($this->settings->crop == 'circle') {
-                $ratio_1 = 1;
-                $ratio_2 = 1;
-            }
-
-            // Get the new width or height.
-            if($size['width'] / $size['height'] < $ratio_1) {
-                $new_height = $size['width'] * $ratio_2;
-            }
-            else {
-                $new_width = $size['height'] * $ratio_1;
-            }
-
-            // Make sure we have enough memory to crop.
-            @ini_set('memory_limit', '300M');
-
-            // Crop the photo.
-            $editor->resize($new_width, $new_height, true);
-
-            // Save the photo.
-            $editor->save($cropped_path['path']);
-
-            // Return the new url.
-            return $cropped_path['url'];
-        }
-
-        return false;
-    }
-
-    /**
-     * @method get_data
-     */
-    public function get_data()
-    {
-        if(!$this->data) {
-
-            // Photo source is set to "url".
-            if($this->settings->photo_source == 'url') {
-                $this->data = new stdClass();
-                $this->data->alt = $this->settings->caption;
-                $this->data->caption = $this->settings->caption;
-                $this->data->link = $this->settings->photo_url;
-                $this->data->url = $this->settings->photo_url;
-                $this->settings->photo_src = $this->settings->photo_url;
-            }
-
-            // Photo source is set to "library".
-            else if(is_object($this->settings->photo)) {
-                $this->data = $this->settings->photo;
-            }
-            else {
-                $this->data = FLBuilderPhoto::get_attachment_data($this->settings->photo);
-            }
-
-            // Data object is empty, use the settings cache.
-            if(!$this->data && isset($this->settings->data)) {
-                $this->data = $this->settings->data;
-            }
-        }
-
-        return $this->data;
-    }
-
-    /**
-     * @method get_classes
-     */
-    public function get_classes()
-    {
-        $classes = array( 'fl-photo-img' );
-        
-        if ( $this->settings->photo_source == 'library' && ! empty( $this->settings->photo ) ) {
-            
-            $data = self::get_data();
-            
-            if ( is_object( $data ) ) {
-                
-                $classes[] = 'wp-image-' . $data->id;
-
-                if ( isset( $data->sizes ) ) {
-
-                    foreach ( $data->sizes as $key => $size ) {
-                        
-                        if ( $size->url == $this->settings->photo_src ) {
-                            $classes[] = 'size-' . $key;
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-        
-        return implode( ' ', $classes );
-    }
-
-    /**
-     * @method get_src
-     */
-    public function get_src()
-    {
-        $src = $this->_get_uncropped_url();
-
-        // Return a cropped photo.
-        if($this->_has_source() && !empty($this->settings->crop)) {
-
-            $cropped_path = $this->_get_cropped_path();
-
-            // See if the cropped photo already exists.
-            if(file_exists($cropped_path['path'])) {
-                $src = $cropped_path['url'];
-            }
-            // It doesn't, check if this is a demo image.
-            elseif(stristr($src, FL_BUILDER_DEMO_URL) && !stristr(FL_BUILDER_DEMO_URL, $_SERVER['HTTP_HOST'])) {
-                $src = $this->_get_cropped_demo_url();
-            }
-            // It doesn't, check if this is a OLD demo image.
-            elseif(stristr($src, FL_BUILDER_OLD_DEMO_URL)) {
-                $src = $this->_get_cropped_demo_url();
-            }
-            // A cropped photo doesn't exist, try to create one.
-            else {
-
-                $url = $this->crop();
-
-                if($url) {
-                    $src = $url;
-                }
-            }
-        }
-
-        return $src;
-    }
-
-    /**
-     * @method get_link
-     */
-    public function get_link()
-    {
-        $photo = $this->get_data();
-
-        if($this->settings->link_type == 'url') {
-            $link = $this->settings->link_url;
-        }
-        else if($this->settings->link_type == 'lightbox') {
-            $link = $photo->url;
-        }
-        else if($this->settings->link_type == 'file') {
-            $link = $photo->url;
-        }
-        else if($this->settings->link_type == 'page') {
-            $link = $photo->link;
-        }
-        else {
-            $link = '';
-        }
-
-        return $link;
     }
 
     /**
@@ -298,125 +64,6 @@ class BSFModuleCards extends FLBuilderModule {
         else if(!empty($photo->title)) {
             return htmlspecialchars($photo->title);
         }
-    }
-
-    /**
-     * @method get_attributes
-     */
-    public function get_attributes()
-    {
-        $attrs = '';
-        
-        if ( isset( $this->settings->attributes ) ) {
-            foreach ( $this->settings->attributes as $key => $val ) {
-                $attrs .= $key . '="' . $val . '" ';
-            }
-        }
-        
-        return $attrs;
-    }
-
-    /**
-     * @method _has_source
-     * @protected
-     */
-    protected function _has_source()
-    {
-        if($this->settings->photo_source == 'url' && !empty($this->settings->photo_url)) {
-            return true;
-        }
-        else if($this->settings->photo_source == 'library' && !empty($this->settings->photo_src)) {
-            return true;
-        }
-
-        return false;
-    }
-
-    /**
-     * @method _get_editor
-     * @protected
-     */
-    protected function _get_editor()
-    {
-        if($this->_has_source() && $this->_editor === null) {
-
-            $url_path  = $this->_get_uncropped_url();
-            $file_path = str_ireplace(home_url(), ABSPATH, $url_path);
-
-            if(file_exists($file_path)) {
-                $this->_editor = wp_get_image_editor($file_path);
-            }
-            else {
-                $this->_editor = wp_get_image_editor($url_path);
-            }
-        }
-
-        return $this->_editor;
-    }
-
-    /**
-     * @method _get_cropped_path
-     * @protected
-     */
-    protected function _get_cropped_path()
-    {
-        $crop        = empty($this->settings->crop) ? 'none' : $this->settings->crop;
-        $url         = $this->_get_uncropped_url();
-        $cache_dir   = FLBuilderModel::get_cache_dir();
-
-        if(empty($url)) {
-            $filename    = uniqid(); // Return a file that doesn't exist.
-        }
-        else {
-            
-            if ( stristr( $url, '?' ) ) {
-                $parts = explode( '?', $url );
-                $url   = $parts[0];
-            }
-            
-            $pathinfo    = pathinfo($url);
-            $dir         = $pathinfo['dirname'];
-            $ext         = $pathinfo['extension'];
-            $name        = wp_basename($url, ".$ext");
-            $new_ext     = strtolower($ext);
-            $filename    = "{$name}-{$crop}.{$new_ext}";
-        }
-
-        return array(
-            'filename' => $filename,
-            'path'     => $cache_dir['path'] . $filename,
-            'url'      => $cache_dir['url'] . $filename
-        );
-    }
-
-    /**
-     * @method _get_uncropped_url
-     * @protected
-     */
-    protected function _get_uncropped_url()
-    {
-        if($this->settings->photo_source == 'url') {
-            $url = $this->settings->photo_url;
-        }
-        else if(!empty($this->settings->photo_src)) {
-            $url = $this->settings->photo_src;
-        }
-        else {
-            $url = FL_BUILDER_URL . 'img/pixel.png';
-        }
-
-        return $url;
-    }
-
-    /**
-     * @method _get_cropped_demo_url
-     * @protected
-     */
-    protected function _get_cropped_demo_url()
-    {
-        $info = $this->_get_cropped_path();
-
-        return FL_BUILDER_DEMO_CACHE_URL . $info['filename'];
     }
 
 }
@@ -498,31 +145,22 @@ FLBuilder::register_module('BSFModuleCards',
                 'card_image'       => array( // Section
                     'title'         => __('Select Card Image', 'bsf-cards'), // Section Title
                     'fields'        => array( // Section Fields
-                        
-                        // 'photo_field'    => array(
-                        //     'type'          => 'photo',
-                        //     'label'         => __('Photo Field', 'bsf-cards'),
-                        //     'show_remove'   => true
-                        // ),
-
-
                         'photo'         => array(
                             'type'          => 'photo',
                             'label'         => __('Photo', 'bsf-cards'),
                             'show_remove'   => true
                         ),
                         
-                        'align'         => array(
-                            'type'          => 'select',
-                            'label'         => __('Alignment', 'bsf-cards'),
-                            'default'       => 'center',
-                            'options'       => array(
-                                'left'          => __('Left', 'bsf-cards'),
-                                'center'        => __('Center', 'bsf-cards'),
-                                'right'         => __('Right', 'bsf-cards')
-                            )
-                        )
-
+                        // 'align'         => array(
+                        //     'type'          => 'select',
+                        //     'label'         => __('Alignment', 'bsf-cards'),
+                        //     'default'       => 'center',
+                        //     'options'       => array(
+                        //         'left'          => __('Left', 'bsf-cards'),
+                        //         'center'        => __('Center', 'bsf-cards'),
+                        //         'right'         => __('Right', 'bsf-cards')
+                        //     )
+                        // )
 
                     )     
                 )
@@ -551,7 +189,7 @@ FLBuilder::register_module('BSFModuleCards',
                                 'sections'      => array('link', 'link_typography')
                             ),
                             'button'        => array(
-                                'sections'      => array('btn-general', 'btn-link', 'btn-icon', 'btn-colors', 'btn-style', 'btn-structure', 'btn_typography')
+                                'sections'      => array('btn-link', 'btn_typography')
                             ),
 
                             )
@@ -698,7 +336,7 @@ FLBuilder::register_module('BSFModuleCards',
                     )
                 ),
 
-                'btn-link'       => array( // Section
+                'btn_typography'       => array( // Section
                     'title'         => __('Button', 'bsf-cards'),
                     'fields'        => array(
 
@@ -732,8 +370,59 @@ FLBuilder::register_module('BSFModuleCards',
                 ),
 
                 'btn-colors'     => array( // Section
-                    'title'         => __('Colors & Border', 'bsf-cards'),
+                    'title'         => __('Button Typography', 'bsf-cards'),
                     'fields'        => array(
+                        'btn_font_family'       => array(
+                            'type'          => 'font',
+                            'label'         => __('Font Family', 'bsf-cards'),
+                            'default'       => array(
+                                'family'        => 'Default',
+                                'weight'        => 'Default'
+                            ),
+                            'preview'   => array(
+                                'type'      => 'font',
+                                'selector'  => '.bb_boot_card_link_button'
+                            ),
+                        ),
+                        'btn_font_size'    => array(
+                            'type'          => 'select',
+                            'label'         => __('Button Font Size', 'fl-builder'),
+                            'default'       => 'default',
+                            'options'       => array(
+                                'default'       =>  __('Default', 'fl-builder'),
+                                'custom'        =>  __('Custom', 'fl-builder')
+                            ),
+                            'toggle'        => array(
+                                'custom'        => array(
+                                    'fields'        => array('btn_custom_size', 'btn_line_height')
+                                )
+                            )
+                        ),
+                        'btn_custom_size' => array(
+                            'type'              => 'text',
+                            'label'             => __('Button Font Size', 'fl-builder'),
+                            'default'           => '14',
+                            'maxlength'         => '3',
+                            'size'              => '4',
+                            'description'       => 'px'
+                        ),
+
+                        'btn_line_height' => array(
+                            'type'          => 'text',
+                            'label'         => __('Button Line Height', 'fl-builder'),
+                            'description'   => 'px',
+                            'default'           => '16',
+                            'maxlength'         => '3',
+                            'size'              => '4',
+                            'description'       => 'px',
+                            'preview'       => array(
+                                'type'          => 'css',
+                                'selector'      => '.bb_boot_card_link_button',
+                                'property'      => 'line-height',
+                                'unit'          => 'px'
+                            )
+                        ),
+
                         'btn_text_color'        => array( 
                             'type'       => 'color',
                             'label'      => __('Text Color', 'bsf-cards'),
@@ -755,15 +444,6 @@ FLBuilder::register_module('BSFModuleCards',
                             'default'    => '#ffdd00',
                             'show_reset' => true,
                         ),
-                        // 'btn_bg_color_opc'    => array( 
-                        //     'type'        => 'text',
-                        //     'label'       => __('Opacity', 'bsf-cards'),
-                        //     'default'     => '100',
-                        //     'description' => '%',
-                        //     'maxlength'   => '3',
-                        //     'size'        => '5',
-                        // ),
-
                         'btn_bg_hover_color'        => array( 
                             'type'       => 'color',
                             'label'         => __('Background Hover Color', 'bsf-cards'),
@@ -773,15 +453,6 @@ FLBuilder::register_module('BSFModuleCards',
                                 'type'          => 'none'
                             )
                         ),
-                        // 'btn_bg_hover_color_opc'    => array( 
-                        //     'type'        => 'text',
-                        //     'label'       => __('Opacity', 'bsf-cards'),
-                        //     'default'     => '100',
-                        //     'description' => '%',
-                        //     'maxlength'   => '3',
-                        //     'size'        => '5',
-                        // ),
-
                         'btn_border_radius' => array(
                             'type'          => 'text',
                             'label'         => __('Round Corners', 'bsf-cards'),
@@ -789,7 +460,6 @@ FLBuilder::register_module('BSFModuleCards',
                             'size'          => '4',
                             'description'   => 'px'
                         ),
-                        
                     )
                 ),
 
