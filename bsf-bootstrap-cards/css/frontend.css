@@ -52,7 +52,6 @@
     border-radius: 0 !important;
 }
 
-
 .bb_boot_card_link_button {
     background-color: #ffdd00;
 }
@@ -78,6 +77,6 @@
     transition: all 200ms linear;
 }
 
-.bb_boot_card_link_button{
-    text-shadow: none;
+.bb_boot_card_link{
+    text-decoration: none;
 }

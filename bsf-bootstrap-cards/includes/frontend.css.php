@@ -108,6 +108,7 @@ display:block;
 	background-color: #<?php echo $settings->btn_bg_color; ?>;
 <?php endif; ?>	
 	padding: 8px 16px;
+	text-decoration: none;
 <?php if(!empty($settings->btn_border_radius)) : ?>	
 	border-radius: <?php echo $settings->btn_border_radius; ?>px;
 	-moz-border-radius: <?php echo $settings->btn_border_radius; ?>px;
