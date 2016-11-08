@@ -32,6 +32,8 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
 }
 
 
@@ -76,8 +78,4 @@
     -ms-transition: all 200ms linear;
     -o-transition: all 200ms linear;
     transition: all 200ms linear;
-}
-
-.bb_boot_card_link{
-    text-decoration: none;
 }
