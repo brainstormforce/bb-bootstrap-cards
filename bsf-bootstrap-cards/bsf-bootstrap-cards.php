@@ -214,7 +214,7 @@ FLBuilder::register_module('BSFModuleCards',
                 'link_typography'    =>  array(
                     'title' => __( 'Link Typography', 'bsf-cards' ),
                     'fields'    => array(
-                        'link_font_family'       => array(
+                        'link_text_font_family'       => array(
                             'type'          => 'font',
                             'label'         => __('Font Family', 'bsf-cards'),
                             'default'       => array(
@@ -223,7 +223,7 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'preview'   => array(
                                 'type'      => 'font',
-                                'selector'  => '.bb_boot_card_link'
+                                'selector'  => '.bb_boot_card_block .bb_boot_card_link'
                             ),
                         ),
 
@@ -265,7 +265,7 @@ FLBuilder::register_module('BSFModuleCards',
                             'preview'       => array(
                                 'type' => 'css',
                                 'property' => 'color',
-                                'selector' => '.bb_boot_card_link',
+                                'selector' => '.bb_boot_card_block .bb_boot_card_link',
                             )
                         ),
 
@@ -292,7 +292,7 @@ FLBuilder::register_module('BSFModuleCards',
                             'preview'       => array(
                                 'type' => 'css',
                                 'property' => 'margin-top',
-                                'selector' => '.bb_boot_card_link',
+                                'selector' => '.bb_boot_card_block .bb_boot_card_link',
                                 'unit'       => 'px'
                             )
 
@@ -360,7 +360,7 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'preview'   => array(
                                 'type'      => 'font',
-                                'selector'  => '.bb_boot_card_link_button'
+                                'selector'  => '.bb_boot_card_block .bb_boot_card_link_button .bb_boot_button'
                             ),
                         ),
                         'btn_font_size'    => array(
@@ -396,7 +396,7 @@ FLBuilder::register_module('BSFModuleCards',
                             'description'       => 'px',
                             'preview'       => array(
                                 'type'          => 'css',
-                                'selector'      => '.bb_boot_card_link_button',
+                                'selector'      => '.bb_boot_card_block .bb_boot_card_link_button',
                                 'property'      => 'line-height',
                                 'unit'          => 'px'
                             )
@@ -559,7 +559,7 @@ FLBuilder::register_module('BSFModuleCards',
                                 ),
                                 'preview'         => array(
                                     'type'            => 'font',
-                                    'selector'        => '.bb_boot_card_text, .bb_boot_card_text'
+                                    'selector'        => '.bb_boot_card_block .bb_boot_card_text'
                                 )
                             ),
 
@@ -594,7 +594,7 @@ FLBuilder::register_module('BSFModuleCards',
                                 'preview'       => array(
                                     'type' => 'css',
                                     'property' => 'color',
-                                    'selector' => '.bb_boot_card_text, .bb_boot_card_text *'
+                                    'selector' => '.bb_boot_card_block .bb_boot_card_text'
                                 )
                             ),
                             'desc_margin_top' => array(
@@ -608,7 +608,7 @@ FLBuilder::register_module('BSFModuleCards',
                                 'preview'       => array(
                                     'type' => 'css',
                                     'property' => 'margin-top',
-                                    'selector' => '.bb_boot_card_text',
+                                    'selector' => '.bb_boot_card_block .bb_boot_card_text',
                                     'unit'       => 'px'
                                 )
 
@@ -624,7 +624,7 @@ FLBuilder::register_module('BSFModuleCards',
                                 'preview'       => array(
                                     'type' => 'css',
                                     'property' => 'margin-bottom',
-                                    'selector' => '.bb_boot_card_text',
+                                    'selector' => '.bb_boot_card_block .bb_boot_card_text',
                                     'unit'       => 'px'
                                 )
                             ),
