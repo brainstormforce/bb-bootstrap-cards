@@ -1,6 +1,8 @@
+/* Background Property */
 <?php if(!empty($settings->bg_color)) : ?>
 .fl-node-<?php echo $id; ?> .bb_boot_card_container { 
 	background-color: #<?php echo $settings->bg_color; ?>;
+	background: rgba(<?php echo implode(',', FLBuilderColor::hex_to_rgb($settings->bg_color)) ?>, <?php echo ( $settings->bg_color_opc != '' ) ? $settings->bg_color_opc/100 : 1; ?>);
 }
 <?php endif; ?>
 

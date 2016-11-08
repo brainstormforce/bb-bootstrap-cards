@@ -104,14 +104,15 @@ FLBuilder::register_module('BSFModuleCards',
                             'default'    => '',
                             'show_reset' => true,
                         ),
-                        // 'bg_color_opc' => array( 
-                        //     'type'        => 'text',
-                        //     'label'       => __('Opacity', 'bsf-cards'),
-                        //     'default'     => '100',
-                        //     'description' => '%',
-                        //     'maxlength'   => '3',
-                        //     'size'        => '5',
-                        // )
+
+                        'bg_color_opc' => array( 
+                            'type'        => 'text',
+                            'label'       => __('Opacity', 'bsf-cards'),
+                            'default'     => '100',
+                            'description' => '%',
+                            'maxlength'   => '3',
+                            'size'        => '5',
+                        )
                     )
                 )
             )
