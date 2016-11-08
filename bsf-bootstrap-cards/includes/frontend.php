@@ -1,7 +1,7 @@
 <div class="bb_boot_card_container">
 
 	<!--Card image-->
-	<div class="bb_boot_card_image fl-photo<?php if ( ! empty( $settings->crop ) ) echo ' fl-photo-crop-' . $settings->crop ; ?>">
+	<div class="bb_boot_card_image">
 	    <?php if( $settings->photo != '' && isset( $settings->photo_src) ){ ?> 
 		   <img src="<?php echo $settings->photo_src; ?>"/>
 		<?php } ?>
