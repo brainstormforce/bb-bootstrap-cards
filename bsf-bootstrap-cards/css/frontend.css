@@ -81,5 +81,6 @@
 }
 
 .bb_boot_card_block .bb_boot_card_text {
-    display: inline-block;  
+    display: inline-block;
+    width: 100%; 
 }
