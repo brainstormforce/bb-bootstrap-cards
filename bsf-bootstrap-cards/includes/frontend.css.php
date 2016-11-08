@@ -29,7 +29,6 @@
 margin-top: <?php echo ( trim($settings->title_margin_top) != '' ) ? $settings->title_margin_top : '0'; ?>px;
 margin-bottom: <?php echo ( trim($settings->title_margin_bottom) != '' ) ? $settings->title_margin_bottom : '0'; ?>px;
 <?php if ( $settings->title_margin_top != '' || $settings->title_margin_bottom != '' ) { ?>
-display:block;
 <?php } ?>
 }
 
@@ -92,7 +91,6 @@ display:block;
 margin-top: <?php echo ( trim($settings->desc_margin_top) != '' ) ? $settings->desc_margin_top : '0'; ?>px;
 margin-bottom: <?php echo ( trim($settings->desc_margin_bottom) != '' ) ? $settings->desc_margin_bottom : '0'; ?>px;
 <?php if ( $settings->desc_margin_top != '' || $settings->desc_margin_bottom != '' ) { ?>
-display:block;
 <?php } ?>
 }
 
