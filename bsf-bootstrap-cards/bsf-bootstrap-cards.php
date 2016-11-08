@@ -464,7 +464,7 @@ FLBuilder::register_module('BSFModuleCards',
                                     'h6'            =>  'h6'
                                 )
                             ),
-                            'font'          => array(
+                            'heading_font'          => array(
                                 'type'          => 'font',
                                 'default'       => array(
                                     'family'        => 'Default',

@@ -7,10 +7,10 @@
 <?php endif; ?>
 
 /* BCard Heading Typography */
-<?php if( !empty($settings->font) && $settings->font['family'] != 'Default' ) : ?>
+<?php if( !empty($settings->heading_font) && $settings->font['family'] != 'Default' ) : ?>
 .fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_boot_card_title,
 .fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_boot_card_title *{
-	<?php FLBuilderFonts::font_css( $settings->font ); ?>
+	<?php FLBuilderFonts::font_css( $settings->heading_font ); ?>
 }
 <?php endif; ?>
 
