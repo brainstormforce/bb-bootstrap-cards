@@ -108,7 +108,7 @@ FLBuilder::register_module('BSFModuleCards',
                         'bg_color_opc' => array( 
                             'type'        => 'text',
                             'label'       => __('Opacity', 'bsf-cards'),
-                            'default'     => '100',
+                            'default'     => '',
                             'description' => '%',
                             'maxlength'   => '3',
                             'size'        => '5',
