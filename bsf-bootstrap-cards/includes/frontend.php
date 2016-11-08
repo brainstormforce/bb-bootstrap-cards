@@ -1,4 +1,4 @@
-<div class="bb_boot_card_container">
+<div class="bb_boot_card_container bb-content-align-<?php echo $settings->alignment; ?>">
 
 	<!--Card image-->
 	<div class="bb_boot_card_image">
@@ -9,7 +9,7 @@
 	<!--/.Card image-->
 
 	<!--Card content-->
-	<div class="bb_boot_card_block bb-content-align-<?php echo $settings->alignment; ?>">
+	<div class="bb_boot_card_block">
 	    
 	    <!--Title-->
 	    <<?php echo $settings->tag; ?> class="bb_boot_card_title"><?php echo $settings->card_title; ?></<?php echo $settings->tag; ?>>

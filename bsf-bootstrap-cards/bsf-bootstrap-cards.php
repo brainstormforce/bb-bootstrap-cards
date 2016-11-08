@@ -229,11 +229,11 @@ FLBuilder::register_module('BSFModuleCards',
 
                         'link_font_size'    => array(
                             'type'          => 'select',
-                            'label'         => __('Link Font Size', 'fl-builder'),
+                            'label'         => __('Link Font Size', 'bsf-cards'),
                             'default'       => 'default',
                             'options'       => array(
-                                'default'       =>  __('Default', 'fl-builder'),
-                                'custom'        =>  __('Custom', 'fl-builder')
+                                'default'       =>  __('Default', 'bsf-cards'),
+                                'custom'        =>  __('Custom', 'bsf-cards')
                             ),
                             'toggle'        => array(
                                 'custom'        => array(
@@ -243,11 +243,56 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'link_custom_size' => array(
                             'type'              => 'text',
-                            'label'             => __('Link Font Size', 'fl-builder'),
+                            'label'             => __('Font Size', 'bsf-cards'),
                             'default'           => '20',
                             'maxlength'         => '3',
                             'size'              => '4',
                             'description'       => 'px'
+                        ),
+
+                        'link_line_height'     => array(
+                            'type'          => 'select',
+                            'label'         => __('Line Height', 'bsf-cards'),
+                            'default'       => 'default',
+                            'options'       => array(
+                                'default'       =>  __('Default', 'bsf-cards'),
+                                'custom'        =>  __('Custom', 'bsf-cards')
+                            ),
+                            'toggle'        => array(
+                                'custom'        => array(
+                                    'fields'        => array('link_custom_line_height')
+                                )
+                            )
+                        ),
+                        'link_custom_line_height' => array(
+                            'type'          => 'text',
+                            'label'         => __('Custom Line Height', 'bsf-cards'),
+                            'default'       => '24',
+                            'maxlength'     => '4',
+                            'size'          => '4',
+                            'description'   => 'px'
+                        ),
+                        'link_letter_spacing'     => array(
+                            'type'          => 'select',
+                            'label'         => __('Letter Spacing', 'bsf-cards'),
+                            'default'       => 'default',
+                            'options'       => array(
+                                'default'       =>  __('Default', 'bsf-cards'),
+                                'custom'        =>  __('Custom', 'bsf-cards')
+                            ),
+                            'toggle'        => array(
+                                'custom'        => array(
+                                    'fields'        => array('link_custom_letter_spacing')
+                                )
+                            )
+                        ),
+                        'link_custom_letter_spacing' => array(
+                            'type'          => 'text',
+                            'label'         => __('Custom Letter Spacing', 'bsf-cards'),
+                            'default'       => '0',
+                            'maxlength'     => '3',
+                            'size'          => '4',
+                            'description'   => 'px'
                         ),
 
                         'link_color'        => array( 
@@ -365,11 +410,11 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'btn_font_size'    => array(
                             'type'          => 'select',
-                            'label'         => __('Button Font Size', 'fl-builder'),
+                            'label'         => __('Font Size', 'bsf-cards'),
                             'default'       => 'default',
                             'options'       => array(
-                                'default'       =>  __('Default', 'fl-builder'),
-                                'custom'        =>  __('Custom', 'fl-builder')
+                                'default'       =>  __('Default', 'bsf-cards'),
+                                'custom'        =>  __('Custom', 'bsf-cards')
                             ),
                             'toggle'        => array(
                                 'custom'        => array(
@@ -379,7 +424,7 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'btn_custom_size' => array(
                             'type'              => 'text',
-                            'label'             => __('Button Font Size', 'fl-builder'),
+                            'label'             => __('Font Size', 'bsf-cards'),
                             'default'           => '14',
                             'maxlength'         => '3',
                             'size'              => '4',
@@ -388,7 +433,7 @@ FLBuilder::register_module('BSFModuleCards',
 
                         'btn_line_height' => array(
                             'type'          => 'text',
-                            'label'         => __('Button Line Height', 'fl-builder'),
+                            'label'         => __('Line Height', 'bsf-cards'),
                             'description'   => 'px',
                             'default'           => '16',
                             'maxlength'         => '3',
@@ -479,11 +524,11 @@ FLBuilder::register_module('BSFModuleCards',
 
                             'title_size'    => array(
                                 'type'          => 'select',
-                                'label'         => __('Heading Size', 'fl-builder'),
+                                'label'         => __('Heading Size', 'bsf-cards'),
                                 'default'       => 'default',
                                 'options'       => array(
-                                    'default'       =>  __('Default', 'fl-builder'),
-                                    'custom'        =>  __('Custom', 'fl-builder')
+                                    'default'       =>  __('Default', 'bsf-cards'),
+                                    'custom'        =>  __('Custom', 'bsf-cards')
                                 ),
                                 'toggle'        => array(
                                     'custom'        => array(
@@ -493,11 +538,56 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'title_custom_size' => array(
                                 'type'              => 'text',
-                                'label'             => __('Heading Custom Size', 'fl-builder'),
+                                'label'             => __('Heading Custom Size', 'bsf-cards'),
                                 'default'           => '24',
                                 'maxlength'         => '3',
                                 'size'              => '4',
                                 'description'       => 'px'
+                            ),
+
+                            'title_line_height'     => array(
+                                'type'          => 'select',
+                                'label'         => __('Line Height', 'bsf-cards'),
+                                'default'       => 'default',
+                                'options'       => array(
+                                    'default'       =>  __('Default', 'bsf-cards'),
+                                    'custom'        =>  __('Custom', 'bsf-cards')
+                                ),
+                                'toggle'        => array(
+                                    'custom'        => array(
+                                        'fields'        => array('title_custom_line_height')
+                                    )
+                                )
+                            ),
+                            'title_custom_line_height' => array(
+                                'type'          => 'text',
+                                'label'         => __('Custom Line Height', 'bsf-cards'),
+                                'default'       => '26',
+                                'maxlength'     => '4',
+                                'size'          => '4',
+                                'description'   => 'px'
+                            ),
+                            'title_letter_spacing'     => array(
+                                'type'          => 'select',
+                                'label'         => __('Letter Spacing', 'bsf-cards'),
+                                'default'       => 'default',
+                                'options'       => array(
+                                    'default'       =>  __('Default', 'bsf-cards'),
+                                    'custom'        =>  __('Custom', 'bsf-cards')
+                                ),
+                                'toggle'        => array(
+                                    'custom'        => array(
+                                        'fields'        => array('title_custom_letter_spacing')
+                                    )
+                                )
+                            ),
+                            'title_custom_letter_spacing' => array(
+                                'type'          => 'text',
+                                'label'         => __('Custom Letter Spacing', 'bsf-cards'),
+                                'default'       => '0',
+                                'maxlength'     => '3',
+                                'size'          => '4',
+                                'description'   => 'px'
                             ),
 
                             'color'    => array( 
@@ -579,11 +669,56 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'desc_custom_size' => array(
                                 'type'              => 'text',
-                                'label'             => __('Font Size', 'fl-builder'),
+                                'label'             => __('Font Size', 'bsf-cards'),
                                 'default'           => '14',
                                 'maxlength'         => '3',
                                 'size'              => '4',
                                 'description'       => 'px'
+                            ),
+
+                            'desc_line_height'     => array(
+                                'type'          => 'select',
+                                'label'         => __('Line Height', 'bsf-cards'),
+                                'default'       => 'default',
+                                'options'       => array(
+                                    'default'       =>  __('Default', 'bsf-cards'),
+                                    'custom'        =>  __('Custom', 'bsf-cards')
+                                ),
+                                'toggle'        => array(
+                                    'custom'        => array(
+                                        'fields'        => array('desc_custom_line_height')
+                                    )
+                                )
+                            ),
+                            'desc_custom_line_height' => array(
+                                'type'          => 'text',
+                                'label'         => __('Custom Line Height', 'bsf-cards'),
+                                'default'       => '24',
+                                'maxlength'     => '4',
+                                'size'          => '4',
+                                'description'   => 'px'
+                            ),
+                            'desc_letter_spacing'     => array(
+                                'type'          => 'select',
+                                'label'         => __('Letter Spacing', 'bsf-cards'),
+                                'default'       => 'default',
+                                'options'       => array(
+                                    'default'       =>  __('Default', 'bsf-cards'),
+                                    'custom'        =>  __('Custom', 'bsf-cards')
+                                ),
+                                'toggle'        => array(
+                                    'custom'        => array(
+                                        'fields'        => array('desc_custom_letter_spacing')
+                                    )
+                                )
+                            ),
+                            'desc_custom_letter_spacing' => array(
+                                'type'          => 'text',
+                                'label'         => __('Custom Letter Spacing', 'bsf-cards'),
+                                'default'       => '0',
+                                'maxlength'     => '3',
+                                'size'          => '4',
+                                'description'   => 'px'
                             ),
 
                             'desc_color'        => array( 

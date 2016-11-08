@@ -23,6 +23,15 @@
 <?php if($settings->title_size == 'custom') : ?>
 	font-size: <?php echo $settings->title_custom_size; ?>px;
 <?php endif; ?>
+
+<?php if($settings->title_line_height == 'custom') : ?>
+	line-height: <?php echo $settings->title_custom_line_height; ?>px;
+<?php endif; ?>
+
+<?php if($settings->title_letter_spacing == 'custom') : ?>
+	letter-spacing: <?php echo $settings->title_custom_letter_spacing; ?>px;
+<?php endif; ?>
+
 }
 
 .fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_boot_card_title {
@@ -47,6 +56,14 @@ margin-bottom: <?php echo ( trim($settings->title_margin_bottom) != '' ) ? $sett
 
 <?php if($settings->link_font_size == 'custom') : ?>
 	font-size: <?php echo $settings->link_custom_size; ?>px;
+<?php endif; ?>
+
+<?php if($settings->link_line_height == 'custom') : ?>
+	line-height: <?php echo $settings->link_custom_line_height; ?>px;
+<?php endif; ?>
+
+<?php if($settings->link_letter_spacing == 'custom') : ?>
+	letter-spacing: <?php echo $settings->link_custom_letter_spacing; ?>px;
 <?php endif; ?>
 }
 
@@ -85,6 +102,15 @@ display:block;
 <?php if($settings->desc_font_size == 'custom') : ?>
 	font-size: <?php echo $settings->desc_custom_size; ?>px;
 <?php endif; ?>
+
+<?php if($settings->desc_line_height == 'custom') : ?>
+	line-height: <?php echo $settings->desc_custom_line_height; ?>px;
+<?php endif; ?>
+
+<?php if($settings->title_letter_spacing == 'custom') : ?>
+	letter-spacing: <?php echo $settings->desc_custom_letter_spacing; ?>px;
+<?php endif; ?>
+
 }
 
 .fl-node-<?php echo $id; ?> .bb_boot_card_block .bb_boot_card_text {

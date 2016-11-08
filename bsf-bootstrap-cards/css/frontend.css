@@ -37,15 +37,15 @@
 }
 
 
-.bb_boot_card_block.bb-content-align-left {
+.bb_boot_card_container.bb-content-align-left {
     text-align: left;
 }
 
-.bb_boot_card_block.bb-content-align-center {
+.bb_boot_card_container.bb-content-align-center {
     text-align: center;
 }
 
-.bb_boot_card_block.bb-content-align-right{
+.bb_boot_card_container.bb-content-align-right{
     text-align: right;
 }
 
