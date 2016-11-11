@@ -22,6 +22,7 @@ if ( !class_exists( 'BSFBBBootstrapCards' ) ) {
         
         function __construct() {
             add_action( 'init', array( $this, 'load_bootstrap_card' ) );
+            add_action('init', array( $this, 'load_textdomain'));
         }
 
         // function to load BB Bootstrap Cards
@@ -41,6 +42,13 @@ if ( !class_exists( 'BSFBBBootstrapCards' ) ) {
                 add_action('network_admin_notices',array($this,'admin_notices_function'));
 
             }
+        }
+
+        // function to load text domain
+        public function load_textdomain() {
+            
+            load_plugin_textdomain( 'bb-bootstrap-cards' );
+            
         }
 
         // function to display admin notice
