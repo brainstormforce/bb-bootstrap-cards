@@ -3,7 +3,7 @@
 /**
  * @class BSFBBCards
  */
-class BSFModuleCards extends FLBuilderModule {
+class BSFBBCards extends FLBuilderModule {
     /** 
      * Constructor function for the module. You must pass the
      * name, description, dir and url in an array to the parent class.
