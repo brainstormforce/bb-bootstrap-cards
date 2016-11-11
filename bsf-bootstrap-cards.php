@@ -21,12 +21,18 @@ if ( !class_exists( 'BSFBBBootstarpCards' ) ) {
         
         function __construct() {
             add_action( 'init', array( $this, 'load_bootstrap_card' ) );
+            add_action('init', array( $this, 'load_textdomain'));
         }
 
         function load_bootstrap_card() {
             if ( class_exists( 'FLBuilder' ) ) {
                 require_once 'bsf-bootstrap-cards/bsf-bootstrap-cards.php';
             }
+        }
+
+        // function to load text domain
+        public function load_textdomain() {
+            load_plugin_textdomain( 'bb-bootstrap-cards' );
         } 
     }
 
