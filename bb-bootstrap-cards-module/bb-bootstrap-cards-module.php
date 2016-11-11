@@ -16,8 +16,8 @@ class BSFModuleCards extends FLBuilderModule {
             'name'          => __('Bootstrap Cards', 'bb-bootstrap-cards'),
             'description'   => __('To create Bootstrap Card builder modules.', 'bb-bootstrap-cards'),
             'category'		=> __('Advanced Modules', 'bb-bootstrap-cards'),
-            'dir'           => BB_BOOTSTRAPCARDS_DIR . 'bsf-bootstrap-cards/',
-            'url'           => BB_BOOTSTRAPCARDS_URL . 'bsf-bootstrap-cards/',
+            'dir'           => BB_BOOTSTRAPCARDS_DIR . 'bb-bootstrap-cards-module/',
+            'url'           => BB_BOOTSTRAPCARDS_URL . 'bb-bootstrap-cards-module/',
             'partial_refresh'   => true
         ));
         

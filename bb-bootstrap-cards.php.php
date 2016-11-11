@@ -31,7 +31,7 @@ if ( !class_exists( 'BSFBBBootstrapCards' ) ) {
             if ( class_exists( 'FLBuilder' ) ) {
 
                 // If class exist it loads the module
-                require_once 'bsf-bootstrap-cards/bsf-bootstrap-cards.php';
+                require_once 'bb-bootstrap-cards-module/bb-bootstrap-cards-module.php';
 
             }
 
