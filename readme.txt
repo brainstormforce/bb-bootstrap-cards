@@ -10,11 +10,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Bootstrap Cards for Beaver Builder is a custom modules for Beaver Builder that create awesome Bootstrap Card in simple way.
 
-
 == Description ==
 
 Bootstrap Card is a custom modules for for Beaver Builder. By using bootsrap card module user can create awesome Bootstrap Card in simple way in short time.
-
 
 == Installation ==
 
@@ -25,7 +23,6 @@ Bootstrap Card is a custom modules for for Beaver Builder. By using bootsrap car
 3. Activate the plugin through the 'Plugins' screen in WordPress
 
 4. Find this module in `Page Builder` -> `Add Content` -> `Advance Modules` -> `Bootstrap Cards`
-
 
 == Changelog ==
 
