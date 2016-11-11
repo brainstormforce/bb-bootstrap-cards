@@ -19,7 +19,7 @@ Bootstrap Card is a custom modules for for Beaver Builder. By using bootsrap car
 
 == Installation ==
 
-1. Be sure that you have the [Beaver Builder Plugin](https://www.wpbeaverbuilder.com/) installed and activated.
+1. Be sure that you have the [Beaver Builder Plugin](https://goo.gl/rYCvGw) installed and activated.
 
 2. Upload the plugin files to the `/wp-content/plugins/bb-bootstrap-cards` directory, or install the plugin through the WordPress plugins screen directly.
 
