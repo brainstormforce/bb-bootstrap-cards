@@ -4,13 +4,7 @@
  * @class BSFModuleCards
  */
 class BSFModuleCards extends FLBuilderModule {
-
-    /** 
-     * Constructor function for the module. You must pass the
-     * name, description, dir and url in an array to the parent class.
-     *
-     * @method __construct
-     */  
+  
     public function __construct()
     {
         parent::__construct(array(
@@ -129,17 +123,6 @@ FLBuilder::register_module('BSFModuleCards',
                             'label'         => __('Photo', 'bsf-cards'),
                             'show_remove'   => true
                         ),
-                        
-                        // 'align'         => array(
-                        //     'type'          => 'select',
-                        //     'label'         => __('Alignment', 'bsf-cards'),
-                        //     'default'       => 'center',
-                        //     'options'       => array(
-                        //         'left'          => __('Left', 'bsf-cards'),
-                        //         'center'        => __('Center', 'bsf-cards'),
-                        //         'right'         => __('Right', 'bsf-cards')
-                        //     )
-                        // )
 
                     )     
                 )
@@ -319,11 +302,6 @@ FLBuilder::register_module('BSFModuleCards',
                             'label'      => __('Link Hover Color', 'bsf-cards'),
                             'default'    => '',
                             'show_reset' => true,
-                            // 'preview'       => array(
-                            //     'type' => 'css',
-                            //     'property' => 'color',
-                            //     'selector' => '.bb_boot_card_link',
-                            // )
                         ),
 
                         'link_margin_top' => array(
