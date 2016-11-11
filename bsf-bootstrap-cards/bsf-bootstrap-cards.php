@@ -1,18 +1,18 @@
 <?php
 
 /**
- * @class BSFModuleCards
+ * @class BSFBBCards
  */
-class BSFModuleCards extends FLBuilderModule {
+class BSFBBCards  extends FLBuilderModule {
   
     public function __construct()
     {
         parent::__construct(array(
-            'name'          => __('Bootstrap Card', 'bsf-cards'),
-            'description'   => __('To create Bootstrap Card builder modules.', 'bsf-cards'),
-            'category'		=> __('Advanced Modules', 'bsf-cards'),
-            'dir'           => BSF_MODULE_CARDS_DIR . 'bsf-bootstrap-cards/',
-            'url'           => BSF_MODULE_CARDS_URL . 'bsf-bootstrap-cards/',
+            'name'          => __('Bootstrap Cards', 'bb-bootstrap-cards'),
+            'description'   => __('To create Bootstrap Card builder modules.', 'bb-bootstrap-cards'),
+            'category'		=> __('Advanced Modules', 'bb-bootstrap-cards'),
+            'dir'           => BB_BOOTSTRAPCARDS_DIR . 'bsf-bootstrap-cards/',
+            'url'           => BB_BOOTSTRAPCARDS_URL . 'bsf-bootstrap-cards/',
             'partial_refresh'   => true
         ));
         
@@ -43,20 +43,20 @@ class BSFModuleCards extends FLBuilderModule {
 /**
  * Register the module and its form settings.
  */
-FLBuilder::register_module('BSFModuleCards', 
+FLBuilder::register_module('BSFBBCards', 
     array(
         'general'       => array( // Tab
-            'title'         => __('General', 'bsf-cards'), // Tab title
+            'title'         => __('General', 'bb-bootstrap-cards'), // Tab title
             'sections'      => array( // Tab Sections
                 'general'       => array( // Section
-                    'title'         => __('Card Elements', 'bsf-cards'), // Section Title
+                    'title'         => __('Card Elements', 'bb-bootstrap-cards'), // Section Title
                     'fields'        => array( // Section Fields
                         'card_title'     => array(
                             'type'          => 'text',
-                            'label'         => __('Text Field', 'bsf-cards'),
+                            'label'         => __('Text Field', 'bb-bootstrap-cards'),
                             'default'       => '',
                             'placeholder'   => 'Enter Card Title',
-                            'default'       => __('Card title', 'bsf-cards'),
+                            'default'       => __('Card title', 'bb-bootstrap-cards'),
                             'class'         => 'my-card-title',
                             'preview'         => array(
                                 'type'             => 'text',
@@ -66,10 +66,10 @@ FLBuilder::register_module('BSFModuleCards',
 
                         'card_textarea' => array(
                             'type'          => 'textarea',
-                            'label'         => __('Textarea Field', 'bsf-cards'),
+                            'label'         => __('Textarea Field', 'bb-bootstrap-cards'),
                             'default'       => '',
-                            'placeholder'   => __('Enter Card Text', 'bsf-cards'),
-                            'default'       => __('Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.', 'bsf-cards'),
+                            'placeholder'   => __('Enter Card Text', 'bb-bootstrap-cards'),
+                            'default'       => __('Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.', 'bb-bootstrap-cards'),
                             'rows'          => '6',
                             'preview'         => array(
                                 'type'             => 'text',
@@ -79,29 +79,29 @@ FLBuilder::register_module('BSFModuleCards',
                     )
                 ),
                 'structure'     => array(
-                    'title'         => __('Structure', 'bsf-cards'),
+                    'title'         => __('Structure', 'bb-bootstrap-cards'),
                     'fields'        => array(
                         'alignment'     => array(
                             'type'          => 'select',
-                            'label'         => __('Alignment', 'bsf-cards'),
+                            'label'         => __('Alignment', 'bb-bootstrap-cards'),
                             'default'       => 'Left',
                             'options'       => array(
-                                'left'      =>  __('Left', 'bsf-cards'),
-                                'center'    =>  __('Center', 'bsf-cards'),
-                                'right'     =>  __('Right', 'bsf-cards')
+                                'left'      =>  __('Left', 'bb-bootstrap-cards'),
+                                'center'    =>  __('Center', 'bb-bootstrap-cards'),
+                                'right'     =>  __('Right', 'bb-bootstrap-cards')
                             ),
-                            'help'         => __('This is the overall alignment and would apply to all Card elements', 'bsf-cards'),
+                            'help'         => __('This is the overall alignment and would apply to all Card elements', 'bb-bootstrap-cards'),
                         ),
                         'bg_color' => array( 
                             'type'       => 'color',
-                            'label'         => __('Background Color', 'bsf-cards'),
+                            'label'         => __('Background Color', 'bb-bootstrap-cards'),
                             'default'    => '',
                             'show_reset' => true,
                         ),
 
                         'bg_color_opc' => array( 
                             'type'        => 'text',
-                            'label'       => __('Opacity', 'bsf-cards'),
+                            'label'       => __('Opacity', 'bb-bootstrap-cards'),
                             'default'     => '',
                             'description' => '%',
                             'maxlength'   => '3',
@@ -113,14 +113,14 @@ FLBuilder::register_module('BSFModuleCards',
         ),
 
         'image'       => array( // Tab
-            'title'         => __('Image', 'bsf-cards'), // Tab title
+            'title'         => __('Image', 'bb-bootstrap-cards'), // Tab title
             'sections'      => array( // Tab Sections
                 'card_image'       => array( // Section
-                    'title'         => __('Select Card Image', 'bsf-cards'), // Section Title
+                    'title'         => __('Select Card Image', 'bb-bootstrap-cards'), // Section Title
                     'fields'        => array( // Section Fields
                         'photo'         => array(
                             'type'          => 'photo',
-                            'label'         => __('Photo', 'bsf-cards'),
+                            'label'         => __('Photo', 'bb-bootstrap-cards'),
                             'show_remove'   => true
                         ),
 
@@ -130,19 +130,19 @@ FLBuilder::register_module('BSFModuleCards',
         ),
 
         'link'      => array( // Tab
-            'title'         => __('Link / Button ', 'bsf-cards'), // Tab title
+            'title'         => __('Link / Button ', 'bb-bootstrap-cards'), // Tab title
             'sections'      => array( // Tab Sections
                 'card_link'       => array( // Section
-                    'title'         => __('Select Read More', 'bsf-cards'), // Section Title
+                    'title'         => __('Select Read More', 'bb-bootstrap-cards'), // Section Title
                     'fields'        => array( // Section Fields
                         'card_btn_type'      => array(
                         'type'          => 'select',
-                        'label'         => __('Type', 'bsf-cards'),
+                        'label'         => __('Type', 'bb-bootstrap-cards'),
                         'default'       => 'none',
                         'options'       => array(
-                            'none'          => _x( 'None', 'bsf-cards' ),
-                            'link'          => __('Text', 'bsf-cards'),
-                            'button'        => __('Button', 'bsf-cards'),
+                            'none'          => _x( 'None', 'bb-bootstrap-cards' ),
+                            'link'          => __('Text', 'bb-bootstrap-cards'),
+                            'button'        => __('Button', 'bb-bootstrap-cards'),
                         ),
                         'toggle'        => array(
                             'none'          => array(),
@@ -162,29 +162,29 @@ FLBuilder::register_module('BSFModuleCards',
                 ),
 
                 'link'          => array(
-                    'title'         => __('Link', 'bsf-cards'),
+                    'title'         => __('Link', 'bb-bootstrap-cards'),
                     'fields'        => array(
                         
                         'card_btn_text'      => array(
                             'type'          => 'text',
-                            'label'         => __('Text', 'bsf-cards'),
-                            'default'       => __('Read More', 'bsf-cards'),
+                            'label'         => __('Text', 'bb-bootstrap-cards'),
+                            'default'       => __('Read More', 'bb-bootstrap-cards'),
                         ),
 
                         'link_field'          => array(
                             'type'          => 'link',
-                            'label'         => __('Link', 'bsf-cards'),
+                            'label'         => __('Link', 'bb-bootstrap-cards'),
                             'preview'       => array(
                                 'type'          => 'none'
                             )
                         ),
                         'link_target'   => array(
                             'type'          => 'select',
-                            'label'         => __('Link Target', 'bsf-cards'),
+                            'label'         => __('Link Target', 'bb-bootstrap-cards'),
                             'default'       => '_self',
                             'options'       => array(
-                                '_self'         => __('Same Window', 'bsf-cards'),
-                                '_blank'        => __('New Window', 'bsf-cards')
+                                '_self'         => __('Same Window', 'bb-bootstrap-cards'),
+                                '_blank'        => __('New Window', 'bb-bootstrap-cards')
                             ),
                             'preview'       => array(
                                 'type'          => 'none'
@@ -195,11 +195,11 @@ FLBuilder::register_module('BSFModuleCards',
                 ),
 
                 'link_typography'    =>  array(
-                    'title' => __( 'Link Typography', 'bsf-cards' ),
+                    'title' => __( 'Link Typography', 'bb-bootstrap-cards' ),
                     'fields'    => array(
                         'link_text_font_family'       => array(
                             'type'          => 'font',
-                            'label'         => __('Font Family', 'bsf-cards'),
+                            'label'         => __('Font Family', 'bb-bootstrap-cards'),
                             'default'       => array(
                                 'family'        => 'Default',
                                 'weight'        => 'Default'
@@ -212,11 +212,11 @@ FLBuilder::register_module('BSFModuleCards',
 
                         'link_font_size'    => array(
                             'type'          => 'select',
-                            'label'         => __('Link Font Size', 'bsf-cards'),
+                            'label'         => __('Link Font Size', 'bb-bootstrap-cards'),
                             'default'       => 'default',
                             'options'       => array(
-                                'default'       =>  __('Default', 'bsf-cards'),
-                                'custom'        =>  __('Custom', 'bsf-cards')
+                                'default'       =>  __('Default', 'bb-bootstrap-cards'),
+                                'custom'        =>  __('Custom', 'bb-bootstrap-cards')
                             ),
                             'toggle'        => array(
                                 'custom'        => array(
@@ -226,7 +226,7 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'link_custom_size' => array(
                             'type'              => 'text',
-                            'label'             => __('Font Size', 'bsf-cards'),
+                            'label'             => __('Font Size', 'bb-bootstrap-cards'),
                             'default'           => '20',
                             'maxlength'         => '3',
                             'size'              => '4',
@@ -235,11 +235,11 @@ FLBuilder::register_module('BSFModuleCards',
 
                         'link_line_height'     => array(
                             'type'          => 'select',
-                            'label'         => __('Line Height', 'bsf-cards'),
+                            'label'         => __('Line Height', 'bb-bootstrap-cards'),
                             'default'       => 'default',
                             'options'       => array(
-                                'default'       =>  __('Default', 'bsf-cards'),
-                                'custom'        =>  __('Custom', 'bsf-cards')
+                                'default'       =>  __('Default', 'bb-bootstrap-cards'),
+                                'custom'        =>  __('Custom', 'bb-bootstrap-cards')
                             ),
                             'toggle'        => array(
                                 'custom'        => array(
@@ -249,7 +249,7 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'link_custom_line_height' => array(
                             'type'          => 'text',
-                            'label'         => __('Custom Line Height', 'bsf-cards'),
+                            'label'         => __('Custom Line Height', 'bb-bootstrap-cards'),
                             'default'       => '24',
                             'maxlength'     => '4',
                             'size'          => '4',
@@ -257,11 +257,11 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'link_letter_spacing'     => array(
                             'type'          => 'select',
-                            'label'         => __('Letter Spacing', 'bsf-cards'),
+                            'label'         => __('Letter Spacing', 'bb-bootstrap-cards'),
                             'default'       => 'default',
                             'options'       => array(
-                                'default'       =>  __('Default', 'bsf-cards'),
-                                'custom'        =>  __('Custom', 'bsf-cards')
+                                'default'       =>  __('Default', 'bb-bootstrap-cards'),
+                                'custom'        =>  __('Custom', 'bb-bootstrap-cards')
                             ),
                             'toggle'        => array(
                                 'custom'        => array(
@@ -271,7 +271,7 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'link_custom_letter_spacing' => array(
                             'type'          => 'text',
-                            'label'         => __('Custom Letter Spacing', 'bsf-cards'),
+                            'label'         => __('Custom Letter Spacing', 'bb-bootstrap-cards'),
                             'default'       => '0',
                             'maxlength'     => '3',
                             'size'          => '4',
@@ -280,14 +280,14 @@ FLBuilder::register_module('BSFModuleCards',
 
                         'link_color'        => array( 
                             'type'       => 'color',
-                            'label'         => __('Link Color', 'bsf-cards'),
+                            'label'         => __('Link Color', 'bb-bootstrap-cards'),
                             'default'    => '',
                             'show_reset' => true,
                         ),
 
                         'link_color'        => array( 
                             'type'       => 'color',
-                            'label'      => __('Link Color', 'bsf-cards'),
+                            'label'      => __('Link Color', 'bb-bootstrap-cards'),
                             'default'    => '',
                             'show_reset' => true,
                             'preview'       => array(
@@ -299,14 +299,14 @@ FLBuilder::register_module('BSFModuleCards',
 
                         'link_hover_color'        => array( 
                             'type'       => 'color',
-                            'label'      => __('Link Hover Color', 'bsf-cards'),
+                            'label'      => __('Link Hover Color', 'bb-bootstrap-cards'),
                             'default'    => '',
                             'show_reset' => true,
                         ),
 
                         'link_margin_top' => array(
                             'type'              => 'text',
-                            'label'             => __('Margin Top', 'bsf-cards'),
+                            'label'             => __('Margin Top', 'bb-bootstrap-cards'),
                             'placeholder'       => '0',
                             'maxlength'         => '3',
                             'size'              => '4',
@@ -322,7 +322,7 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'link_margin_bottom' => array(
                             'type'              => 'text',
-                            'label'             => __('Margin Bottom', 'bsf-cards'),
+                            'label'             => __('Margin Bottom', 'bb-bootstrap-cards'),
                             'placeholder'       => '0',
                             'maxlength'         => '3',
                             'size'              => '4',
@@ -339,30 +339,30 @@ FLBuilder::register_module('BSFModuleCards',
                 ),
 
                 'btn-link'       => array( // Section
-                    'title'         => __('Button', 'bsf-cards'),
+                    'title'         => __('Button', 'bb-bootstrap-cards'),
                     'fields'        => array(
 
                         'btn_text'          => array(
                             'type'          => 'text',
-                            'label'         => __('Button Text', 'bsf-cards'),
-                            'default'       => __('Click Here', 'bsf-cards'),
+                            'label'         => __('Button Text', 'bb-bootstrap-cards'),
+                            'default'       => __('Click Here', 'bb-bootstrap-cards'),
                         ),
 
                         'btn_link'          => array(
                             'type'          => 'link',
-                            'label'         => __('Button Link', 'bsf-cards'),
-                            'placeholder'   => __( 'http://www.example.com', 'bsf-cards' ),
+                            'label'         => __('Button Link', 'bb-bootstrap-cards'),
+                            'placeholder'   => __( 'http://www.example.com', 'bb-bootstrap-cards' ),
                             'preview'       => array(
                                 'type'          => 'none'
                             )
                         ),
                         'btn_link_target'   => array(
                             'type'          => 'select',
-                            'label'         => __('Button Target', 'bsf-cards'),
+                            'label'         => __('Button Target', 'bb-bootstrap-cards'),
                             'default'       => '_self',
                             'options'       => array(
-                                '_self'         => __('Same Window', 'bsf-cards'),
-                                '_blank'        => __('New Window', 'bsf-cards')
+                                '_self'         => __('Same Window', 'bb-bootstrap-cards'),
+                                '_blank'        => __('New Window', 'bb-bootstrap-cards')
                             ),
                             'preview'       => array(
                                 'type'          => 'none'
@@ -372,11 +372,11 @@ FLBuilder::register_module('BSFModuleCards',
                 ),
 
                 'btn_typography'     => array( // Section
-                    'title'         => __('Button Typography', 'bsf-cards'),
+                    'title'         => __('Button Typography', 'bb-bootstrap-cards'),
                     'fields'        => array(
                         'btn_font_family'       => array(
                             'type'          => 'font',
-                            'label'         => __('Font Family', 'bsf-cards'),
+                            'label'         => __('Font Family', 'bb-bootstrap-cards'),
                             'default'       => array(
                                 'family'        => 'Default',
                                 'weight'        => 'Default'
@@ -388,11 +388,11 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'btn_font_size'    => array(
                             'type'          => 'select',
-                            'label'         => __('Font Size', 'bsf-cards'),
+                            'label'         => __('Font Size', 'bb-bootstrap-cards'),
                             'default'       => 'default',
                             'options'       => array(
-                                'default'       =>  __('Default', 'bsf-cards'),
-                                'custom'        =>  __('Custom', 'bsf-cards')
+                                'default'       =>  __('Default', 'bb-bootstrap-cards'),
+                                'custom'        =>  __('Custom', 'bb-bootstrap-cards')
                             ),
                             'toggle'        => array(
                                 'custom'        => array(
@@ -402,7 +402,7 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'btn_custom_size' => array(
                             'type'              => 'text',
-                            'label'             => __('Font Size', 'bsf-cards'),
+                            'label'             => __('Font Size', 'bb-bootstrap-cards'),
                             'default'           => '14',
                             'maxlength'         => '3',
                             'size'              => '4',
@@ -411,7 +411,7 @@ FLBuilder::register_module('BSFModuleCards',
 
                         'btn_line_height' => array(
                             'type'          => 'text',
-                            'label'         => __('Line Height', 'bsf-cards'),
+                            'label'         => __('Line Height', 'bb-bootstrap-cards'),
                             'description'   => 'px',
                             'default'           => '16',
                             'maxlength'         => '3',
@@ -427,13 +427,13 @@ FLBuilder::register_module('BSFModuleCards',
 
                         'btn_text_color'        => array( 
                             'type'       => 'color',
-                            'label'      => __('Text Color', 'bsf-cards'),
+                            'label'      => __('Text Color', 'bb-bootstrap-cards'),
                             'default'    => '#414242',
                             'show_reset' => true,
                         ),
                         'btn_text_hover_color'        => array( 
                             'type'       => 'color',
-                            'label'      => __('Text Hover Color', 'bsf-cards'),
+                            'label'      => __('Text Hover Color', 'bb-bootstrap-cards'),
                             'default'    => '#ffffff',
                             'show_reset' => true,
                             'preview'       => array(
@@ -442,13 +442,13 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'btn_bg_color'        => array( 
                             'type'       => 'color',
-                            'label'      => __('Background Color', 'bsf-cards'),
+                            'label'      => __('Background Color', 'bb-bootstrap-cards'),
                             'default'    => '#ffdd00',
                             'show_reset' => true,
                         ),
                         'btn_bg_hover_color'        => array( 
                             'type'       => 'color',
-                            'label'         => __('Background Hover Color', 'bsf-cards'),
+                            'label'         => __('Background Hover Color', 'bb-bootstrap-cards'),
                             'default'    => '',
                             'show_reset' => true,
                             'preview'       => array(
@@ -457,7 +457,7 @@ FLBuilder::register_module('BSFModuleCards',
                         ),
                         'btn_border_radius' => array(
                             'type'          => 'text',
-                            'label'         => __('Round Corners', 'bsf-cards'),
+                            'label'         => __('Round Corners', 'bb-bootstrap-cards'),
                             'maxlength'     => '3',
                             'size'          => '4',
                             'description'   => 'px'
@@ -469,14 +469,14 @@ FLBuilder::register_module('BSFModuleCards',
         ),
 
         'typography'         => array(
-            'title'         => __('Typography', 'bsf-cards'),
+            'title'         => __('Typography', 'bb-bootstrap-cards'),
                 'sections'      => array(
                     'heading_card'     => array(
-                        'title'         => __('Heading', 'bsf-cards'),
+                        'title'         => __('Heading', 'bb-bootstrap-cards'),
                         'fields'        => array(
                             'tag'           => array(
                                 'type'          => 'select',
-                                'label'         => __( 'HTML Tag', 'bsf-cards' ),
+                                'label'         => __( 'HTML Tag', 'bb-bootstrap-cards' ),
                                 'default'       => 'h4',
                                 'options'       => array(
                                     'h1'            =>  'h1',
@@ -493,7 +493,7 @@ FLBuilder::register_module('BSFModuleCards',
                                     'family'        => 'Default',
                                     'weight'        => 300
                                 ),
-                                'label'         => __('Font', 'bsf-cards'),
+                                'label'         => __('Font', 'bb-bootstrap-cards'),
                                 'preview'         => array(
                                     'type'            => 'font',
                                     'selector'        => '.bb_boot_card_block .bb_boot_card_title'
@@ -502,11 +502,11 @@ FLBuilder::register_module('BSFModuleCards',
 
                             'title_size'    => array(
                                 'type'          => 'select',
-                                'label'         => __('Heading Size', 'bsf-cards'),
+                                'label'         => __('Heading Size', 'bb-bootstrap-cards'),
                                 'default'       => 'default',
                                 'options'       => array(
-                                    'default'       =>  __('Default', 'bsf-cards'),
-                                    'custom'        =>  __('Custom', 'bsf-cards')
+                                    'default'       =>  __('Default', 'bb-bootstrap-cards'),
+                                    'custom'        =>  __('Custom', 'bb-bootstrap-cards')
                                 ),
                                 'toggle'        => array(
                                     'custom'        => array(
@@ -516,7 +516,7 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'title_custom_size' => array(
                                 'type'              => 'text',
-                                'label'             => __('Heading Custom Size', 'bsf-cards'),
+                                'label'             => __('Heading Custom Size', 'bb-bootstrap-cards'),
                                 'default'           => '24',
                                 'maxlength'         => '3',
                                 'size'              => '4',
@@ -525,11 +525,11 @@ FLBuilder::register_module('BSFModuleCards',
 
                             'title_line_height'     => array(
                                 'type'          => 'select',
-                                'label'         => __('Line Height', 'bsf-cards'),
+                                'label'         => __('Line Height', 'bb-bootstrap-cards'),
                                 'default'       => 'default',
                                 'options'       => array(
-                                    'default'       =>  __('Default', 'bsf-cards'),
-                                    'custom'        =>  __('Custom', 'bsf-cards')
+                                    'default'       =>  __('Default', 'bb-bootstrap-cards'),
+                                    'custom'        =>  __('Custom', 'bb-bootstrap-cards')
                                 ),
                                 'toggle'        => array(
                                     'custom'        => array(
@@ -539,7 +539,7 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'title_custom_line_height' => array(
                                 'type'          => 'text',
-                                'label'         => __('Custom Line Height', 'bsf-cards'),
+                                'label'         => __('Custom Line Height', 'bb-bootstrap-cards'),
                                 'default'       => '26',
                                 'maxlength'     => '4',
                                 'size'          => '4',
@@ -547,11 +547,11 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'title_letter_spacing'     => array(
                                 'type'          => 'select',
-                                'label'         => __('Letter Spacing', 'bsf-cards'),
+                                'label'         => __('Letter Spacing', 'bb-bootstrap-cards'),
                                 'default'       => 'default',
                                 'options'       => array(
-                                    'default'       =>  __('Default', 'bsf-cards'),
-                                    'custom'        =>  __('Custom', 'bsf-cards')
+                                    'default'       =>  __('Default', 'bb-bootstrap-cards'),
+                                    'custom'        =>  __('Custom', 'bb-bootstrap-cards')
                                 ),
                                 'toggle'        => array(
                                     'custom'        => array(
@@ -561,7 +561,7 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'title_custom_letter_spacing' => array(
                                 'type'          => 'text',
-                                'label'         => __('Custom Letter Spacing', 'bsf-cards'),
+                                'label'         => __('Custom Letter Spacing', 'bb-bootstrap-cards'),
                                 'default'       => '0',
                                 'maxlength'     => '3',
                                 'size'          => '4',
@@ -570,7 +570,7 @@ FLBuilder::register_module('BSFModuleCards',
 
                             'color'    => array( 
                                 'type'       => 'color',
-                                'label'         => __('Text Color', 'bsf-cards'),
+                                'label'         => __('Text Color', 'bb-bootstrap-cards'),
                                 'default'    => '',
                                 'show_reset' => true,
                                 'preview'       => array(
@@ -582,7 +582,7 @@ FLBuilder::register_module('BSFModuleCards',
 
                             'title_margin_top' => array(
                                 'type'              => 'text',
-                                'label'             => __('Margin Top', 'bsf-cards'),
+                                'label'             => __('Margin Top', 'bb-bootstrap-cards'),
                                 'placeholder'       => '0',
                                 'maxlength'         => '3',
                                 'size'              => '4',
@@ -598,7 +598,7 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'title_margin_bottom' => array(
                                 'type'              => 'text',
-                                'label'             => __('Margin Bottom', 'bsf-cards'),
+                                'label'             => __('Margin Bottom', 'bb-bootstrap-cards'),
                                 'placeholder'       => '0',
                                 'maxlength'         => '3',
                                 'size'              => '4',
@@ -615,12 +615,12 @@ FLBuilder::register_module('BSFModuleCards',
                         )
                     ),
                     'card_description'    =>  array(
-                        'title'     => __('Description', 'bsf-cards'),
+                        'title'     => __('Description', 'bb-bootstrap-cards'),
                         'fields'    => array(
 
                             'desc_font_family'       => array(
                                 'type'          => 'font',
-                                'label'         => __('Font Family', 'bsf-cards'),
+                                'label'         => __('Font Family', 'bb-bootstrap-cards'),
                                 'default'       => array(
                                     'family'        => 'Default',
                                     'weight'        => 'Default'
@@ -633,11 +633,11 @@ FLBuilder::register_module('BSFModuleCards',
 
                             'desc_font_size'    => array(
                                 'type'          => 'select',
-                                'label'         => __('Font Size', 'bsf-cards'),
+                                'label'         => __('Font Size', 'bb-bootstrap-cards'),
                                 'default'       => 'default',
                                 'options'       => array(
-                                    'default'       =>  __('Default', 'bsf-cards'),
-                                    'custom'        =>  __('Custom', 'bsf-cards')
+                                    'default'       =>  __('Default', 'bb-bootstrap-cards'),
+                                    'custom'        =>  __('Custom', 'bb-bootstrap-cards')
                                 ),
                                 'toggle'        => array(
                                     'custom'        => array(
@@ -647,7 +647,7 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'desc_custom_size' => array(
                                 'type'              => 'text',
-                                'label'             => __('Font Size', 'bsf-cards'),
+                                'label'             => __('Font Size', 'bb-bootstrap-cards'),
                                 'default'           => '14',
                                 'maxlength'         => '3',
                                 'size'              => '4',
@@ -656,11 +656,11 @@ FLBuilder::register_module('BSFModuleCards',
 
                             'desc_line_height'     => array(
                                 'type'          => 'select',
-                                'label'         => __('Line Height', 'bsf-cards'),
+                                'label'         => __('Line Height', 'bb-bootstrap-cards'),
                                 'default'       => 'default',
                                 'options'       => array(
-                                    'default'       =>  __('Default', 'bsf-cards'),
-                                    'custom'        =>  __('Custom', 'bsf-cards')
+                                    'default'       =>  __('Default', 'bb-bootstrap-cards'),
+                                    'custom'        =>  __('Custom', 'bb-bootstrap-cards')
                                 ),
                                 'toggle'        => array(
                                     'custom'        => array(
@@ -670,7 +670,7 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'desc_custom_line_height' => array(
                                 'type'          => 'text',
-                                'label'         => __('Custom Line Height', 'bsf-cards'),
+                                'label'         => __('Custom Line Height', 'bb-bootstrap-cards'),
                                 'default'       => '24',
                                 'maxlength'     => '4',
                                 'size'          => '4',
@@ -678,11 +678,11 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'desc_letter_spacing'     => array(
                                 'type'          => 'select',
-                                'label'         => __('Letter Spacing', 'bsf-cards'),
+                                'label'         => __('Letter Spacing', 'bb-bootstrap-cards'),
                                 'default'       => 'default',
                                 'options'       => array(
-                                    'default'       =>  __('Default', 'bsf-cards'),
-                                    'custom'        =>  __('Custom', 'bsf-cards')
+                                    'default'       =>  __('Default', 'bb-bootstrap-cards'),
+                                    'custom'        =>  __('Custom', 'bb-bootstrap-cards')
                                 ),
                                 'toggle'        => array(
                                     'custom'        => array(
@@ -692,7 +692,7 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'desc_custom_letter_spacing' => array(
                                 'type'          => 'text',
-                                'label'         => __('Custom Letter Spacing', 'bsf-cards'),
+                                'label'         => __('Custom Letter Spacing', 'bb-bootstrap-cards'),
                                 'default'       => '0',
                                 'maxlength'     => '3',
                                 'size'          => '4',
@@ -701,7 +701,7 @@ FLBuilder::register_module('BSFModuleCards',
 
                             'desc_color'        => array( 
                                 'type'       => 'color',
-                                'label'      => __('Color', 'bsf-cards'),
+                                'label'      => __('Color', 'bb-bootstrap-cards'),
                                 'default'    => '',
                                 'show_reset' => true,
                                 'preview'       => array(
@@ -712,7 +712,7 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'desc_margin_top' => array(
                                 'type'              => 'text',
-                                'label'             => __('Margin Top', 'bsf-cards'),
+                                'label'             => __('Margin Top', 'bb-bootstrap-cards'),
                                 'placeholder'       => '0',
                                 'maxlength'         => '3',
                                 'size'              => '4',
@@ -728,7 +728,7 @@ FLBuilder::register_module('BSFModuleCards',
                             ),
                             'desc_margin_bottom' => array(
                                 'type'              => 'text',
-                                'label'             => __('Margin Bottom', 'bsf-cards'),
+                                'label'             => __('Margin Bottom', 'bb-bootstrap-cards'),
                                 'placeholder'       => '0',
                                 'maxlength'         => '3',
                                 'size'              => '4',
