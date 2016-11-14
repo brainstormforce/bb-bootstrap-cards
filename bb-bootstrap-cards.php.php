@@ -4,7 +4,7 @@
  * Plugin URI: https://www.brainstormforce.com/
  * Description: This is a plugin for creating Awesome Bootstrap Card.
  * Version: 1.0.0
- * Author: Brainstorm force
+ * Author: Brainstorm force, bhushansbobade20
  * Author URI: https://www.brainstormforce.com/
  * Text Domain: bb-bootstrap-cards
  */
