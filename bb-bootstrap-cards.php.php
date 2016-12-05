@@ -71,7 +71,7 @@ if ( !class_exists( 'BSFBBBootstrapCards' ) ) {
             
             echo '<div class="notice notice-error">';
 
-                echo "<p>The <strong>Bootstrap Cards For Beaver Builder</strong> " . __( 'plugin requires', 'bb-bootstrap-cards' )." <strong><a href='".$url."'>Beaver Builder</strong></a>" . __( ' plugin installed & activated.', 'bb-bootstrap-cards' ) . "</p>";
+                echo "<p>". sprintf( __( '<strong>Bootstrap Cards For Beaver Builder</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-bootstrap-cards' ) . "</p>", $url );
             
             echo '</div>';
         } 
