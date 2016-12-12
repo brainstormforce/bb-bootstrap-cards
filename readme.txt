@@ -1,4 +1,4 @@
-=== BB Bootstrap Cards ===
+=== Beaver Builder Bootstrap Cards ===
 Contributors: brainstormforce, bhushansbobade20
 Donate link: https://www.brainstormforce.com/payment/
 Requires at least: 4.4
