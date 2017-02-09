@@ -7,7 +7,7 @@
 <?php endif; ?>
 
 /* BCard Heading Typography */
-<?php if( !empty($settings->heading_font) && $settings->font['family'] != 'Default' ) : ?>
+<?php if( !empty($settings->heading_font) && $settings->heading_font['family'] != 'Default' ) : ?>
 .fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_boot_card_title,
 .fl-node-<?php echo $id; ?> <?php /* echo $settings->tag; */?>.bb_boot_card_title *{
 	<?php FLBuilderFonts::font_css( $settings->heading_font ); ?>
@@ -43,7 +43,7 @@ margin-bottom: <?php echo ( trim($settings->title_margin_bottom) != '' ) ? $sett
 
 /* BCard's Link color */
 
-<?php if( !empty($settings->link_text_font_family) && $settings->font['family'] != 'Default' ) : ?>
+<?php if( !empty($settings->link_text_font_family) && $settings->link_text_font_family['family'] != 'Default' ) : ?>
 .fl-node-<?php echo $id; ?> .bb_boot_card_link, .fl-node-<?php echo $id; ?> .bb_boot_card_link:visited{
 	<?php FLBuilderFonts::font_css( $settings->link_text_font_family ); ?>
 }
@@ -87,7 +87,7 @@ display:block;
 
 /* BCard's Description Typography */
 
-<?php if( !empty($settings->desc_font_family) && $settings->font['family'] != 'Default' ) : ?>
+<?php if( !empty($settings->desc_font_family) && $settings->desc_font_family['family'] != 'Default' ) : ?>
 .fl-node-<?php echo $id; ?> .bb_boot_card_block .bb_boot_card_text{
 	<?php FLBuilderFonts::font_css( $settings->desc_font_family ); ?>
 }
@@ -122,7 +122,7 @@ margin-bottom: <?php echo ( trim($settings->desc_margin_bottom) != '' ) ? $setti
 
 
 /* BCard's Button Link */
-<?php if( !empty($settings->btn_font_family) && $settings->font['family'] != 'Default' ) : ?>
+<?php if( !empty($settings->btn_font_family) && $settings->btn_font_family['family'] != 'Default' ) : ?>
 .fl-node-<?php echo $id; ?> .bb_boot_card_link_button .bb_boot_button{
 	<?php FLBuilderFonts::font_css( $settings->btn_font_family ); ?>
 }
