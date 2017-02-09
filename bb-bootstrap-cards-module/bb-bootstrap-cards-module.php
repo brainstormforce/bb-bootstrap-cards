@@ -18,10 +18,15 @@ class BSFBBCards extends FLBuilderModule {
             'category'		=> __('Advanced Modules', 'bb-bootstrap-cards'),
             'dir'           => BB_BOOTSTRAPCARDS_DIR . 'bb-bootstrap-cards-module/',
             'url'           => BB_BOOTSTRAPCARDS_URL . 'bb-bootstrap-cards-module/',
-            'partial_refresh'   => true
+            'partial_refresh' => false // Defaults to false and can be omitted.
         ));
         
     }
+
+    /**
+     * @property $data
+     */
+    public $data = null;
 
     /**
      * @method update
@@ -40,6 +45,51 @@ class BSFBBCards extends FLBuilderModule {
             $settings->data = $data;
         }
         return $settings;
+    }
+
+    /**
+     * @method get_data
+     */
+    public function get_data()
+    {
+        if(!$this->data) {
+
+            // Photo source is set to "library".
+            if(is_object($this->settings->photo)) {
+                $this->data = $this->settings->photo;
+            }
+            else {
+                $this->data = FLBuilderPhoto::get_attachment_data($this->settings->photo);
+            }
+
+            // Data object is empty, use the settings cache.
+            if(!$this->data && isset($this->settings->data)) {
+                $this->data = $this->settings->data;
+            }
+        }
+
+        return $this->data;
+    }
+
+    /**
+     * @method get_alt
+     */
+    public function get_alt()
+    {
+        $photo = $this->get_data();
+
+        if(!empty($photo->alt)) {
+            return htmlspecialchars($photo->alt);
+        }
+        else if(!empty($photo->description)) {
+            return htmlspecialchars($photo->description);
+        }
+        else if(!empty($photo->caption)) {
+            return htmlspecialchars($photo->caption);
+        }
+        else if(!empty($photo->title)) {
+            return htmlspecialchars($photo->title);
+        }
     }
   
 

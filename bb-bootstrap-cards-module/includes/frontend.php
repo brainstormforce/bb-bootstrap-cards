@@ -1,9 +1,13 @@
+
 <div class="bb_boot_card_container bb-content-align-<?php echo $settings->alignment; ?>">
 
 	<!--Card image-->
 	<div class="bb_boot_card_image">
+		<?php
+			$alt      = $module->get_alt();
+		?>
 	    <?php if( $settings->photo != '' && isset( $settings->photo_src) ){ ?> 
-		   <img src="<?php echo $settings->photo_src; ?>"/>
+		   <img src="<?php echo $settings->photo_src; ?>" alt="<?php echo $alt; ?>" itemprop="image"/>
 		<?php } ?>
 	</div>
 	<!--/.Card image-->
