@@ -108,8 +108,6 @@ FLBuilder::register_module('BSFBBCards',
                     'fields'        => array( // Section Fields
                         'card_title'     => array(
                             'type'          => 'text',
-                            'label'         => __('Text Field', 'bb-bootstrap-cards'),
-                            'default'       => '',
                             'placeholder'   => 'Enter Card Title',
                             'default'       => __('Card title', 'bb-bootstrap-cards'),
                             'class'         => 'my-card-title',
@@ -121,7 +119,6 @@ FLBuilder::register_module('BSFBBCards',
 
                         'card_textarea' => array(
                             'type'          => 'editor',
-                            
                             'default'       => '',
                             'placeholder'   => __('Enter Card Text', 'bb-bootstrap-cards'),
                             'default'       => __('Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.', 'bb-bootstrap-cards'),
