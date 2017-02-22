@@ -84,3 +84,7 @@
     display: inline-block;
     width: 100%; 
 }
+
+.bb_boot_card_block .bb_boot_card_text a:focus {
+    outline: none;
+}
