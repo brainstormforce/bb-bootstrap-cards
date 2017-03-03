@@ -37,5 +37,6 @@ Bootstrap Card is a custom modules for for Beaver Builder. By using bootsrap car
 
 = 1.0.1 =
 - Update: Added image alt tag.
+- Card image source enhancement: Media / URL.
 - Update: Textarea to Text Editor for more flexibility.
 - Fixed	: PHP Notice Errors.
