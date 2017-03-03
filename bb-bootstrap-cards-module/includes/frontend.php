@@ -4,11 +4,22 @@
 	<!--Card image-->
 	<div class="bb_boot_card_image">
 		<?php
+			$photo    = $module->get_data();
+			$classes  = $module->get_classes();
+			$src      = $module->get_src();
 			$alt      = $module->get_alt();
+			$attrs    = $module->get_attributes();
+			$filetype = pathinfo($src, PATHINFO_EXTENSION);
 		?>
-	    <?php if( $settings->photo != '' && isset( $settings->photo_src) ){ ?> 
-		   <img src="<?php echo $settings->photo_src; ?>" alt="<?php echo $alt; ?>" itemprop="image"/>
-		<?php } ?>
+
+		<?php if(!empty($link)) : ?>
+		<a href="<?php echo $link; ?>" target="<?php echo $settings->link_target; ?>" itemprop="url">
+		<?php endif; ?>
+		<img class="<?php echo $classes; ?>" src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" itemprop="image" <?php echo $attrs; ?> />
+		<?php if(!empty($link)) : ?>
+		</a>
+		<?php endif; ?>
+
 	</div>
 	<!--/.Card image-->
 

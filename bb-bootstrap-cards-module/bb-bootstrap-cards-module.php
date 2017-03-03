@@ -29,6 +29,12 @@ class BSFBBCards extends FLBuilderModule {
     public $data = null;
 
     /**
+     * @property $_editor
+     * @protected
+     */
+    protected $_editor = null;
+
+    /**
      * @method update
      * @param $settings {object}
      */
@@ -44,8 +50,10 @@ class BSFBBCards extends FLBuilderModule {
         if($data) {
             $settings->data = $data;
         }
+
         return $settings;
     }
+
 
     /**
      * @method get_data
@@ -53,6 +61,14 @@ class BSFBBCards extends FLBuilderModule {
     public function get_data()
     {
         if(!$this->data) {
+
+            // Photo source is set to "url".
+            if($this->settings->cards_photo_source == 'url') {
+                $this->data = new stdClass();
+                $this->data->link = $this->settings->cards_photo_url;
+                $this->data->url = $this->settings->cards_photo_url;
+                $this->settings->photo_src = $this->settings->cards_photo_url;
+            }
 
             // Photo source is set to "library".
             if(is_object($this->settings->photo)) {
@@ -69,6 +85,47 @@ class BSFBBCards extends FLBuilderModule {
         }
 
         return $this->data;
+    }
+
+    /**
+     * @method get_classes
+     */
+    public function get_classes()
+    {
+        $classes = array( 'fl-photo-img' );
+        
+        if ( $this->settings->cards_photo_source == 'library' && ! empty( $this->settings->photo ) ) {
+            
+            $data = self::get_data();
+            
+            if ( is_object( $data ) ) {
+                
+                $classes[] = 'wp-image-' . $data->id;
+
+                if ( isset( $data->sizes ) ) {
+
+                    foreach ( $data->sizes as $key => $size ) {
+                        
+                        if ( $size->url == $this->settings->photo_src ) {
+                            $classes[] = 'size-' . $key;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        
+        return implode( ' ', $classes );
+    }
+
+    /**
+     * @method get_src
+     */
+    public function get_src()
+    {
+        $src = $this->_get_uncropped_url();
+
+        return $src;
     }
 
     /**
@@ -91,6 +148,129 @@ class BSFBBCards extends FLBuilderModule {
             return htmlspecialchars($photo->title);
         }
     }
+
+    /**
+     * @method get_attributes
+     */
+    public function get_attributes()
+    {
+        $attrs = '';
+        
+        if ( isset( $this->settings->attributes ) ) {
+            foreach ( $this->settings->attributes as $key => $val ) {
+                $attrs .= $key . '="' . $val . '" ';
+            }
+        }
+        
+        return $attrs;
+    }
+
+    /**
+     * @method _has_source
+     * @protected
+     */
+    protected function _has_source()
+    {
+        if($this->settings->cards_photo_source == 'url' && !empty($this->settings->cards_photo_url)) {
+            return true;
+        }
+        else if($this->settings->cards_photo_source == 'library' && !empty($this->settings->photo_src)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * @method _get_editor
+     * @protected
+     */
+    protected function _get_editor()
+    {
+        if($this->_has_source() && $this->_editor === null) {
+
+            $url_path  = $this->_get_uncropped_url();
+            $file_path = str_ireplace(home_url(), ABSPATH, $url_path);
+
+            if(file_exists($file_path)) {
+                $this->_editor = wp_get_image_editor($file_path);
+            }
+            else {
+                $this->_editor = wp_get_image_editor($url_path);
+            }
+        }
+
+        return $this->_editor;
+    }
+
+        /**
+     * @method _get_cropped_path
+     * @protected
+     */
+    protected function _get_cropped_path()
+    {
+        $url         = $this->_get_uncropped_url();
+        $cache_dir   = FLBuilderModel::get_cache_dir();
+
+        if(empty($url)) {
+            $filename    = uniqid(); // Return a file that doesn't exist.
+        }
+        else {
+            
+            if ( stristr( $url, '?' ) ) {
+                $parts = explode( '?', $url );
+                $url   = $parts[0];
+            }
+            
+            $pathinfo    = pathinfo($url);
+            $dir         = $pathinfo['dirname'];
+            $ext         = $pathinfo['extension'];
+            $name        = wp_basename($url, ".$ext");
+            $new_ext     = strtolower($ext);
+            $filename    = "{$name}-{$crop}.{$new_ext}";
+        }
+
+        return array(
+            'filename' => $filename,
+            'path'     => $cache_dir['path'] . $filename,
+            'url'      => $cache_dir['url'] . $filename
+        );
+    }
+
+    /**
+     * @method _get_uncropped_url
+     * @protected
+     */
+    protected function _get_uncropped_url()
+    {
+        if($this->settings->cards_photo_source == 'url') {
+            $url = $this->settings->cards_photo_url;
+        }
+        else if(!empty($this->settings->photo_src)) {
+            $url = $this->settings->photo_src;
+        }
+        else {
+            $url = FL_BUILDER_URL . 'img/pixel.png';
+        }
+
+        return $url;
+    }
+
+    /**
+     * @method _get_cropped_demo_url
+     * @protected
+     */
+    protected function _get_cropped_demo_url()
+    {
+        $info = $this->_get_cropped_path();
+
+        return FL_BUILDER_DEMO_CACHE_URL . $info['filename'];
+    }
+
+    /**
+     * @method _get_cropped_path
+     * @protected
+     */
   
 
 }
@@ -172,10 +352,35 @@ FLBuilder::register_module('BSFBBCards',
                 'card_image'       => array( // Section
                     'title'         => __('Select Card Image', 'bb-bootstrap-cards'), // Section Title
                     'fields'        => array( // Section Fields
+                        
+                        'cards_photo_source'  => array(
+                            'type'          => 'select',
+                            'label'         => __('Photo Source', 'bb-bootstrap-cards'),
+                            'default'       => 'library',
+                            'options'       => array(
+                                'library'       => __('Media Library', 'bb-bootstrap-cards'),
+                                'url'           => __('URL', 'fl-builder')
+                            ),
+                            'toggle'        => array(
+                                'library'       => array(
+                                    'fields'        => array('photo')
+                                ),
+                                'url'           => array(
+                                    'fields'        => array('cards_photo_url', 'caption')
+                                )
+                            )
+                        ),
+
                         'photo'         => array(
                             'type'          => 'photo',
                             'label'         => __('Photo', 'bb-bootstrap-cards'),
                             'show_remove'   => true
+                        ),
+
+                        'cards_photo_url'     => array(
+                            'type'          => 'text',
+                            'label'         => __('Photo URL', 'bb-bootstrap-cards'),
+                            'placeholder'   => __( 'http://www.example.com/my-photo.jpg', 'fl-builder' )
                         ),
 
                     )     
