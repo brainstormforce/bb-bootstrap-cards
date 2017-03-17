@@ -2,7 +2,7 @@
 Contributors: brainstormforce, bhushansbobade20
 Donate link: https://www.brainstormforce.com/payment/
 Requires at least: 4.4
-Tags: beaver builder, page builder plugin, bootstrap cards, cards, bootstrap, drag and drop cards, bb bootstrap
+Tags: beaver builder, page builder plugin, bootstrap cards, cards, bootstrap, drag and drop cards, bb bootstrap, Beaver Builder Cards
 Stable tag: 1.0.1
 Tested up to: 4.7
 License: GPLv2 or later
@@ -10,8 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 URL : https://wordpress.org/plugins/beaver-builder-cards/
  
-Old: Beaver Builder Bootstrap Cards
-New: Beaver Builder Cards
+Beaver Builder Cards
  
 A quick and easy to use plugin to build creative and responsive cards for Beaver Builder.
 
