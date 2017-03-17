@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Bootstrap Cards Module For Beaver Builder 
+ * Plugin Name: Beaver Builder Cards
  * Plugin URI: https://www.brainstormforce.com/
  * Description: This is a plugin for creating Awesome Bootstrap Card.
  * Version: 1.0.1
