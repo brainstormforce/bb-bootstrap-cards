@@ -359,7 +359,7 @@ FLBuilder::register_module('BSFBBCards',
                             'default'       => 'library',
                             'options'       => array(
                                 'library'       => __('Media Library', 'bb-bootstrap-cards'),
-                                'url'           => __('URL', 'fl-builder')
+                                'url'           => __('URL', 'bb-bootstrap-cards')
                             ),
                             'toggle'        => array(
                                 'library'       => array(
@@ -380,7 +380,7 @@ FLBuilder::register_module('BSFBBCards',
                         'cards_photo_url'     => array(
                             'type'          => 'text',
                             'label'         => __('Photo URL', 'bb-bootstrap-cards'),
-                            'placeholder'   => __( 'http://www.example.com/my-photo.jpg', 'fl-builder' )
+                            'placeholder'   => __( 'http://www.example.com/my-photo.jpg', 'bb-bootstrap-cards' )
                         ),
 
                     )     
