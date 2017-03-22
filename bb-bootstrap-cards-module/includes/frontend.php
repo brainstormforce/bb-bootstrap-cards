@@ -9,14 +9,14 @@
 			$src      = $module->get_src();
 			$alt      = $module->get_alt();
 			$attrs    = $module->get_attributes();
-			$filetype = pathinfo($src, PATHINFO_EXTENSION);
+			$filetype = pathinfo( $src, PATHINFO_EXTENSION );
 		?>
 
-		<?php if(!empty($link)) : ?>
+		<?php if ( ! empty( $link ) ) : ?>
 		<a href="<?php echo $link; ?>" target="<?php echo $settings->link_target; ?>" itemprop="url">
 		<?php endif; ?>
 		<img class="<?php echo $classes; ?>" src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" itemprop="image" <?php echo $attrs; ?> />
-		<?php if(!empty($link)) : ?>
+		<?php if ( ! empty( $link ) ) : ?>
 		</a>
 		<?php endif; ?>
 
@@ -37,11 +37,11 @@
 		<!--/.Text-->
 	    
 	    <!--Link--> 
-	   	<?php if( $settings->card_btn_type == 'link' ){ ?>  
+	   	<?php if ( $settings->card_btn_type == 'link' ) { ?>  
 		    <a class="bb_boot_card_link" href="<?php echo $settings->link_field; ?>" target="<?php echo $settings->link_target?>">
 		    	<?php echo $settings->card_btn_text; ?>
 		    </a>
-	    <?php } else if($settings->card_btn_type == 'button'){ ?>
+	    <?php } elseif ( $settings->card_btn_type == 'button' ) { ?>
 	     	<a class="bb_boot_card_link_button" href="<?php echo $settings->btn_link; ?>" target="<?php echo $settings->btn_link_target?>">
 				<span class="bb_boot_button"><?php echo $settings->btn_text; ?></span>
 			</a>	
