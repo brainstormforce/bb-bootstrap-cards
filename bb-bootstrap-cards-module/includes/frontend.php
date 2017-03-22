@@ -1,3 +1,11 @@
+<?php
+/**
+ * Beaver Builder Cards
+ *
+ * @package  bb-bootstrap-cards
+ */
+
+?>
 
 <div class="bb_boot_card_container bb-content-align-<?php echo $settings->alignment; ?>">
 
@@ -37,11 +45,11 @@
 		<!--/.Text-->
 	    
 	    <!--Link--> 
-	   	<?php if ( $settings->card_btn_type == 'link' ) { ?>  
+	   	<?php if ( 'link' == $settings->card_btn_type ) { ?>  
 		    <a class="bb_boot_card_link" href="<?php echo $settings->link_field; ?>" target="<?php echo $settings->link_target?>">
 		    	<?php echo $settings->card_btn_text; ?>
 		    </a>
-	    <?php } elseif ( $settings->card_btn_type == 'button' ) { ?>
+	    <?php } elseif ( 'button' == $settings->card_btn_type ) { ?>
 	     	<a class="bb_boot_card_link_button" href="<?php echo $settings->btn_link; ?>" target="<?php echo $settings->btn_link_target?>">
 				<span class="bb_boot_button"><?php echo $settings->btn_text; ?></span>
 			</a>	
