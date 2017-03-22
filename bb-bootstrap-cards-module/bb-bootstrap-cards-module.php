@@ -1,7 +1,14 @@
 <?php
+/**
+ * BB Bootstrap Cards.
+ *
+ * @package BB-Bootstrap-Cards
+ */
 
 /**
- * @class BSFBBCards
+ * BB-Bootstrap-Cards
+ *
+ * @since 1.0
  */
 class BSFBBCards extends FLBuilderModule {
 	/**
@@ -23,19 +30,26 @@ class BSFBBCards extends FLBuilderModule {
 	}
 
 	/**
+	 * Summary
+	 *
 	 * @property $data
+	 * @var null description
 	 */
 	public $data = null;
 
 	/**
+	 * Summary
+	 *
 	 * @property $_editor
-	 * @protected
+	 * @var null description
 	 */
 	protected $_editor = null;
 
 	/**
+	 * Summary
+	 *
 	 * @method update
-	 * @param $settings {object}
+	 * @param [type] $settings {object}.
 	 */
 	public function update( $settings ) {
 		// Make sure we have a photo_src property.
@@ -54,13 +68,15 @@ class BSFBBCards extends FLBuilderModule {
 
 
 	/**
+	 * Summary
+	 *
 	 * @method get_data
 	 */
 	public function get_data() {
 		if ( ! $this->data ) {
 
 			// Photo source is set to "url".
-			if ( $this->settings->cards_photo_source == 'url' ) {
+			if ( 'url' == $this->settings->cards_photo_source ) {
 				$this->data = new stdClass();
 				$this->data->link = $this->settings->cards_photo_url;
 				$this->data->url = $this->settings->cards_photo_url;
@@ -84,12 +100,14 @@ class BSFBBCards extends FLBuilderModule {
 	}
 
 	/**
+	 * Summary
+	 *
 	 * @method get_classes
 	 */
 	public function get_classes() {
 		$classes = array( 'fl-photo-img' );
 
-		if ( $this->settings->cards_photo_source == 'library' && ! empty( $this->settings->photo ) ) {
+		if ( 'library' == $this->settings->cards_photo_source && ! empty( $this->settings->photo ) ) {
 
 			$data = self::get_data();
 
@@ -114,6 +132,8 @@ class BSFBBCards extends FLBuilderModule {
 	}
 
 	/**
+	 * Summary
+	 *
 	 * @method get_src
 	 */
 	public function get_src() {
@@ -123,6 +143,8 @@ class BSFBBCards extends FLBuilderModule {
 	}
 
 	/**
+	 * Summary
+	 *
 	 * @method get_alt
 	 */
 	public function get_alt() {
@@ -140,6 +162,8 @@ class BSFBBCards extends FLBuilderModule {
 	}
 
 	/**
+	 * Summary
+	 *
 	 * @method get_attributes
 	 */
 	public function get_attributes() {
@@ -155,13 +179,15 @@ class BSFBBCards extends FLBuilderModule {
 	}
 
 	/**
+	 * Summary
+	 *
 	 * @method _has_source
 	 * @protected
 	 */
 	protected function _has_source() {
-		if ( $this->settings->cards_photo_source == 'url' && ! empty( $this->settings->cards_photo_url ) ) {
+		if ( 'url' == $this->settings->cards_photo_source && ! empty( $this->settings->cards_photo_url ) ) {
 			return true;
-		} elseif ( $this->settings->cards_photo_source == 'library' && ! empty( $this->settings->photo_src ) ) {
+		} elseif ( 'library' == $this->settings->cards_photo_source && ! empty( $this->settings->photo_src ) ) {
 			return true;
 		}
 
@@ -169,11 +195,13 @@ class BSFBBCards extends FLBuilderModule {
 	}
 
 	/**
+	 * Summary
+	 *
 	 * @method _get_editor
 	 * @protected
 	 */
 	protected function _get_editor() {
-		if ( $this->_has_source() && $this->_editor === null ) {
+		if ( $this->_has_source() && null === $this->_editor ) {
 
 			$url_path  = $this->_get_uncropped_url();
 			$file_path = str_ireplace( home_url(), ABSPATH, $url_path );
@@ -189,6 +217,8 @@ class BSFBBCards extends FLBuilderModule {
 	}
 
 		/**
+		 * Summary
+		 *
 		 * @method _get_cropped_path
 		 * @protected
 		 */
@@ -221,11 +251,13 @@ class BSFBBCards extends FLBuilderModule {
 	}
 
 	/**
+	 * Summary
+	 *
 	 * @method _get_uncropped_url
 	 * @protected
 	 */
 	protected function _get_uncropped_url() {
-		if ( $this->settings->cards_photo_source == 'url' ) {
+		if ( 'url' == $this->settings->cards_photo_source ) {
 			$url = $this->settings->cards_photo_url;
 		} elseif ( ! empty( $this->settings->photo_src ) ) {
 			$url = $this->settings->photo_src;
@@ -237,6 +269,8 @@ class BSFBBCards extends FLBuilderModule {
 	}
 
 	/**
+	 * Summary
+	 *
 	 * @method _get_cropped_demo_url
 	 * @protected
 	 */
@@ -247,6 +281,8 @@ class BSFBBCards extends FLBuilderModule {
 	}
 
 	/**
+	 * Summary
+	 *
 	 * @method _get_cropped_path
 	 * @protected
 	 */
@@ -264,7 +300,7 @@ FLBuilder::register_module('BSFBBCards',
 			'sections'      => array( // Tab Sections
 				'general'       => array( // Section
 					'title'         => __( 'Card Elements', 'bb-bootstrap-cards' ), // Section Title
-					'fields'        => array( // Section Fields
+					'fields'        => array( // Section Fields.
 						'card_title'     => array(
 							'type'          => 'text',
 							'placeholder'   => 'Enter Card Title',
@@ -330,7 +366,7 @@ FLBuilder::register_module('BSFBBCards',
 			'sections'      => array( // Tab Sections
 				'card_image'       => array( // Section
 					'title'         => __( 'Select Card Image', 'bb-bootstrap-cards' ), // Section Title
-					'fields'        => array( // Section Fields
+					'fields'        => array( // Section Fields.
 
 						'cards_photo_source'  => array(
 							'type'          => 'select',
@@ -372,7 +408,7 @@ FLBuilder::register_module('BSFBBCards',
 			'sections'      => array( // Tab Sections
 				'card_link'       => array( // Section
 					'title'         => __( 'Select Read More', 'bb-bootstrap-cards' ), // Section Title
-					'fields'        => array( // Section Fields
+					'fields'        => array( // Section Fields.
 						'card_btn_type'      => array(
 						'type'          => 'select',
 						'label'         => __( 'Type', 'bb-bootstrap-cards' ),
@@ -576,7 +612,7 @@ FLBuilder::register_module('BSFBBCards',
 					),
 				),
 
-				'btn-link'       => array( // Section
+				'btn-link'       => array( // Section.
 					'title'         => __( 'Button', 'bb-bootstrap-cards' ),
 					'fields'        => array(
 
@@ -609,7 +645,7 @@ FLBuilder::register_module('BSFBBCards',
 					),
 				),
 
-				'btn_typography'     => array( // Section
+				'btn_typography'     => array( // Section.
 					'title'         => __( 'Button Typography', 'bb-bootstrap-cards' ),
 					'fields'        => array(
 						'btn_font_family'       => array(
