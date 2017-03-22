@@ -1,58 +1,75 @@
 <?php
 /**
- * Plugin Name: Beaver Builder Cards
- * Plugin URI: https://www.brainstormforce.com/
- * Description: This is a plugin for creating Awesome Bootstrap Card.
- * Version: 1.0.1
- * Author: Brainstorm force, Bhushan Bobade
- * Author URI: https://www.brainstormforce.com/
- * Text Domain: bb-bootstrap-cards
+ * Plugin Name: 	Beaver Builder Cards
+ * Plugin URI: 		https://www.brainstormforce.com/
+ * Description: 	This is a plugin for creating Awesome Bootstrap Card.
+ * Author: 			Brainstorm force, Bhushan Bobade
+ * Author URI: 		https://www.brainstormforce.com/
+ * Text Domain: 	bb-bootstrap-cards
+ * Version: 		1.0.1
+ *
+ * @package         BB-Bootstrap-Cards
  */
+
 define( 'BB_BOOTSTRAPCARDS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BB_BOOTSTRAPCARDS_URL', plugins_url( '/', __FILE__ ) );
 
 /**
  * Custom modules
  */
-// check of BSFBBBootstrapCards class already exist or not
+// check of BSFBBBootstrapCards class already exist or not.
 if ( ! class_exists( 'BSFBBBootstrapCards' ) ) {
-
+	/**
+	 * Class to check BB cards install
+	 */
 	class BSFBBBootstrapCards {
 
-
+		/**
+		 * Constructor
+		 */
 		function __construct() {
 			add_action( 'init', array( $this, 'load_bootstrap_card' ) );
 			add_action( 'init', array( $this, 'load_textdomain' ) );
 		}
 
-		// function to load BB Bootstrap Cards
+		/**
+		 * Function to load BB Bootstrap Cards
+		 */
 		function load_bootstrap_card() {
 
 			if ( class_exists( 'FLBuilder' ) ) {
-
-				// If class exist it loads the module
+				/**
+				 * If class exist it loads the module
+				 */
 				require_once 'bb-bootstrap-cards-module/bb-bootstrap-cards-module.php';
 
 			} else {
-
-				// Display admin notice for activating beaver builder
+				/**
+				 * Display admin notice for activating beaver builder
+				 */
 				add_action( 'admin_notices',array( $this, 'admin_notices_function' ) );
 				add_action( 'network_admin_notices',array( $this, 'admin_notices_function' ) );
 
 			}
 		}
 
-		// function to load text domain
+		/**
+		 * Function to load text domain
+		 */
 		public function load_textdomain() {
 
 			load_plugin_textdomain( 'bb-bootstrap-cards' );
 
 		}
 
-		// function to display admin notice
+		/**
+		 * Function to display admin notice
+		 */
 		function admin_notices_function() {
 
-			// check for Beaver Builder Installed / Activated or not
+			/**
+			 * Check for Beaver Builder Installed / Activated or not
+			 */
 			if ( file_exists( plugin_dir_path( 'bb-plugin-agency/fl-builder.php' ) )
 
 				|| file_exists( plugin_dir_path( 'beaver-builder-lite-version/fl-builder.php' ) ) ) {
