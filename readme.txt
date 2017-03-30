@@ -72,6 +72,9 @@ Visit our website to know more about the top WordPress products and services we 
 == Frequently Asked Questions ==
 
 
+== Screenshots ==
+
+
 == Changelog ==
 
 = 1.0.0 =
