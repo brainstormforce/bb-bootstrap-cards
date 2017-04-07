@@ -18,10 +18,10 @@ A quick and easy to use plugin to build creative and responsive cards for Beaver
 
 ##Description##
 
-Cards can be defined as flexible and extensible content containers. These make it easy to display small boxes of content that comprise of images, text, titles, links and buttons too.
+Cards can be defined as flexible and extensible content containers. These make it easy to display small boxes of content that comprise of images, text, titles, links and buttons too. Are you looking for a <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/?utm_source=wp-repo&utm_campaign=%20bbcards&utm_medium=description”>Beaver Builder Addon</a> that helps create cards?
 
 
-The Beaver Builder Cards plugin adds an advanced custom module to the basic page builder, making it easy for users to create attractive and responsive cards on their website. Like all the other Beaver Builder modules, the Beaver Builder Cards module can simply be dragged and dropped on a page, followed by the additional customizations.
+The <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=%20bbcards&utm_medium=description”>Beaver Builder Cards</a> plugin adds an advanced custom module to the basic page builder, making it easy for users to create attractive and responsive cards on their website. Like all the other Beaver Builder modules, the Beaver Builder Cards module can simply be dragged and dropped on a page, followed by the additional customizations.
 
 ###Features of the Beaver Builder Cards###
 
@@ -44,6 +44,11 @@ Can be used as small information boxes on an informative website.
 Works like any other Beaver Builder module. Thus, it's easy!
 Responsive and mobile friendly cards
 Customizations make it easy to create attractive cards.
+
+ Made with love at <a href=”https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=
+bbcards&utm_medium=description
+“>Brainstorm Force</a>! 
+
 ###What’s More?###
 
 If you like this plugin, please leave us a good review and rating! Your feedback and suggestions will be highly appreciated.
@@ -51,11 +56,11 @@ If you like this plugin, please leave us a good review and rating! Your feedback
 You can also consider checking out our other plugins:
 
 <a href=”https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Ultimate Addons for Beaver Builder Lite</a>: The Best Addon for Beaver Builder with a huge collection of advanced and creative modules.
-<a href=”https://www.ultimatebeaver.com/freebies/expandable-row/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Expandable Row for Beaver Builder</a>: An advanced plugin that lets you expand your Beaver Builder rows.
-<a href=”https://www.ultimatebeaver.com/freebies/bbcards/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Timeline module for Beaver Builder</a>: An advanced module to create attractive and responsive timelines using Beaver Builder.
-<a href=”https://www.ultimatebeaver.com/freebies/bbalerts/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Beaver Builder Alerts</a>: An advanced module to create attention seeking alerts in Beaver Builder.
-<a href=”https://www.ultimatebeaver.com/freebies/bb-header-footer/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Beaver Builder Header Footer</a>: Design beautiful headers and footers with Beaver Builder.
-<a href=”https://www.ultimatebeaver.com/freebies/column-seperator/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/expandable-row/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Expandable Row for Beaver Builder</a>: An advanced plugin that lets you expand your Beaver Builder rows.
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Timeline module for Beaver Builder</a>: An advanced module to create attractive and responsive timelines using Beaver Builder.
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbalerts/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Beaver Builder Alerts</a>: An advanced module to create attention seeking alerts in Beaver Builder.
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Beaver Builder Header Footer</a>: Design beautiful headers and footers with Beaver Builder.
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/column-seperator/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!
  
 Visit our website to know more about the top WordPress products and services we offer. You can also stay updated with our upcoming endeavors by following us on <a href=”https://www.brainstormforce.com/go/brainstorm-force-facebook-page/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=share”>Facebook</a> and <a href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=share”>Twitter</a>.
 
