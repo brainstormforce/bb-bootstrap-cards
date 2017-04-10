@@ -86,9 +86,9 @@ Visit our website to know more about the top WordPress products and services we 
 - Initial release
 
 ### 1.0.1 ###
-- Update: 		Added image alt tag.
-- Enhancement: 	Card image source enhancement Media / URL.
-- Update: 		Textarea to Text Editor for more flexibility.
-- Fixed	: 		PHP Notice Errors.
+- Update: Added image alt tag.
+- Enhancement: Card image source enhancement Media / URL.
+- Update: Textarea to Text Editor for more flexibility.
+- Fixed	: PHP Notice Errors.
 
 ## Upgrade Notice ##
