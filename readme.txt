@@ -87,13 +87,13 @@ Visit our website to know more about the top WordPress products and services we 
 
 == Changelog ==
 
-= 1.0.0 =
-- Initial release
-
 = 1.0.1 =
 - Update: Added image alt tag.
 - Enhancement: Card image source enhancement Media / URL.
 - Update: Textarea to Text Editor for more flexibility.
 - Fixed	: PHP Notice Errors.
+
+= 1.0.0 =
+- Initial release
 
 == Upgrade Notice ==
