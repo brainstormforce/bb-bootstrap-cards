@@ -1,14 +1,33 @@
+<?php
+/**
+ * Beaver Builder Cards
+ *
+ * @package  bb-bootstrap-cards
+ */
+
+?>
 
 <div class="bb_boot_card_container bb-content-align-<?php echo $settings->alignment; ?>">
 
 	<!--Card image-->
 	<div class="bb_boot_card_image">
 		<?php
+			$photo    = $module->get_data();
+			$classes  = $module->get_classes();
+			$src      = $module->get_src();
 			$alt      = $module->get_alt();
+			$attrs    = $module->get_attributes();
+			$filetype = pathinfo( $src, PATHINFO_EXTENSION );
 		?>
-	    <?php if( $settings->photo != '' && isset( $settings->photo_src) ){ ?> 
-		   <img src="<?php echo $settings->photo_src; ?>" alt="<?php echo $alt; ?>" itemprop="image"/>
-		<?php } ?>
+
+		<?php if ( ! empty( $link ) ) : ?>
+		<a href="<?php echo $link; ?>" target="<?php echo $settings->link_target; ?>" itemprop="url">
+		<?php endif; ?>
+		<img class="<?php echo $classes; ?>" src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" itemprop="image" <?php echo $attrs; ?> />
+		<?php if ( ! empty( $link ) ) : ?>
+		</a>
+		<?php endif; ?>
+
 	</div>
 	<!--/.Card image-->
 
@@ -26,11 +45,11 @@
 		<!--/.Text-->
 	    
 	    <!--Link--> 
-	   	<?php if( $settings->card_btn_type == 'link' ){ ?>  
+	   	<?php if ( 'link' == $settings->card_btn_type ) { ?>  
 		    <a class="bb_boot_card_link" href="<?php echo $settings->link_field; ?>" target="<?php echo $settings->link_target?>">
 		    	<?php echo $settings->card_btn_text; ?>
 		    </a>
-	    <?php } else if($settings->card_btn_type == 'button'){ ?>
+	    <?php } elseif ( 'button' == $settings->card_btn_type ) { ?>
 	     	<a class="bb_boot_card_link_button" href="<?php echo $settings->btn_link; ?>" target="<?php echo $settings->btn_link_target?>">
 				<span class="bb_boot_button"><?php echo $settings->btn_text; ?></span>
 			</a>	

@@ -1,29 +1,29 @@
-=== Beaver Builder Cards ===
-Contributors: brainstormforce, bhushansbobade20
-Donate link: https://www.brainstormforce.com/payment/
-Requires at least: 4.4
-Tags: beaver builder, page builder plugin, bootstrap cards, cards, bootstrap, drag and drop cards, bb bootstrap, Beaver Builder Cards
-Stable tag: 1.0.1
-Tested up to: 4.7
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+# Beaver Builder Cards #
+**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce), [bhushansbobade20](https://profiles.wordpress.org/bhushansbobade20)  
+**Donate link:** https://www.brainstormforce.com/payment/  
+**Requires at least:** 4.4  
+**Tags:** beaver builder, page builder plugin, bootstrap cards, cards, bootstrap, drag and drop cards, bb bootstrap, Beaver Builder Cards  
+**Stable tag:** 1.0.1  
+**Tested up to:** 4.7  
+**License:** GPLv2 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
-URL : https://wordpress.org/plugins/beaver-builder-cards/
+**URL :** https://wordpress.org/plugins/beaver-builder-cards/  
  
 Beaver Builder Cards
  
 A quick and easy to use plugin to build creative and responsive cards for Beaver Builder.
 
-Tags: beaver builder cards, beaver builder modules, bootstrap cards, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, widget, cards for beaver builder
+**Tags:** beaver builder cards, beaver builder modules, bootstrap cards, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, widget, cards for beaver builder  
 
-== Description ==
+## Description ##
 
 Cards can be defined as flexible and extensible content containers. These make it easy to display small boxes of content that comprise of images, text, titles, links and buttons too. Are you looking for a <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/?utm_source=wp-repo&utm_campaign=%20bbcards&utm_medium=description”>Beaver Builder Addon</a> that helps create cards?
 
 
 The <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=%20bbcards&utm_medium=description”>Beaver Builder Cards</a> plugin adds an advanced custom module to the basic page builder, making it easy for users to create attractive and responsive cards on their website. Like all the other Beaver Builder modules, the Beaver Builder Cards module can simply be dragged and dropped on a page, followed by the additional customizations.
 
-== Features of the Beaver Builder Cards ==
+### Features of the Beaver Builder Cards ###
 
 Create Attractive and creative cards on the page
 Responsive and mobile ready cards
@@ -32,14 +32,14 @@ Easy to build and design
 
 Since this module is easy to use and highly customizable, you can use for various applications across the web.
 
-== Applications of the Beaver Builder Cards ==
+### Applications of the Beaver Builder Cards ###
 
 Display Product information with image and call-to-action on Ecommerce websites
 Can contain an introductory batch of content that takes users to another page.
 Can contain a featured image and some content to take users to0 a blog post.
 Can be used as small information boxes on an informative website.
 
-== Advantages of Beaver Builder Cards ==
+### Advantages of Beaver Builder Cards ###
 
 Works like any other Beaver Builder module. Thus, it's easy!
 Responsive and mobile friendly cards
@@ -49,7 +49,7 @@ Customizations make it easy to create attractive cards.
 bbcards&utm_medium=description
 “>Brainstorm Force</a>! 
 
-== What’s More? ==
+### What’s More? ###
 
 If you like this plugin, please leave us a good review and rating! Your feedback and suggestions will be highly appreciated.
 
@@ -64,7 +64,7 @@ You can also consider checking out our other plugins:
  
 Visit our website to know more about the top WordPress products and services we offer. You can also stay updated with our upcoming endeavors by following us on <a href=”https://www.brainstormforce.com/go/brainstorm-force-facebook-page/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=share”>Facebook</a> and <a href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=share”>Twitter</a>.
 
-== Installation ==
+## Installation ##
 
 1. Be sure that you have the [Beaver Builder](https://goo.gl/rYCvGw "Beaver Builder") installed and activated.
 
@@ -74,21 +74,21 @@ Visit our website to know more about the top WordPress products and services we 
 
 4. Find this module in `Page Builder` -> `Add Content` -> `Advance Modules` -> `Bootstrap Cards`
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions ##
 
 
-== Screenshots ==
+## Screenshots ##
 
 
-== Changelog ==
+## Changelog ##
 
-= 1.0.0 =
+### 1.0.0 ###
 - Initial release
 
-= 1.0.1 =
+### 1.0.1 ###
 - Update: Added image alt tag.
 - Enhancement: Card image source enhancement Media / URL.
 - Update: Textarea to Text Editor for more flexibility.
 - Fixed	: PHP Notice Errors.
 
-== Upgrade Notice ==
+## Upgrade Notice ##
