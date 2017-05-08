@@ -130,8 +130,8 @@ margin-bottom: <?php echo ( trim( $settings->desc_margin_bottom ) != '' ) ? $set
 }
 
 
-/* BCard's Button Link */
-<?php if ( ! empty( 'Default' != $settings->btn_font_family ) && $settings->btn_font_family['family'] ) : ?>
+/* BCard's Button Link */ 
+<?php if ( ! empty( $settings->btn_font_family ) && 'Default' != $settings->btn_font_family['family'] ) : ?>
 .fl-node-<?php echo $id; ?> .bb_boot_card_link_button .bb_boot_button{
 	<?php FLBuilderFonts::font_css( $settings->btn_font_family ); ?>
 }

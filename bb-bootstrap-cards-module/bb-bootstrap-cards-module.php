@@ -310,6 +310,7 @@ FLBuilder::register_module('BSFBBCards',
 								'type'             => 'text',
 								'selector'         => '.bb_boot_card_title',
 							),
+							'connections'   => array( 'string', 'html' ),
 						),
 
 						'card_textarea' => array(
@@ -322,6 +323,7 @@ FLBuilder::register_module('BSFBBCards',
 								'type'             => 'text',
 								'selector'         => '.bb_boot_card_text',
 							),
+							'connections'   => array( 'string', 'html' ),
 						),
 
 
@@ -390,6 +392,7 @@ FLBuilder::register_module('BSFBBCards',
 							'type'          => 'photo',
 							'label'         => __( 'Photo', 'bb-bootstrap-cards' ),
 							'show_remove'   => true,
+							'connections'   => array( 'photo' ),
 						),
 
 						'cards_photo_url'     => array(
@@ -443,6 +446,7 @@ FLBuilder::register_module('BSFBBCards',
 							'type'          => 'text',
 							'label'         => __( 'Text', 'bb-bootstrap-cards' ),
 							'default'       => __( 'Read More', 'bb-bootstrap-cards' ),
+							'connections'   => array( 'string', 'html' ),
 						),
 
 						'link_field'          => array(
@@ -451,6 +455,7 @@ FLBuilder::register_module('BSFBBCards',
 							'preview'       => array(
 								'type'          => 'none',
 							),
+							'connections'   => array( 'url' ),
 						),
 						'link_target'   => array(
 							'type'          => 'select',
@@ -620,6 +625,7 @@ FLBuilder::register_module('BSFBBCards',
 							'type'          => 'text',
 							'label'         => __( 'Button Text', 'bb-bootstrap-cards' ),
 							'default'       => __( 'Click Here', 'bb-bootstrap-cards' ),
+							'connections'   => array( 'string', 'html' ),
 						),
 
 						'btn_link'          => array(
@@ -629,6 +635,7 @@ FLBuilder::register_module('BSFBBCards',
 							'preview'       => array(
 								'type'          => 'none',
 							),
+							'connections'   => array( 'url' ),
 						),
 						'btn_link_target'   => array(
 							'type'          => 'select',
