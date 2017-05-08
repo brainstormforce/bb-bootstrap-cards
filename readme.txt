@@ -87,6 +87,9 @@ Visit our website to know more about the top WordPress products and services we 
 
 == Changelog ==
 
+= 1.1.0 =
+* New: Beaver Themer support for field connections.
+
 = 1.0.1 =
 - Update: Added image alt tag.
 - Enhancement: Card image source enhancement Media / URL.
