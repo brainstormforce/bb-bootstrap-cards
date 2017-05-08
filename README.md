@@ -45,9 +45,7 @@ Works like any other Beaver Builder module. Thus, it's easy!
 Responsive and mobile friendly cards
 Customizations make it easy to create attractive cards.
 
- Made with love at <a href=”https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=
-bbcards&utm_medium=description
-“>Brainstorm Force</a>! 
+ Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=description">Brainstorm Force</a>! 
 
 ## What’s More? ##
 
