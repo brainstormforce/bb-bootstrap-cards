@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: 	Beaver Builder Cards
- * Plugin URI: 		https://www.brainstormforce.com/
+ * Plugin URI: 		https://www.ultimatebeaver.com/beaver-builder-free/bbcards/
  * Description: 	This is a plugin for creating Awesome Bootstrap Card.
- * Author: 			Brainstorm force, Bhushan Bobade
- * Author URI: 		https://www.brainstormforce.com/
+ * Author: 			Beaver Builder Addon
+ * Author URI: 		https://www.ultimatebeaver.com/
  * Text Domain: 	bb-bootstrap-cards
  * Version: 		1.1.0
  *

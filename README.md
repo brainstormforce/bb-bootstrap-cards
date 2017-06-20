@@ -4,17 +4,11 @@
 **Requires at least:** 4.4  
 **Tags:** beaver builder, page builder plugin, bootstrap cards, cards, bootstrap, drag and drop cards, bb bootstrap, Beaver Builder Cards  
 **Stable tag:** 1.1.0  
-**Tested up to:** 4.7.4  
+**Tested up to:** 4.8.0  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
-**URL :** https://wordpress.org/plugins/beaver-builder-cards/  
- 
-Beaver Builder Cards
- 
 A quick and easy to use plugin to build creative and responsive cards for Beaver Builder.
-
-**Tags:** beaver builder cards, beaver builder modules, bootstrap cards, beaver builder addon, beaver builder, beaver builder extensions, beaver addons, beaver builder free, page builder addons, beaver builder template, widget, cards for beaver builder  
 
 ## Description ##
 
