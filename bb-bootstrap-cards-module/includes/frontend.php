@@ -24,7 +24,7 @@
 		<a href="<?php echo $settings->btn_link; ?>" target="<?php echo $settings->btn_link_target; ?>" itemprop="url">
 		<?php endif; ?>
 		<img class="<?php echo $classes; ?>" src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" itemprop="image" <?php echo $attrs; ?> />
-		<?php if ( $settings->photo_hyperlink == 'yes' && $settings->card_btn_type != 'none' ) : ?>
+		<?php if ( 'yes' == $settings->photo_hyperlink && 'none' != $settings->card_btn_type ) : ?>
 		</a>
 		<?php endif; ?>
 
