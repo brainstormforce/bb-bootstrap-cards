@@ -6,7 +6,7 @@
  * Author: 			Brainstorm force, Bhushan Bobade
  * Author URI: 		https://www.brainstormforce.com/
  * Text Domain: 	bb-bootstrap-cards
- * Version: 		1.1.0
+ * Version: 		1.1.1
  *
  * @package         BB-Bootstrap-Cards
  */
