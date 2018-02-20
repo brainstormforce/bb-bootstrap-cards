@@ -19,12 +19,14 @@
 			$attrs    = $module->get_attributes();
 			$filetype = pathinfo( $src, PATHINFO_EXTENSION );
 		?>
-
-		<?php if ( ! empty( $link ) ) : ?>
-		<a href="<?php echo $link; ?>" target="<?php echo $settings->link_target; ?>" itemprop="url">
+		<?php if ( 'yes' == $settings->photo_hyperlink && 'link' == $settings->card_btn_type ) : ?>
+		<a href="<?php echo $settings->link_field; ?>" target="<?php echo $settings->link_target; ?>" itemprop="url">
+		<?php endif; ?>
+		<?php if ( 'yes' == $settings->photo_hyperlink && 'button' == $settings->card_btn_type ) : ?>
+		<a href="<?php echo $settings->btn_link; ?>" target="<?php echo $settings->btn_link_target; ?>" itemprop="url">
 		<?php endif; ?>
 		<img class="<?php echo $classes; ?>" src="<?php echo $src; ?>" alt="<?php echo $alt; ?>" itemprop="image" <?php echo $attrs; ?> />
-		<?php if ( ! empty( $link ) ) : ?>
+		<?php if ( $settings->photo_hyperlink == 'yes' && $settings->card_btn_type != 'none' ) : ?>
 		</a>
 		<?php endif; ?>
 

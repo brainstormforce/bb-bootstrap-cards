@@ -387,7 +387,6 @@ FLBuilder::register_module('BSFBBCards',
 								),
 							),
 						),
-
 						'photo'         => array(
 							'type'          => 'photo',
 							'label'         => __( 'Photo', 'bb-bootstrap-cards' ),
@@ -399,6 +398,15 @@ FLBuilder::register_module('BSFBBCards',
 							'type'          => 'text',
 							'label'         => __( 'Photo URL', 'bb-bootstrap-cards' ),
 							'placeholder'   => __( 'http://www.example.com/my-photo.jpg', 'bb-bootstrap-cards' ),
+						),
+						'photo_hyperlink'     => array(
+							'type'          => 'select',
+							'label'         => __( 'Add Link to Photo', 'bb-bootstrap-cards' ),
+							'default'       => 'no',
+							'options'       => array(
+								'yes'       => __( 'Yes', 'bb-bootstrap-cards' ),
+								'no'        => __( 'No', 'bb-bootstrap-cards' ),
+							),
 						),
 
 					),
@@ -424,10 +432,11 @@ FLBuilder::register_module('BSFBBCards',
 						'toggle'        => array(
 							'none'          => array(),
 							'link'          => array(
-								'fields'        => array( 'card_btn_text' ),
+								'fields'        => array( 'card_btn_text', 'photo_hyperlink' ),
 								'sections'      => array( 'link', 'link_typography' ),
 							),
 							'button'        => array(
+								'fields'        => array( 'photo_hyperlink' ),
 								'sections'      => array( 'btn-link', 'btn_typography' ),
 							),
 
