@@ -66,6 +66,39 @@ class BSFBBCards extends FLBuilderModule {
 		return $settings;
 	}
 
+
+	/**
+	 * Summary
+	 *
+	 * @method get_data
+	 */
+	public function get_data() {
+		if ( ! $this->data ) {
+
+			// Photo source is set to "url".
+			if ( 'url' == $this->settings->cards_photo_source ) {
+				$this->data = new stdClass();
+				$this->data->link = $this->settings->cards_photo_url;
+				$this->data->url = $this->settings->cards_photo_url;
+				$this->settings->photo_src = $this->settings->cards_photo_url;
+			}
+
+			// Photo source is set to "library".
+			if ( is_object( $this->settings->photo ) ) {
+				$this->data = $this->settings->photo;
+			} else {
+				$this->data = FLBuilderPhoto::get_attachment_data( $this->settings->photo );
+			}
+
+			// Data object is empty, use the settings cache.
+			if ( ! $this->data && isset( $this->settings->data ) ) {
+				$this->data = $this->settings->data;
+			}
+		}
+
+		return $this->data;
+	}
+
 	/**
 	 * Summary
 	 *
