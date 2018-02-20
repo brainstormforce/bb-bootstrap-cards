@@ -181,78 +181,6 @@ class BSFBBCards extends FLBuilderModule {
 	/**
 	 * Summary
 	 *
-	 * @method _has_source
-	 * @protected
-	 */
-	protected function _has_source() {
-		if ( 'url' == $this->settings->cards_photo_source && ! empty( $this->settings->cards_photo_url ) ) {
-			return true;
-		} elseif ( 'library' == $this->settings->cards_photo_source && ! empty( $this->settings->photo_src ) ) {
-			return true;
-		}
-
-		return false;
-	}
-
-	/**
-	 * Summary
-	 *
-	 * @method _get_editor
-	 * @protected
-	 */
-	protected function _get_editor() {
-		if ( $this->_has_source() && null === $this->_editor ) {
-
-			$url_path  = $this->_get_uncropped_url();
-			$file_path = str_ireplace( home_url(), ABSPATH, $url_path );
-
-			if ( file_exists( $file_path ) ) {
-				$this->_editor = wp_get_image_editor( $file_path );
-			} else {
-				$this->_editor = wp_get_image_editor( $url_path );
-			}
-		}
-
-		return $this->_editor;
-	}
-
-		/**
-		 * Summary
-		 *
-		 * @method _get_cropped_path
-		 * @protected
-		 */
-	protected function _get_cropped_path() {
-		$url         = $this->_get_uncropped_url();
-		$cache_dir   = FLBuilderModel::get_cache_dir();
-
-		if ( empty( $url ) ) {
-			$filename    = uniqid(); // Return a file that doesn't exist.
-		} else {
-
-			if ( stristr( $url, '?' ) ) {
-				$parts = explode( '?', $url );
-				$url   = $parts[0];
-			}
-
-			$pathinfo    = pathinfo( $url );
-			$dir         = $pathinfo['dirname'];
-			$ext         = $pathinfo['extension'];
-			$name        = wp_basename( $url, ".$ext" );
-			$new_ext     = strtolower( $ext );
-			$filename    = "{$name}-{$crop}.{$new_ext}";
-		}
-
-		return array(
-			'filename' => $filename,
-			'path'     => $cache_dir['path'] . $filename,
-			'url'      => $cache_dir['url'] . $filename,
-		);
-	}
-
-	/**
-	 * Summary
-	 *
 	 * @method _get_uncropped_url
 	 * @protected
 	 */
@@ -267,26 +195,6 @@ class BSFBBCards extends FLBuilderModule {
 
 		return $url;
 	}
-
-	/**
-	 * Summary
-	 *
-	 * @method _get_cropped_demo_url
-	 * @protected
-	 */
-	protected function _get_cropped_demo_url() {
-		$info = $this->_get_cropped_path();
-
-		return FL_BUILDER_DEMO_CACHE_URL . $info['filename'];
-	}
-
-	/**
-	 * Summary
-	 *
-	 * @method _get_cropped_path
-	 * @protected
-	 */
-
 
 }
 
