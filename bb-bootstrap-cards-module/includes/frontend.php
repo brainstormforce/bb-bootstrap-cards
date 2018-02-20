@@ -12,12 +12,10 @@
 	<!--Card image-->
 	<div class="bb_boot_card_image">
 		<?php
-			$photo    = $module->get_data();
 			$classes  = $module->get_classes();
 			$src      = $module->get_src();
 			$alt      = $module->get_alt();
 			$attrs    = $module->get_attributes();
-			$filetype = pathinfo( $src, PATHINFO_EXTENSION );
 		?>
 		<?php if ( 'yes' == $settings->photo_hyperlink && 'link' == $settings->card_btn_type ) : ?>
 		<a href="<?php echo $settings->link_field; ?>" target="<?php echo $settings->link_target; ?>" itemprop="url">
