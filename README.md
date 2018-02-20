@@ -86,7 +86,7 @@ Visit our website to know more about the top WordPress products and services we 
 ## Changelog ##
 
 ### 1.1.1 ###
-* Update: Added option to apply link on photo.
+* Update: Added option to apply link on the photo.
 
 ### 1.1.0 ###
 * New: Beaver Themer support for field connections.
