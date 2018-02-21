@@ -11,7 +11,7 @@
 <?php if ( ! empty( $settings->bg_color ) ) : ?>
 .fl-node-<?php echo $id; ?> .bb_boot_card_container { 
 	background-color: #<?php echo $settings->bg_color; ?>;
-	background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $settings->bg_color ) ) ?>, <?php echo ( '' != $settings->bg_color_opc ) ? $settings->bg_color_opc / 100 : 100; ?>);
+	background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $settings->bg_color ) ); ?>, <?php echo ( '' != $settings->bg_color_opc ) ? $settings->bg_color_opc / 100 : 100; ?>);
 }
 <?php endif; ?>
 
@@ -87,7 +87,7 @@ margin-bottom: <?php echo ( trim( $settings->title_margin_bottom ) != '' ) ? $se
 .fl-node-<?php echo $id; ?> .bb_boot_card_link {
 margin-top: <?php echo ( trim( $settings->link_margin_top ) != '' ) ? $settings->link_margin_top : '0'; ?>px;
 margin-bottom: <?php echo ( trim( $settings->link_margin_bottom ) != '' ) ? $settings->link_margin_bottom : '0'; ?>px;
-<?php if ( '' != $settings->link_margin_top  || '' != $settings->link_margin_bottom ) { ?>
+<?php if ( '' != $settings->link_margin_top || '' != $settings->link_margin_bottom ) { ?>
 display:block;
 <?php } ?>
 }

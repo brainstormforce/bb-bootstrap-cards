@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: 	Beaver Builder Cards
- * Plugin URI: 		https://www.brainstormforce.com/
- * Description: 	This is a plugin for creating Awesome Bootstrap Card.
- * Author: 			Brainstorm force, Bhushan Bobade
- * Author URI: 		https://www.brainstormforce.com/
- * Text Domain: 	bb-bootstrap-cards
- * Version: 		1.1.0
+ * Plugin Name:     Beaver Builder Cards
+ * Plugin URI:      https://www.brainstormforce.com/
+ * Description:     This is a plugin for creating Awesome Bootstrap Card.
+ * Author:          Brainstorm force, Bhushan Bobade
+ * Author URI:      https://www.brainstormforce.com/
+ * Text Domain:     bb-bootstrap-cards
+ * Version:         1.1.0
  *
  * @package         BB-Bootstrap-Cards
  */
@@ -47,8 +47,8 @@ if ( ! class_exists( 'BSFBBBootstrapCards' ) ) {
 				/**
 				 * Display admin notice for activating beaver builder
 				 */
-				add_action( 'admin_notices',array( $this, 'admin_notices_function' ) );
-				add_action( 'network_admin_notices',array( $this, 'admin_notices_function' ) );
+				add_action( 'admin_notices', array( $this, 'admin_notices_function' ) );
+				add_action( 'network_admin_notices', array( $this, 'admin_notices_function' ) );
 
 			}
 		}

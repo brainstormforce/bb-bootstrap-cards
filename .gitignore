@@ -2,4 +2,7 @@
 Thumbs.db
 wp-cli.local.yml
 node_modules/
-bb-bootstrap-cards.zip
+*.zip
+*.tar.gz
+package-lock.json
+vendor/
