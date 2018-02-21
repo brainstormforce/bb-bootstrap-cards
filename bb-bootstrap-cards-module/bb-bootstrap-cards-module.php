@@ -270,26 +270,6 @@ class BSFBBCards extends FLBuilderModule {
 		return $url;
 	}
 
-	/**
-	 * Summary
-	 *
-	 * @method _get_cropped_demo_url
-	 * @protected
-	 */
-	protected function _get_cropped_demo_url() {
-		$info = $this->_get_cropped_path();
-
-		return FL_BUILDER_DEMO_CACHE_URL . $info['filename'];
-	}
-
-	/**
-	 * Summary
-	 *
-	 * @method _get_cropped_path
-	 * @protected
-	 */
-
-
 }
 
 /**
@@ -298,11 +278,11 @@ class BSFBBCards extends FLBuilderModule {
 FLBuilder::register_module(
 	'BSFBBCards',
 	array(
-		'general'    => array( // Tab
-			'title'    => __( 'General', 'bb-bootstrap-cards' ), // Tab title
-			'sections' => array( // Tab Sections
-				'general'   => array( // Section
-					'title'  => __( 'Card Elements', 'bb-bootstrap-cards' ), // Section Title
+		'general'    => array( // Tab.
+			'title'    => __( 'General', 'bb-bootstrap-cards' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'general'   => array( // Section.
+					'title'  => __( 'Card Elements', 'bb-bootstrap-cards' ), // Section Title.
 					'fields' => array( // Section Fields.
 						'card_title'    => array(
 							'type'        => 'text',
@@ -365,12 +345,11 @@ FLBuilder::register_module(
 				),
 			),
 		),
-
-		'image'      => array( // Tab
-			'title'    => __( 'Image', 'bb-bootstrap-cards' ), // Tab title
-			'sections' => array( // Tab Sections
-				'card_image' => array( // Section
-					'title'  => __( 'Select Card Image', 'bb-bootstrap-cards' ), // Section Title
+		'image'      => array( // Tab.
+			'title'    => __( 'Image', 'bb-bootstrap-cards' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'card_image' => array( // Section.
+					'title'  => __( 'Select Card Image', 'bb-bootstrap-cards' ), // Section Title.
 					'fields' => array( // Section Fields.
 
 						'cards_photo_source' => array(
@@ -390,7 +369,6 @@ FLBuilder::register_module(
 								),
 							),
 						),
-
 						'photo'              => array(
 							'type'        => 'photo',
 							'label'       => __( 'Photo', 'bb-bootstrap-cards' ),
@@ -403,17 +381,26 @@ FLBuilder::register_module(
 							'label'       => __( 'Photo URL', 'bb-bootstrap-cards' ),
 							'placeholder' => __( 'http://www.example.com/my-photo.jpg', 'bb-bootstrap-cards' ),
 						),
+						'photo_hyperlink'    => array(
+							'type'    => 'select',
+							'label'   => __( 'Add Link to Photo', 'bb-bootstrap-cards' ),
+							'default' => 'no',
+							'options' => array(
+								'yes' => __( 'Yes', 'bb-bootstrap-cards' ),
+								'no'  => __( 'No', 'bb-bootstrap-cards' ),
+							),
+						),
 
 					),
 				),
 			),
 		),
+		'link'       => array( // Tab.
+			'title'    => __( 'Link / Button ', 'bb-bootstrap-cards' ), // Tab title.
+			'sections' => array( // Tab Sections.
+				'card_link'       => array( // Section.
+					'title'  => __( 'Select Read More', 'bb-bootstrap-cards' ), // Section Title.
 
-		'link'       => array( // Tab
-			'title'    => __( 'Link / Button ', 'bb-bootstrap-cards' ), // Tab title
-			'sections' => array( // Tab Sections
-				'card_link'       => array( // Section
-					'title'  => __( 'Select Read More', 'bb-bootstrap-cards' ), // Section Title
 					'fields' => array( // Section Fields.
 						'card_btn_type' => array(
 							'type'    => 'select',
@@ -427,10 +414,11 @@ FLBuilder::register_module(
 							'toggle'  => array(
 								'none'   => array(),
 								'link'   => array(
-									'fields'   => array( 'card_btn_text' ),
+									'fields'   => array( 'card_btn_text', 'photo_hyperlink' ),
 									'sections' => array( 'link', 'link_typography' ),
 								),
 								'button' => array(
+									'fields'   => array( 'photo_hyperlink' ),
 									'sections' => array( 'btn-link', 'btn_typography' ),
 								),
 
@@ -863,7 +851,6 @@ FLBuilder::register_module(
 								'selector' => '.bb_boot_card_block .bb_boot_card_title',
 							),
 						),
-
 						'title_margin_top'            => array(
 							'type'        => 'text',
 							'label'       => __( 'Margin Top', 'bb-bootstrap-cards' ),
@@ -937,7 +924,6 @@ FLBuilder::register_module(
 							'size'        => '4',
 							'description' => 'px',
 						),
-
 						'desc_line_height'           => array(
 							'type'    => 'select',
 							'label'   => __( 'Line Height', 'bb-bootstrap-cards' ),

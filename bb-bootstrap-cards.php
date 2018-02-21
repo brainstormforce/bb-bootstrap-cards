@@ -6,7 +6,7 @@
  * Author:          Brainstorm force, Bhushan Bobade
  * Author URI:      https://www.brainstormforce.com/
  * Text Domain:     bb-bootstrap-cards
- * Version:         1.1.0
+ * Version:         1.1.1
  *
  * @package         BB-Bootstrap-Cards
  */
@@ -85,11 +85,11 @@ if ( ! class_exists( 'BSFBBBootstrapCards' ) ) {
 			echo '<div class="notice notice-error">';
 
 			/* Translators: Beaver Builder */
-				echo '<p>' . sprintf( __( '<strong>Bootstrap Cards For Beaver Builder</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-bootstrap-cards' ) . '</p>', $url );
+				echo '<p>' . sprintf( __( '<strong>Bootstrap Cards For Beaver Builder</strong> plugin requires <strong><a href="%s">Beaver Builder</strong></a> plugin installed & activated.', 'bb-bootstrap-cards' ), $url ) . '</p>';
 
 			echo '</div>';
 		}
 	}
 
 	new BSFBBBootstrapCards();
-}// End if().
+} // end if.
