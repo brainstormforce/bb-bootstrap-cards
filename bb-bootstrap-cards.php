@@ -92,4 +92,4 @@ if ( ! class_exists( 'BSFBBBootstrapCards' ) ) {
 	}
 
 	new BSFBBBootstrapCards();
-}// End if().
+} // end if().
