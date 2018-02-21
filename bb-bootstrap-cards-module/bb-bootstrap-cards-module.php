@@ -183,6 +183,79 @@ class BSFBBCards extends FLBuilderModule {
 	/**
 	 * Summary
 	 *
+	 * @method _has_source
+	 * @protected
+	 */
+	protected function _has_source() {
+		if ( 'url' == $this->settings->cards_photo_source && ! empty( $this->settings->cards_photo_url ) ) {
+			return true;
+		} elseif ( 'library' == $this->settings->cards_photo_source && ! empty( $this->settings->photo_src ) ) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Summary
+	 *
+	 * @method _get_editor
+	 * @protected
+	 */
+	protected function _get_editor() {
+		if ( $this->_has_source() && null === $this->_editor ) {
+
+			$url_path  = $this->_get_uncropped_url();
+			$file_path = str_ireplace( home_url(), ABSPATH, $url_path );
+
+			if ( file_exists( $file_path ) ) {
+				$this->_editor = wp_get_image_editor( $file_path );
+			} else {
+				$this->_editor = wp_get_image_editor( $url_path );
+			}
+		}
+
+		return $this->_editor;
+	}
+
+		/**
+		 * Summary
+		 *
+		 * @method _get_cropped_path
+		 * @protected
+		 */
+	protected function _get_cropped_path() {
+		$url       = $this->_get_uncropped_url();
+		$cache_dir = FLBuilderModel::get_cache_dir();
+
+		if ( empty( $url ) ) {
+			$filename = uniqid(); // Return a file that doesn't exist.
+		} else {
+
+			if ( stristr( $url, '?' ) ) {
+				$parts = explode( '?', $url );
+				$url   = $parts[0];
+			}
+
+			$pathinfo = pathinfo( $url );
+			$dir      = $pathinfo['dirname'];
+			$ext      = $pathinfo['extension'];
+			$name     = wp_basename( $url, ".$ext" );
+			$new_ext  = strtolower( $ext );
+			$filename = "{$name}-{$crop}.{$new_ext}";
+		}
+
+		return array(
+			'filename' => $filename,
+			'path'     => $cache_dir['path'] . $filename,
+			'url'      => $cache_dir['url'] . $filename,
+		);
+	}
+
+	/**
+	 * Summary
+	 *
+>>>>>>> 5a92f50ee94331fded73ddd98b4a40cce6ba3483
 	 * @method _get_uncropped_url
 	 * @protected
 	 */
@@ -273,7 +346,6 @@ FLBuilder::register_module(
 				),
 			),
 		),
-
 		'image'      => array( // Tab.
 			'title'    => __( 'Image', 'bb-bootstrap-cards' ), // Tab title.
 			'sections' => array( // Tab Sections.
@@ -324,12 +396,12 @@ FLBuilder::register_module(
 				),
 			),
 		),
-
 		'link'       => array( // Tab.
 			'title'    => __( 'Link / Button ', 'bb-bootstrap-cards' ), // Tab title.
 			'sections' => array( // Tab Sections.
 				'card_link'       => array( // Section.
 					'title'  => __( 'Select Read More', 'bb-bootstrap-cards' ), // Section Title.
+
 					'fields' => array( // Section Fields.
 						'card_btn_type' => array(
 							'type'    => 'select',
@@ -780,7 +852,6 @@ FLBuilder::register_module(
 								'selector' => '.bb_boot_card_block .bb_boot_card_title',
 							),
 						),
-
 						'title_margin_top'            => array(
 							'type'        => 'text',
 							'label'       => __( 'Margin Top', 'bb-bootstrap-cards' ),
@@ -854,7 +925,6 @@ FLBuilder::register_module(
 							'size'        => '4',
 							'description' => 'px',
 						),
-
 						'desc_line_height'           => array(
 							'type'    => 'select',
 							'label'   => __( 'Line Height', 'bb-bootstrap-cards' ),

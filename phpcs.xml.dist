@@ -8,11 +8,12 @@
 	<rule ref="WordPress-Core" />
 	<rule ref="WordPress-Docs" />
 
-	<rule ref="WordPress.Files.FileName">
-		<properties>
-			<property name="strict_class_file_names" value="false" />
-		</properties>
-	</rule> 
+	<!-- Check all PHP files in directory tree by default. -->
+	<arg name="extensions" value="php"/>
+	<file>.</file>
+
+	<!-- Show sniff codes in all reports -->
+	<arg value="s"/>
 
 	<!-- Check all PHP files in directory tree by default. -->
 	<arg name="extensions" value="php"/>
