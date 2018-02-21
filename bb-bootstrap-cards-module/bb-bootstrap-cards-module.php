@@ -255,7 +255,6 @@ class BSFBBCards extends FLBuilderModule {
 	/**
 	 * Summary
 	 *
->>>>>>> 5a92f50ee94331fded73ddd98b4a40cce6ba3483
 	 * @method _get_uncropped_url
 	 * @protected
 	 */
