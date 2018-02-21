@@ -46,11 +46,11 @@
 	
 			<!--Link--> 
 			<?php if ( 'link' == $settings->card_btn_type ) { ?>  
-			<a class="bb_boot_card_link" href="<?php echo $settings->link_field; ?>" target="<?php echo $settings->link_target?>">
+			<a class="bb_boot_card_link" href="<?php echo $settings->link_field; ?>" target="<?php echo $settings->link_target; ?>">
 				<?php echo $settings->card_btn_text; ?>
 			</a>
 		<?php } elseif ( 'button' == $settings->card_btn_type ) { ?>
-			 <a class="bb_boot_card_link_button" href="<?php echo $settings->btn_link; ?>" target="<?php echo $settings->btn_link_target?>">
+			 <a class="bb_boot_card_link_button" href="<?php echo $settings->btn_link; ?>" target="<?php echo $settings->btn_link_target; ?>">
 				<span class="bb_boot_button"><?php echo $settings->btn_text; ?></span>
 			</a>	
 		<?php } ?>
