@@ -1,6 +1,6 @@
 === Beaver Builder Cards ===
-Contributors: brainstormforce, bhushansbobade20
-Donate link: https://www.brainstormforce.com/payment/
+Contributors: brainstormforce
+Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 4.4
 Tags: beaver builder, page builder plugin, bootstrap cards, cards, bootstrap, drag and drop cards, bb bootstrap, Beaver Builder Cards
 Stable tag: 1.1.0
