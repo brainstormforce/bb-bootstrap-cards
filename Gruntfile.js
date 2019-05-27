@@ -44,9 +44,15 @@ module.exports = function( grunt ) {
 
 	} );
 
+	/* Load Tasks */
+	grunt.loadNpmTasks( "grunt-contrib-copy" )
+	grunt.loadNpmTasks( "grunt-contrib-compress" )
+	grunt.loadNpmTasks( "grunt-contrib-clean" )
+
     grunt.loadNpmTasks('grunt-wp-i18n');
     grunt.loadNpmTasks('grunt-wp-readme-to-markdown');
 
+    grunt.registerTask("release", ["clean:zip", "copy","compress","clean:main"]);
     grunt.registerTask('i18n', ['addtextdomain', 'makepot']);
     grunt.registerTask('readme', ['wp_readme_to_markdown']);
 
