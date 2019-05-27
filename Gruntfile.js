@@ -72,6 +72,7 @@ module.exports = function( grunt ) {
 				dest: "bb-bootstrap-cards/"
 			}
 		},
+
 		compress: {
 			main: {
 				options: {
@@ -88,10 +89,12 @@ module.exports = function( grunt ) {
 				]
 			}
 		},
+
 		clean: {
 			main: ["bb-bootstrap-cards"],
 			zip: ["*.zip"],
 		},
+		
 		wp_readme_to_markdown: {
 			your_target: {
 				files: {
@@ -114,9 +117,6 @@ module.exports = function( grunt ) {
     grunt.registerTask("release", ["clean:zip", "copy","compress","clean:main"]);
     grunt.registerTask('i18n', ['addtextdomain', 'makepot']);
     grunt.registerTask('readme', ['wp_readme_to_markdown']);
-
-    // Generate Read me file
-    grunt.registerTask( "readme", ["wp_readme_to_markdown"] )
 
 	grunt.util.linefeed = '\n';
 
