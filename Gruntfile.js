@@ -40,7 +40,65 @@ module.exports = function( grunt ) {
 					updateTimestamp: true
 				}
 			}
-		}
+		},
+
+		copy: {
+			main: {
+				options: {
+					mode: true
+				},
+				src: [
+					"**",
+					"!node_modules/**",
+					"!.git/**",
+					"!*.sh",
+					"!*.zip",
+					"!eslintrc.json",
+					"!README.md",
+					"!Gruntfile.js",
+					"!package.json",
+					"!package-lock.json",
+					"!.gitignore",
+					"!*.zip",
+					"!Optimization.txt",
+					"!composer.json",
+					"!composer.lock",
+					"!phpcs.xml.dist",
+					"!vendor/**",
+					"!src/**",
+					"!scripts/**",
+					"!config/**"
+				],
+				dest: "bb-bootstrap-cards/"
+			}
+		},
+		compress: {
+			main: {
+				options: {
+					archive: "bb-bootstrap-cards-<%= pkg.version %>.zip",
+					mode: "zip"
+				},
+				files: [
+					{
+						src: [
+							"./bb-bootstrap-cards/**"
+						]
+
+					}
+				]
+			}
+		},
+		clean: {
+			main: ["bb-bootstrap-cards"],
+			zip: ["*.zip"],
+		},
+		wp_readme_to_markdown: {
+			your_target: {
+				files: {
+					"README.md": "readme.txt"
+				}
+			},
+		},
 
 	} );
 
@@ -52,9 +110,13 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks('grunt-wp-i18n');
     grunt.loadNpmTasks('grunt-wp-readme-to-markdown');
 
+    /* Register task started */
     grunt.registerTask("release", ["clean:zip", "copy","compress","clean:main"]);
     grunt.registerTask('i18n', ['addtextdomain', 'makepot']);
     grunt.registerTask('readme', ['wp_readme_to_markdown']);
+
+    // Generate Read me file
+    grunt.registerTask( "readme", ["wp_readme_to_markdown"] )
 
 	grunt.util.linefeed = '\n';
 
