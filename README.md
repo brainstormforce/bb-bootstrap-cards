@@ -59,7 +59,7 @@ You can also consider checking out our other plugins:
 
 <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Timeline module for Beaver Builder</a>: An advanced module to create attractive and responsive timelines using Beaver Builder.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbalerts/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Beaver Builder Alerts</a>: An advanced module to create attention seeking alerts in Beaver Builder.
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbalerts/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Alerts for Beaver Builder</a>: An advanced module to create attention seeking alerts in Beaver Builder.
 
 <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Beaver Builder Header Footer</a>: Design beautiful headers and footers with Beaver Builder.
 
