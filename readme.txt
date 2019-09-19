@@ -45,7 +45,7 @@ Works like any other Beaver Builder module. Thus, it's easy!
 Responsive and mobile friendly cards
 Customizations make it easy to create attractive cards.
 
- Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=description">Brainstorm Force</a>! 
+Made with love at <a href="https://www.brainstormforce.com/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=description">Brainstorm Force</a>! 
 
 == What’s More? ==
 
@@ -61,7 +61,7 @@ You can also consider checking out our other plugins:
 
 <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbalerts/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Alerts for Beaver Builder</a>: An advanced module to create attention seeking alerts in Beaver Builder.
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Beaver Builder Header Footer</a>: Design beautiful headers and footers with Beaver Builder.
+<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Header Footer for Beaver Builder</a>: Design beautiful headers and footers with Beaver Builder.
 
 <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/column-seperator/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!
  
