@@ -3,7 +3,7 @@ Contributors: brainstormforce
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 4.4
 Tags: beaver builder, page builder plugin, bootstrap cards, cards, bootstrap, drag and drop cards, bb bootstrap, Cards for Beaver Builder
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 Tested up to: 5.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -84,6 +84,9 @@ Visit our website to know more about the top WordPress products and services we 
 
 
 == Changelog ==
+
+= 1.1.2 =
+* Improvement: Hardened the plugin security.
 
 = 1.1.1 =
 * Update: Added option to apply link on the photo.
