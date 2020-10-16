@@ -6,10 +6,13 @@
  * Author:          Brainstorm force
  * Author URI:      https://www.brainstormforce.com/
  * Text Domain:     bb-bootstrap-cards
- * Version:         1.1.1
+ * Version:         1.1.2
  *
  * @package         BB-Bootstrap-Cards
  */
+
+// Exit if directly access.
+defined( 'ABSPATH' ) || exit;
 
 define( 'BB_BOOTSTRAPCARDS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BB_BOOTSTRAPCARDS_URL', plugins_url( '/', __FILE__ ) );
