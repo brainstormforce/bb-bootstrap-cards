@@ -5,6 +5,9 @@
  * @package BB-Bootstrap-Cards
  */
 
+// Exit if directly access.
+defined( 'ABSPATH' ) || exit;
+
 /**
  * BB-Bootstrap-Cards
  *
