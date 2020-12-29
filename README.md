@@ -101,3 +101,9 @@ Visit our website to know more about the top WordPress products and services we 
 - Initial release
 
 ## Upgrade Notice ##
+
+## Credits ##
+
+### Boostrap ###
+CSS used for Cards - https://getbootstrap.com/
+Licensed under MIT - https://github.com/twbs/bootstrap/blob/main/LICENSE
