@@ -104,6 +104,4 @@ Visit our website to know more about the top WordPress products and services we 
 
 == Credits ==
 
-= Boostrap =
-CSS used for Cards - https://getbootstrap.com/
-Licensed under MIT - https://github.com/twbs/bootstrap/blob/main/LICENSE
+- [Bootstrap](https://getbootstrap.com/) is distributed under the terms of the MIT License.
