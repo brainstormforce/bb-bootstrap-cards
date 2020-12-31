@@ -1,9 +1,9 @@
 # Cards for Beaver Builder #
 **Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce)  
-**Donate link:** https://www.paypal.me/BrainstormForce  
+**Donate link:** https://www.paypal.me/BrainstormForce
 **Requires at least:** 4.4  
 **Tags:** beaver builder, page builder plugin, bootstrap cards, cards, bootstrap, drag and drop cards, bb bootstrap, Cards for Beaver Builder  
-**Stable tag:** 1.1.1  
+**Stable tag:** 1.1.1
 **Tested up to:** 5.6
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
@@ -18,10 +18,10 @@ A quick and easy to use plugin to build creative and responsive cards for Beaver
 
 ## Description ##
 
-Cards can be defined as flexible and extensible content containers. These make it easy to display small boxes of content that comprise of images, text, titles, links and buttons too. Are you looking for a <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/?utm_source=wp-repo&utm_campaign=%20bbcards&utm_medium=description”>Beaver Builder Addon</a> that helps create cards?
+Cards can be defined as flexible and extensible content containers. These make it easy to display small boxes of content that comprise of images, text, titles, links and buttons too. Are you looking for a <a href="https://www.ultimatebeaver.com/beaver-builder-freebies/?utm_source=wp-repo&utm_campaign=%20bbcards&utm_medium=description">Beaver Builder Addon</a> that helps create cards?
 
 
-The <a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=%20bbcards&utm_medium=description”>Cards for Beaver Builder</a> plugin adds an advanced custom module to the basic page builder, making it easy for users to create attractive and responsive cards on their website. Like all the other Beaver Builder modules, the Cards for Beaver Builder module can simply be dragged and dropped on a page, followed by the additional customizations.
+The <a href="https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=%20bbcards&utm_medium=description">Cards for Beaver Builder</a> plugin adds an advanced custom module to the basic page builder, making it easy for users to create attractive and responsive cards on their website. Like all the other Beaver Builder modules, the Cards for Beaver Builder module can simply be dragged and dropped on a page, followed by the additional customizations.
 
 ## Features of the Cards for Beaver Builder ##
 
@@ -53,19 +53,19 @@ If you like this plugin, please leave us a good review and rating! Your feedback
 
 You can also consider checking out our other plugins:
 
-<a href=”https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Ultimate Addons for Beaver Builder Lite</a>: The Best Addon for Beaver Builder with a huge collection of advanced and creative modules.
+<li><a href="https://www.ultimatebeaver.com/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins">Ultimate Addons for Beaver Builder Lite</a>: The Best Addon for Beaver Builder with a huge collection of advanced and creative modules.</li>
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/expandable-row/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Expandable Row for Beaver Builder</a>: An advanced plugin that lets you expand your Beaver Builder rows.
+<li><a href="https://www.ultimatebeaver.com/beaver-builder-freebies/expandable-row/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins">Expandable Row for Beaver Builder</a>: An advanced plugin that lets you expand your Beaver Builder rows.</li>
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Timeline module for Beaver Builder</a>: An advanced module to create attractive and responsive timelines using Beaver Builder.
+<li><a href="https://www.ultimatebeaver.com/beaver-builder-freebies/bbcards/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins">Timeline module for Beaver Builder</a>: An advanced module to create attractive and responsive timelines using Beaver Builder.</li>
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bbalerts/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Alerts for Beaver Builder</a>: An advanced module to create attention seeking alerts in Beaver Builder.
+<li><a href="https://www.ultimatebeaver.com/beaver-builder-freebies/bbalerts/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins">Alerts for Beaver Builder</a>: An advanced module to create attention seeking alerts in Beaver Builder.</li>
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Header Footer for Beaver Builder</a>: Design beautiful headers and footers with Beaver Builder.
+<li><a href="https://www.ultimatebeaver.com/beaver-builder-freebies/bb-header-footer/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins">Header Footer for Beaver Builder</a>: Design beautiful headers and footers with Beaver Builder.</li>
 
-<a href=”https://www.ultimatebeaver.com/beaver-builder-freebies/column-seperator/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins”>Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!
+<li><a href="https://www.ultimatebeaver.com/beaver-builder-freebies/column-seperator/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=other-plugins">Column Separator for Beaver Builder</a>: This plugin will no longer leave you pondering for a column separator in Beaver Builder. You can add it right away!</li>
  
-Visit our website to know more about the top WordPress products and services we offer. You can also stay updated with our upcoming endeavors by following us on <a href=”https://www.brainstormforce.com/go/brainstorm-force-facebook-page/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=share”>Facebook</a> and <a href=”https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=share”>Twitter</a>.
+Visit our website to know more about the top WordPress products and services we offer. You can also stay updated with our upcoming endeavors by following us on <a href="https://www.brainstormforce.com/go/brainstorm-force-facebook-page/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=share">Facebook</a> and <a href="https://www.brainstormforce.com/go/brainstorm-force-twitter-page/?utm_source=wp-repo&utm_campaign=bbcards&utm_medium=share">Twitter</a>.
 
 ## Installation ##
 
@@ -82,6 +82,9 @@ Visit our website to know more about the top WordPress products and services we 
 
 ## Screenshots ##
 
+## Credits ##
+
+- [Bootstrap](https://getbootstrap.com/) is distributed under the terms of the MIT License.
 
 ## Changelog ##
 
@@ -101,7 +104,3 @@ Visit our website to know more about the top WordPress products and services we 
 - Initial release
 
 ## Upgrade Notice ##
-
-## Credits ##
-
-- [Bootstrap](https://getbootstrap.com/) is distributed under the terms of the MIT License.
