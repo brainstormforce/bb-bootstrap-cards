@@ -1,10 +1,10 @@
 # Cards for Beaver Builder #
-**Contributors:** [brainstormforce](https://profiles.wordpress.org/brainstormforce)  
+**Contributors:** [pratikchaskar](https://profiles.wordpress.org/pratikchaskar)  
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 4.4  
 **Tags:** beaver builder, page builder plugin, bootstrap cards, cards, bootstrap, drag and drop cards, bb bootstrap, Cards for Beaver Builder  
-**Stable tag:** 1.1.1  
-**Tested up to:** 6.0  
+**Stable tag:** 1.1.2  
+**Tested up to:** 6.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -87,6 +87,9 @@ Visit our website to know more about the top WordPress products and services we 
 - [Bootstrap](https://getbootstrap.com/) is distributed under the terms of the MIT License.
 
 ## Changelog ##
+
+### 1.1.2 ###
+* Improvement: Added compatibility to WordPress 6.1
 
 ### 1.1.1 ###
 * Update: Added option to apply link on the photo.
