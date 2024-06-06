@@ -44,7 +44,7 @@
 			<!--Link--> 
 			<?php if ( 'link' == $settings->card_btn_type ) { ?>  
 			<a class="bb_boot_card_link" href="<?php echo esc_url( $settings->link_field ); ?>" target="<?php echo esc_attr( $settings->link_target ); ?>">
-				<?php echo $settings->card_btn_text; ?>
+				<?php echo esc_html( $settings->card_btn_text ); ?>
 			</a>
 		<?php } elseif ( 'button' == $settings->card_btn_type ) { ?>
 			<a class="bb_boot_card_link_button" href="<?php echo esc_url( $settings->btn_link ); ?>" target="<?php echo esc_attr( $settings->btn_link_target ); ?>">
