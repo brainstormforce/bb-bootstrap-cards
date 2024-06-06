@@ -1,0 +1,382 @@
+# Copyright (C) 2024 Pratik Chaskar
+# This file is distributed under the same license as the Cards for Beaver Builder package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Cards for Beaver Builder 1.1.4\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/bb-bootstrap-cards\n"
+"POT-Creation-Date: 2024-06-06 08:00:57+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:23
+msgid "Bootstrap Cards"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:24
+msgid "To create Bootstrap Card builder modules."
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:25
+msgid "Advanced Modules"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:282
+msgid "General"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:285
+msgid "Card Elements"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:290
+msgid "Card title"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:302
+msgid "Enter Card Text"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:303
+msgid ""
+"Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium "
+"doloremque laudantium, totam rem aperiam."
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:316
+msgid "Structure"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:320
+msgid "Alignment"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:323
+msgid "Left"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:324
+msgid "Center"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:325
+msgid "Right"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:327
+msgid "This is the overall alignment and would apply to all Card elements"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:331
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:717
+msgid "Background Color"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:338
+msgid "Opacity"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:349
+msgid "Image"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:352
+msgid "Select Card Image"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:357
+msgid "Photo Source"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:360
+msgid "Media Library"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:361
+msgid "URL"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:374
+msgid "Photo"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:381
+msgid "Photo URL"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:382
+msgid "http://www.example.com/my-photo.jpg"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:386
+msgid "Add Link to Photo"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:389
+msgid "Yes"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:390
+msgid "No"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:399
+msgid "Link / Button "
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:402
+msgid "Select Read More"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:407
+msgid "Type"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:411
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:438
+msgid "Text"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:412
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:612
+msgid "Button"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:433
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:445
+msgid "Link"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:439
+msgid "Read More"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:453
+msgid "Link Target"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:456
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:636
+msgid "Same Window"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:457
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:637
+msgid "New Window"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:468
+msgid "Link Typography"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:472
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:651
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:894
+msgid "Font Family"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:485
+msgid "Link Font Size"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:488
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:511
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:533
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:666
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:780
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:803
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:825
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:910
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:932
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:954
+msgid "Default"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:489
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:512
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:534
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:667
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:781
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:804
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:826
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:911
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:933
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:955
+msgid "Custom"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:499
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:663
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:677
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:907
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:921
+msgid "Font Size"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:508
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:686
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:800
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:929
+msgid "Line Height"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:522
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:814
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:943
+msgid "Custom Line Height"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:530
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:822
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:951
+msgid "Letter Spacing"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:544
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:836
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:965
+msgid "Custom Letter Spacing"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:553
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:560
+msgid "Link Color"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:572
+msgid "Link Hover Color"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:579
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:856
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:985
+msgid "Margin Top"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:595
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:872
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:1001
+msgid "Margin Bottom"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:617
+msgid "Button Text"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:618
+msgid "Click Here"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:624
+msgid "Button Link"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:625
+msgid "http://www.example.com"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:633
+msgid "Button Target"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:647
+msgid "Button Typography"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:702
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:845
+msgid "Text Color"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:708
+msgid "Text Hover Color"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:723
+msgid "Background Hover Color"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:732
+msgid "Round Corners"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:744
+msgid "Typography"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:747
+msgid "Heading"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:751
+msgid "HTML Tag"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:768
+msgid "Font"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:777
+msgid "Heading Size"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:791
+msgid "Heading Custom Size"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:889
+msgid "Description"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:974
+msgid "Color"
+msgstr ""
+
+#: bb-bootstrap-cards.php.php:88
+#. Translators: Beaver Builder
+msgid ""
+"<strong>Bootstrap Cards For Beaver Builder</strong> plugin requires "
+"<strong><a href=\"%s\">Beaver Builder</strong></a> plugin installed & "
+"activated."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Cards for Beaver Builder"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.brainstormforce.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "This is a plugin for creating Awesome Bootstrap Card."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Pratik Chaskar"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://pratikchaskar.com/"
+msgstr ""
+
+#: bb-bootstrap-cards-module/bb-bootstrap-cards-module.php:410
+msgctxt "bb-bootstrap-cards"
+msgid "None"
+msgstr ""

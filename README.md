@@ -3,7 +3,7 @@
 **Donate link:** https://www.paypal.me/BrainstormForce  
 **Requires at least:** 4.4  
 **Tags:** beaver builder, page builder plugin, bootstrap cards, cards, bootstrap, drag and drop cards, bb bootstrap, Cards for Beaver Builder  
-**Stable tag:** 1.1.3  
+**Stable tag:** 1.1.4  
 **Tested up to:** 6.5  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
@@ -87,6 +87,9 @@ Visit our website to know more about the top WordPress products and services we 
 - [Bootstrap](https://getbootstrap.com/) is distributed under the terms of the MIT License.
 
 ## Changelog ##
+
+### 1.1.4 ###
+This update addressed a security bug. Props to Wordfence for privately reporting it privately to our team. Please make sure you are using the latest version on your website.
 
 ### 1.1.3 ###
 * Security Fix: Hardened the security of the plugin. Props: Wordfence.
