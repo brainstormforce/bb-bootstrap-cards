@@ -34,7 +34,7 @@
 	<!--Card content-->
 	<div class="bb_boot_card_block">
 		<!--Title-->
-		<<?php echo $settings->tag; ?> class="bb_boot_card_title"><?php echo $settings->card_title; ?></<?php echo $settings->tag; ?>>
+		<<?php echo esc_attr( $settings->tag ); ?> class="bb_boot_card_title"><?php echo esc_html( $settings->card_title ); ?></<?php echo esc_attr( $settings->tag ); ?>>
 		<!--/.Title-->	
 			<!--Text-->
 			<div class="bb_boot_card_text">
@@ -48,7 +48,7 @@
 			</a>
 		<?php } elseif ( 'button' == $settings->card_btn_type ) { ?>
 			<a class="bb_boot_card_link_button" href="<?php echo esc_url( $settings->btn_link ); ?>" target="<?php echo esc_attr( $settings->btn_link_target ); ?>">
-				<span class="bb_boot_button"><?php echo $settings->btn_text; ?></span>
+				<span class="bb_boot_button"><?php echo esc_html( $settings->btn_text ); ?></span>
 			</a>	
 		<?php } ?>
 		<!--/.Link-->
