@@ -1,5 +1,5 @@
 === Cards for Beaver Builder ===
-Contributors: pratikchaskar
+Contributors: brainstormforce, pratikchaskar
 Donate link: https://www.paypal.me/BrainstormForce
 Requires at least: 4.4
 Tags: beaver builder, page builder plugin, bootstrap cards, cards, bootstrap, drag and drop cards, bb bootstrap, Cards for Beaver Builder
