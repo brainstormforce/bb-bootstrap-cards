@@ -750,6 +750,7 @@ FLBuilder::register_module(
 							'type'    => 'select',
 							'label'   => __( 'HTML Tag', 'bb-bootstrap-cards' ),
 							'default' => 'h4',
+							'sanitize' => array( 'FLBuilderUtils::esc_tags', 'h4' ),
 							'options' => array(
 								'h1' => 'h1',
 								'h2' => 'h2',

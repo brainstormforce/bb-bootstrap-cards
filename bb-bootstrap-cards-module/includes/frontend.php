@@ -34,7 +34,7 @@
 	<!--Card content-->
 	<div class="bb_boot_card_block">
 		<!--Title-->
-		<<?php echo esc_attr( $settings->tag ); ?> class="bb_boot_card_title"><?php echo esc_html( $settings->card_title ); ?></<?php echo esc_attr( $settings->tag ); ?>>
+		<<?php echo esc_attr( sanitize_text_field( $settings->tag ) ); ?> class="bb_boot_card_title"><?php echo esc_html( $settings->card_title ); ?></<?php echo esc_attr( sanitize_text_field( $settings->tag ) ); ?>>
 		<!--/.Title-->	
 			<!--Text-->
 			<div class="bb_boot_card_text">
