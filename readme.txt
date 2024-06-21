@@ -89,7 +89,7 @@ Visit our website to know more about the top WordPress products and services we 
 == Changelog ==
 
 = 1.1.5 =
-This update addressed a security bug. Props to Wordfence for privately reporting it privately to our team. Please make sure you are using the latest version on your website.
+This update addressed a security bug. Props to Patchstack for privately reporting it privately to our team. Please make sure you are using the latest version on your website.
 
 = 1.1.4 =
 This update addressed a security bug. Props to Wordfence for privately reporting it privately to our team. Please make sure you are using the latest version on your website.
