@@ -6,7 +6,7 @@
  * Author:          Brainstorm Force, Pratik Chaskar
  * Author URI:      https://brainstormforce.com/
  * Text Domain:     bb-bootstrap-cards
- * Version:         1.1.4
+ * Version:         1.1.5
  *
  * @package         BB-Bootstrap-Cards
  */
