@@ -1,14 +1,14 @@
 {
   "name": "bb-bootstrap-cards",
-  "version": "1.1.0",
+  "version": "1.1.6",
   "main": "Gruntfile.js",
-  "author": "Brainstorm Force",
+  "author": "Pratik Chaskar",
   "devDependencies": {
     "grunt": "~1.0.1",
-    "grunt-wp-i18n": "~1.0.0",
-    "grunt-wp-readme-to-markdown": "~2.0.1",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-compress": "^1.4.3",
-    "grunt-contrib-copy": "^1.0.0"
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-wp-i18n": "~1.0.0",
+    "grunt-wp-readme-to-markdown": "~2.0.1"
   }
 }

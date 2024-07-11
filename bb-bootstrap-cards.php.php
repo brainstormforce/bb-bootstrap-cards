@@ -3,10 +3,10 @@
  * Plugin Name:     Cards for Beaver Builder
  * Plugin URI:      https://www.brainstormforce.com/
  * Description:     This is a plugin for creating Awesome Bootstrap Card.
- * Author:          Brainstorm Force, Pratik Chaskar
- * Author URI:      https://brainstormforce.com/
+ * Author:          Pratik Chaskar
+ * Author URI:      https://pratikchaskar.com
  * Text Domain:     bb-bootstrap-cards
- * Version:         1.1.5
+ * Version:         1.1.6
  *
  * @package         BB-Bootstrap-Cards
  */
