@@ -6,7 +6,7 @@
  * Author:          Pratik Chaskar
  * Author URI:      https://pratikchaskar.com
  * Text Domain:     bb-bootstrap-cards
- * Version:         1.1.5
+ * Version:         1.1.6
  *
  * @package         BB-Bootstrap-Cards
  */
