@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name:     Cards for Beaver Builder
- * Plugin URI:      https://www.brainstormforce.com/
+ * Plugin URI:      https://pratikchaskar.com
  * Description:     This is a plugin for creating Awesome Bootstrap Card.
  * Author:          Pratik Chaskar
  * Author URI:      https://pratikchaskar.com
  * Text Domain:     bb-bootstrap-cards
- * Version:         1.1.6
+ * Version:         1.1.7
  *
  * @package         BB-Bootstrap-Cards
  */
