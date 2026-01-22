@@ -130,16 +130,52 @@ margin-bottom: <?php echo ( trim( $settings->desc_margin_bottom ) != '' ) ? $set
 }
 
 
-/* BCard's Button Link */ 
+/* BCard's Button Link */
+<?php if ( 'button' == $settings->card_btn_type ) : ?>
+<?php
+	/**
+	 * Helper function to format color value for CSS output.
+	 * Handles: rgb(), rgba(), hex with #, hex without #
+	 */
+	if ( ! function_exists( 'bb_cards_format_color' ) ) {
+		function bb_cards_format_color( $color, $default = '' ) {
+			if ( empty( $color ) ) {
+				return $default ? bb_cards_format_color( $default ) : '';
+			}
+			// If it's rgb/rgba format, return as-is
+			if ( strpos( $color, 'rgb' ) === 0 ) {
+				return $color;
+			}
+			// If it starts with #, return as-is
+			if ( strpos( $color, '#' ) === 0 ) {
+				return $color;
+			}
+			// Otherwise, it's a hex without #, add it
+			return '#' . $color;
+		}
+	}
+
+	// Get button colors with fallback to defaults
+	$btn_bg_color = bb_cards_format_color(
+		isset( $settings->btn_bg_color ) ? $settings->btn_bg_color : '',
+		'ffdd00'
+	);
+	$btn_text_color = bb_cards_format_color(
+		isset( $settings->btn_text_color ) ? $settings->btn_text_color : '',
+		'414242'
+	);
+	$btn_text_hover_color = bb_cards_format_color(
+		isset( $settings->btn_text_hover_color ) ? $settings->btn_text_hover_color : '',
+		'ffffff'
+	);
+?>
 <?php if ( ! empty( $settings->btn_font_family ) && 'Default' != $settings->btn_font_family['family'] ) : ?>
-.fl-node-<?php echo $id; ?> .bb_boot_card_link_button .bb_boot_button{
+.fl-node-<?php echo $id; ?> .bb_boot_card_block .bb_boot_card_link_button .bb_boot_button{
 	<?php FLBuilderFonts::font_css( $settings->btn_font_family ); ?>
 }
 <?php endif; ?>
-.fl-node-<?php echo $id; ?> .bb_boot_card_link_button .bb_boot_button {
-<?php if ( ! empty( $settings->btn_text_color ) ) : ?>
-	color: #<?php echo $settings->btn_text_color; ?>;
-<?php endif; ?>
+.fl-node-<?php echo $id; ?> .bb_boot_card_block .bb_boot_card_link_button .bb_boot_button {
+	color: <?php echo $btn_text_color; ?> !important;
 <?php if ( 'custom' == $settings->btn_font_size ) : ?>
 	font-size: <?php echo $settings->btn_custom_size; ?>px;
 <?php endif; ?>
@@ -148,29 +184,25 @@ margin-bottom: <?php echo ( trim( $settings->desc_margin_bottom ) != '' ) ? $set
 <?php endif; ?>
 }
 
-.fl-node-<?php echo $id; ?> .bb_boot_card_link_button:hover .bb_boot_button {
-<?php if ( ! empty( $settings->btn_text_hover_color ) ) : ?>
-	color: #<?php echo $settings->btn_text_hover_color; ?>;
-<?php endif; ?>
+.fl-node-<?php echo $id; ?> .bb_boot_card_block .bb_boot_card_link_button:hover .bb_boot_button {
+	color: <?php echo $btn_text_hover_color; ?> !important;
 }
 
-.fl-node-<?php echo $id; ?> .bb_boot_card_link_button {
-<?php if ( ! empty( $settings->btn_bg_color ) ) : ?>
-	background-color: #<?php echo $settings->btn_bg_color; ?>;
-<?php endif; ?>	
+.fl-node-<?php echo $id; ?> .bb_boot_card_block .bb_boot_card_link_button {
+	background-color: <?php echo $btn_bg_color; ?> !important;
 	padding: 8px 16px;
 	text-decoration: none;
-<?php if ( ! empty( $settings->btn_border_radius ) ) : ?>	
+<?php if ( ! empty( $settings->btn_border_radius ) ) : ?>
 	border-radius: <?php echo $settings->btn_border_radius; ?>px;
 	-moz-border-radius: <?php echo $settings->btn_border_radius; ?>px;
 	-webkit-border-radius: <?php echo $settings->btn_border_radius; ?>px;
-<?php endif; ?>	
-}
-
-
-.fl-node-<?php echo $id; ?> .bb_boot_card_link_button:hover {
-<?php if ( ! empty( $settings->btn_bg_hover_color ) ) : ?>
-	background-color: #<?php echo $settings->btn_bg_hover_color; ?>;
 <?php endif; ?>
 }
+
+<?php if ( ! empty( $settings->btn_bg_hover_color ) ) : ?>
+.fl-node-<?php echo $id; ?> .bb_boot_card_block .bb_boot_card_link_button:hover {
+	background-color: <?php echo bb_cards_format_color( $settings->btn_bg_hover_color ); ?> !important;
+}
+<?php endif; ?>
+<?php endif; ?>
 
