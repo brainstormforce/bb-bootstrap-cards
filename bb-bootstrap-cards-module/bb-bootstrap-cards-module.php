@@ -691,7 +691,7 @@ FLBuilder::register_module(
 							'description' => 'px',
 							'preview'     => array(
 								'type'     => 'css',
-								'selector' => '.bb_boot_card_block .bb_boot_card_link_button',
+								'selector' => '.bb_boot_card_block .bb_boot_card_link_button .bb_boot_button',
 								'property' => 'line-height',
 								'unit'     => 'px',
 							),
@@ -700,13 +700,19 @@ FLBuilder::register_module(
 						'btn_text_color'       => array(
 							'type'       => 'color',
 							'label'      => __( 'Text Color', 'bb-bootstrap-cards' ),
-							'default'    => '#414242',
+							'default'    => '414242',
 							'show_reset' => true,
+							'preview'    => array(
+								'type'     => 'css',
+								'property' => 'color',
+								'selector' => '.bb_boot_card_block .bb_boot_card_link_button .bb_boot_button',
+								'important' => true,
+							),
 						),
 						'btn_text_hover_color' => array(
 							'type'       => 'color',
 							'label'      => __( 'Text Hover Color', 'bb-bootstrap-cards' ),
-							'default'    => '#ffffff',
+							'default'    => 'ffffff',
 							'show_reset' => true,
 							'preview'    => array(
 								'type' => 'none',
@@ -715,8 +721,14 @@ FLBuilder::register_module(
 						'btn_bg_color'         => array(
 							'type'       => 'color',
 							'label'      => __( 'Background Color', 'bb-bootstrap-cards' ),
-							'default'    => '#ffdd00',
+							'default'    => 'ffdd00',
 							'show_reset' => true,
+							'preview'    => array(
+								'type'     => 'css',
+								'property' => 'background-color',
+								'selector' => '.bb_boot_card_block .bb_boot_card_link_button',
+								'important' => true,
+							),
 						),
 						'btn_bg_hover_color'   => array(
 							'type'       => 'color',
@@ -733,6 +745,12 @@ FLBuilder::register_module(
 							'maxlength'   => '3',
 							'size'        => '4',
 							'description' => 'px',
+							'preview'     => array(
+								'type'     => 'css',
+								'property' => 'border-radius',
+								'selector' => '.bb_boot_card_block .bb_boot_card_link_button',
+								'unit'     => 'px',
+							),
 						),
 					),
 				),
