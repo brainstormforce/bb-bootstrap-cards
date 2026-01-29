@@ -2,7 +2,7 @@
 Contributors: pratikchaskar
 Requires at least: 4.4
 Tags: beaver builder, page builder plugin, bb bootstrap cards, drag and drop cards, Cards for Beaver Builder
-Stable tag: 1.1.7
+Stable tag: 1.1.8
 Tested up to: 6.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -82,6 +82,9 @@ You can also consider checking out our other plugins:
 - [Bootstrap](https://getbootstrap.com/) is distributed under the terms of the MIT License.
 
 == Changelog ==
+
+= 1.1.8 =
+* Fixed: Dynamic styles not retrieving for Card button, remains in default.
 
 = 1.1.7 =
 Updated readme file.
