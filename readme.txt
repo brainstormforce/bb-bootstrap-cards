@@ -6,8 +6,6 @@ Stable tag: 1.1.8
 Tested up to: 6.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-URL : https://wordpress.org/plugins/beaver-builder-cards/
  
 Cards for Beaver Builder
  
