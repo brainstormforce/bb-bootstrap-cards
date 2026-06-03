@@ -5,12 +5,36 @@
  * @package  bb-bootstrap-cards
  */
 
+/**
+ * Helper function to format color value for CSS output.
+ * Handles: rgb(), rgba(), hex with #, hex without #
+ *
+ * @since 1.0.0
+ */
+if ( ! function_exists( 'bb_cards_format_color' ) ) {
+	function bb_cards_format_color( $color, $default = '' ) {
+		if ( empty( $color ) ) {
+			return $default ? bb_cards_format_color( $default ) : '';
+		}
+		// If it's rgb/rgba format, return as-is.
+		if ( strpos( $color, 'rgb' ) === 0 ) {
+			return $color;
+		}
+		// If it starts with #, return as-is.
+		if ( strpos( $color, '#' ) === 0 ) {
+			return $color;
+		}
+		// Otherwise, it's a hex without #, add it.
+		return '#' . $color;
+	}
+}
+
 ?>
 
 /* Background Property */
 <?php if ( ! empty( $settings->bg_color ) ) : ?>
 .fl-node-<?php echo $id; ?> .bb_boot_card_container { 
-	background-color: #<?php echo $settings->bg_color; ?>;
+	background-color: <?php echo bb_cards_format_color( $settings->bg_color ); ?>;
 	background: rgba(<?php echo implode( ',', FLBuilderColor::hex_to_rgb( $settings->bg_color ) ); ?>, <?php echo ( '' != $settings->bg_color_opc ) ? $settings->bg_color_opc / 100 : 100; ?>);
 }
 <?php endif; ?>
@@ -26,7 +50,7 @@
 .fl-node-<?php echo $id; ?> .bb_boot_card_title,
 .fl-node-<?php echo $id; ?> .bb_boot_card_title * {
 <?php if ( ! empty( $settings->color ) ) : ?>
-	color: #<?php echo $settings->color; ?>;
+	color: <?php echo bb_cards_format_color( $settings->color ); ?>;
 <?php endif; ?>
 
 <?php if ( 'custom' == $settings->title_size ) : ?>
@@ -60,7 +84,7 @@ margin-bottom: <?php echo ( trim( $settings->title_margin_bottom ) != '' ) ? $se
 
 .fl-node-<?php echo $id; ?> .bb_boot_card_link, .fl-node-<?php echo $id; ?> .bb_boot_card_link:visited {
 <?php if ( ! empty( $settings->link_color ) ) : ?>
-	color: #<?php echo $settings->link_color; ?>;
+	color: <?php echo bb_cards_format_color( $settings->link_color ); ?>;
 <?php endif; ?>
 
 <?php if ( 'custom' == $settings->link_font_size ) : ?>
@@ -78,7 +102,7 @@ margin-bottom: <?php echo ( trim( $settings->title_margin_bottom ) != '' ) ? $se
 
 .fl-node-<?php echo $id; ?> .bb_boot_card_link:hover {
 <?php if ( ! empty( $settings->link_hover_color ) ) : ?>
-	color: #<?php echo $settings->link_hover_color; ?>;
+	color: <?php echo bb_cards_format_color( $settings->link_hover_color ); ?>;
 <?php endif; ?>
 }
 
@@ -105,7 +129,7 @@ display:block;
 .fl-node-<?php echo $id; ?> .bb_boot_card_block .bb_boot_card_text,
 .fl-node-<?php echo $id; ?> .bb_boot_card_block .bb_boot_card_text * {
 <?php if ( ! empty( $settings->desc_color ) ) : ?>
-	color: #<?php echo $settings->desc_color; ?>;
+	color: <?php echo bb_cards_format_color( $settings->desc_color ); ?>;
 <?php endif; ?>
 
 <?php if ( 'custom' == $settings->desc_font_size ) : ?>
@@ -133,28 +157,6 @@ margin-bottom: <?php echo ( trim( $settings->desc_margin_bottom ) != '' ) ? $set
 /* BCard's Button Link */
 <?php if ( 'button' == $settings->card_btn_type ) : ?>
 <?php
-	/**
-	 * Helper function to format color value for CSS output.
-	 * Handles: rgb(), rgba(), hex with #, hex without #
-	 */
-	if ( ! function_exists( 'bb_cards_format_color' ) ) {
-		function bb_cards_format_color( $color, $default = '' ) {
-			if ( empty( $color ) ) {
-				return $default ? bb_cards_format_color( $default ) : '';
-			}
-			// If it's rgb/rgba format, return as-is
-			if ( strpos( $color, 'rgb' ) === 0 ) {
-				return $color;
-			}
-			// If it starts with #, return as-is
-			if ( strpos( $color, '#' ) === 0 ) {
-				return $color;
-			}
-			// Otherwise, it's a hex without #, add it
-			return '#' . $color;
-		}
-	}
-
 	// Get button colors with fallback to defaults
 	$btn_bg_color = bb_cards_format_color(
 		isset( $settings->btn_bg_color ) ? $settings->btn_bg_color : '',
